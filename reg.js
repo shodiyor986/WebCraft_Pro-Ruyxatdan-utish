@@ -157,29 +157,29 @@
 //   Barcha webhook'lar to'liq ulangan
 // ============================================================
 
-// 1. ASOSIY WEBHOOK — Ro'yxatdan o'tish va ma'lumot yozish
+// 1. ASOSIY WEBHOOK — Ro'yxatdan o'tish va ma'lumot yozish (POST)
 const PABBLY_WEBHOOK = 'https://connect.pabbly.com/workflow/YOUR_WEBHOOK_URL_HERE';
 
-// 2. MA'LUMOT O'QISH WEBHOOK — Google Sheets dan o'qish
+// 2. MA'LUMOT O'QISH WEBHOOK — Google Sheets dan o'qish (GET)
 const PABBLY_GET_WEBHOOK = PABBLY_WEBHOOK + '/get';
 
-// 3. MA'LUMOT YANGILASH WEBHOOK — Ma'lumotni yangilash
+// 3. MA'LUMOT YANGILASH WEBHOOK — Ma'lumotni yangilash (PUT)
 const PABBLY_UPDATE_WEBHOOK = PABBLY_WEBHOOK + '/update';
 
-// 4. GITHUB LOYIHALAR WEBHOOK — Loyihani saqlash
-const PABBLY_GITHUB_WEBHOOK = PABBLY_WEBHOOK + '/github';
-
-// 5. LOYIHALARNI O'QISH WEBHOOK
-const PABBLY_GITHUB_LIST_WEBHOOK = PABBLY_WEBHOOK + '/github/list';
-
-// 6. LOYIHANI O'CHIRISH WEBHOOK
-const PABBLY_GITHUB_DELETE_WEBHOOK = PABBLY_WEBHOOK + '/github/delete';
-
-// 7. KIRISH WEBHOOK — Login uchun
+// 4. KIRISH WEBHOOK — Login uchun (POST)
 const PABBLY_LOGIN_WEBHOOK = PABBLY_WEBHOOK + '/login';
 
-// 8. TARIF SOTIB OLISH WEBHOOK
+// 5. TARIF SOTIB OLISH WEBHOOK (POST)
 const PABBLY_PLAN_WEBHOOK = PABBLY_WEBHOOK + '/plan';
+
+// 6. GITHUB LOYIHALAR WEBHOOK — Loyihani saqlash (POST)
+const PABBLY_GITHUB_WEBHOOK = PABBLY_WEBHOOK + '/github';
+
+// 7. LOYIHALARNI O'QISH WEBHOOK (GET)
+const PABBLY_GITHUB_LIST_WEBHOOK = PABBLY_WEBHOOK + '/github/list';
+
+// 8. LOYIHANI O'CHIRISH WEBHOOK (DELETE)
+const PABBLY_GITHUB_DELETE_WEBHOOK = PABBLY_WEBHOOK + '/github/delete';
 
 // ============================================================
 //   LOCAL STORAGE KALITLARI
@@ -241,7 +241,7 @@ function getDeviceId() {
 // ============================================================
 async function fetchUsers() {
     try {
-        console.log('📤 Webhook so\'rovi: MA\'LUMOT O\'QISH');
+        console.log('📤 Webhook so\'rovi: MA\'LUMOT O\'QISH (GET)');
         console.log('🔗 URL:', PABBLY_GET_WEBHOOK);
         
         const response = await fetch(PABBLY_GET_WEBHOOK, {
@@ -259,7 +259,7 @@ async function fetchUsers() {
         }
         
         const data = await response.json();
-        console.log('✅ Ma\'lumot olindi:', data.length || 0, 'ta foydalanuvchi');
+        console.log('✅ Ma\'lumot olindi:', Array.isArray(data) ? data.length : 0, 'ta foydalanuvchi');
         return data;
     } catch (error) {
         console.error('❌ Fetch users error:', error);
@@ -273,9 +273,9 @@ async function fetchUsers() {
 // ============================================================
 async function postUser(data) {
     try {
-        console.log('📤 Webhook so\'rovi: RO\'YXATDAN O\'TISH');
+        console.log('📤 Webhook so\'rovi: RO\'YXATDAN O\'TISH (POST)');
         console.log('🔗 URL:', PABBLY_WEBHOOK);
-        console.log('📦 Ma\'lumot:', data);
+        console.log('📦 Ma\'lumot:', JSON.stringify(data, null, 2));
         
         const response = await fetch(PABBLY_WEBHOOK, {
             method: 'POST',
@@ -307,7 +307,7 @@ async function postUser(data) {
 // ============================================================
 async function loginUser(nik, password) {
     try {
-        console.log('📤 Webhook so\'rovi: KIRISH');
+        console.log('📤 Webhook so\'rovi: KIRISH (POST)');
         console.log('🔗 URL:', PABBLY_LOGIN_WEBHOOK);
         console.log('👤 Nik:', nik);
         
@@ -341,10 +341,10 @@ async function loginUser(nik, password) {
 // ============================================================
 async function updateUser(id, data) {
     try {
-        console.log('📤 Webhook so\'rovi: MA\'LUMOT YANGILASH');
+        console.log('📤 Webhook so\'rovi: MA\'LUMOT YANGILASH (PUT)');
         console.log('🔗 URL:', PABBLY_UPDATE_WEBHOOK);
         console.log('🆔 ID:', id);
-        console.log('📦 Yangilash ma\'lumotlari:', data);
+        console.log('📦 Yangilash ma\'lumotlari:', JSON.stringify(data, null, 2));
         
         const response = await fetch(PABBLY_UPDATE_WEBHOOK, {
             method: 'PUT',
@@ -376,10 +376,10 @@ async function updateUser(id, data) {
 // ============================================================
 async function buyPlanWebhook(id, planData) {
     try {
-        console.log('📤 Webhook so\'rovi: TARIF SOTIB OLISH');
+        console.log('📤 Webhook so\'rovi: TARIF SOTIB OLISH (POST)');
         console.log('🔗 URL:', PABBLY_PLAN_WEBHOOK);
         console.log('🆔 ID:', id);
-        console.log('📦 Tarif ma\'lumotlari:', planData);
+        console.log('📦 Tarif ma\'lumotlari:', JSON.stringify(planData, null, 2));
         
         const response = await fetch(PABBLY_PLAN_WEBHOOK, {
             method: 'POST',
@@ -411,9 +411,9 @@ async function buyPlanWebhook(id, planData) {
 // ============================================================
 async function saveProjectToGitHub(project) {
     try {
-        console.log('📤 Webhook so\'rovi: LOYIHANI SAQLASH');
+        console.log('📤 Webhook so\'rovi: LOYIHANI SAQLASH (POST)');
         console.log('🔗 URL:', PABBLY_GITHUB_WEBHOOK);
-        console.log('📦 Loyiha:', project);
+        console.log('📦 Loyiha:', JSON.stringify(project, null, 2));
         
         const response = await fetch(PABBLY_GITHUB_WEBHOOK, {
             method: 'POST',
@@ -448,7 +448,7 @@ async function saveProjectToGitHub(project) {
 // ============================================================
 async function fetchProjectsFromGitHub() {
     try {
-        console.log('📤 Webhook so\'rovi: LOYIHALARNI O\'QISH');
+        console.log('📤 Webhook so\'rovi: LOYIHALARNI O\'QISH (GET)');
         console.log('🔗 URL:', PABBLY_GITHUB_LIST_WEBHOOK);
         
         const response = await fetch(PABBLY_GITHUB_LIST_WEBHOOK, {
@@ -466,7 +466,7 @@ async function fetchProjectsFromGitHub() {
         }
         
         const result = await response.json();
-        console.log('✅ Loyihalar olindi:', result.length || 0, 'ta');
+        console.log('✅ Loyihalar olindi:', Array.isArray(result) ? result.length : 0, 'ta');
         return result;
     } catch (error) {
         console.error('❌ Fetch projects error:', error);
@@ -479,7 +479,7 @@ async function fetchProjectsFromGitHub() {
 // ============================================================
 async function deleteProjectFromGitHub(projectId) {
     try {
-        console.log('📤 Webhook so\'rovi: LOYIHANI O\'CHIRISH');
+        console.log('📤 Webhook so\'rovi: LOYIHANI O\'CHIRISH (DELETE)');
         console.log('🔗 URL:', PABBLY_GITHUB_DELETE_WEBHOOK);
         console.log('🆔 Loyiha ID:', projectId);
         
@@ -699,7 +699,7 @@ function showToast(message, type = 'info') {
     toastContainer.appendChild(toast);
     
     setTimeout(() => {
-        toast.style.animation = 'slideInRight 0.3s ease reverse';
+        toast.style.animation = 'toastIn 0.4s cubic-bezier(0.23, 1, 0.32, 1) reverse';
         setTimeout(() => toast.remove(), 300);
     }, 3500);
 }
@@ -968,10 +968,8 @@ async function buyPlan(type) {
             updated_at: getCurrentDateTime()
         };
         
-        // Webhook orqali tarifni yangilash
         await buyPlanWebhook(currentUser.id, updateData);
         
-        // Local user ni yangilash
         currentUser.plan_type = type;
         currentUser.plan_start = updateData.plan_start;
         currentUser.plan_end = updateData.plan_end;
@@ -1033,7 +1031,7 @@ function renderProjects() {
         <div class="project-item" onclick="openProject(${index})">
             <div>
                 <div class="project-name">
-                    <i class="fas fa-file-code" style="color:var(--accent);font-size:0.8rem;margin-right:6px;"></i>
+                    <i class="fas fa-file-code" style="color:var(--accent-1);font-size:0.8rem;margin-right:6px;"></i>
                     ${project.name || 'Nomsiz loyiha'}
                 </div>
                 <div class="project-date">
@@ -1076,7 +1074,6 @@ function createNewProject() {
         path: projectFolder + '/' + name.trim().replace(/\s+/g, '_')
     };
     
-    // GitHub ga saqlash (webhook orqali)
     try {
         saveProjectToGitHub(newProject).catch(err => console.warn('GitHub save failed:', err));
     } catch (error) {
@@ -1120,7 +1117,6 @@ function deleteProject(index) {
     
     const name = project.name;
     
-    // GitHub dan o'chirish (webhook orqali)
     try {
         deleteProjectFromGitHub(project.id).catch(err => console.warn('GitHub delete failed:', err));
     } catch (error) {
@@ -1260,7 +1256,6 @@ async function checkSession() {
 //   INPUT VALIDATION (Real-time)
 // ============================================================
 document.addEventListener('DOMContentLoaded', () => {
-    // Email validatsiya
     const emailInput = document.getElementById('regEmail');
     if (emailInput) {
         emailInput.addEventListener('blur', function() {
@@ -1277,7 +1272,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // Parol uzunligi validatsiya
     const passInput = document.getElementById('regPassword');
     if (passInput) {
         passInput.addEventListener('blur', function() {
@@ -1294,7 +1288,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // Parol mosligi validatsiya
     const passConfirm = document.getElementById('regPasswordConfirm');
     if (passConfirm) {
         passConfirm.addEventListener('blur', function() {
@@ -1315,12 +1308,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Webhook URL ni konsolga chiqarish
     console.log('🕸️ WebCraft Pro — Intellektual Auth System');
     console.log('📋 Webhook URL sozlamalari:');
-    console.log('  🔗 ASOSIY WEBHOOK:', PABBLY_WEBHOOK);
+    console.log('  🔗 ASOSIY WEBHOOK (POST):', PABBLY_WEBHOOK);
     console.log('  🔗 GET WEBHOOK:', PABBLY_GET_WEBHOOK);
-    console.log('  🔗 UPDATE WEBHOOK:', PABBLY_UPDATE_WEBHOOK);
-    console.log('  🔗 LOGIN WEBHOOK:', PABBLY_LOGIN_WEBHOOK);
-    console.log('  🔗 PLAN WEBHOOK:', PABBLY_PLAN_WEBHOOK);
-    console.log('  🔗 GITHUB WEBHOOK:', PABBLY_GITHUB_WEBHOOK);
+    console.log('  🔗 UPDATE WEBHOOK (PUT):', PABBLY_UPDATE_WEBHOOK);
+    console.log('  🔗 LOGIN WEBHOOK (POST):', PABBLY_LOGIN_WEBHOOK);
+    console.log('  🔗 PLAN WEBHOOK (POST):', PABBLY_PLAN_WEBHOOK);
+    console.log('  🔗 GITHUB WEBHOOK (POST):', PABBLY_GITHUB_WEBHOOK);
+    console.log('  🔗 GITHUB LIST WEBHOOK (GET):', PABBLY_GITHUB_LIST_WEBHOOK);
+    console.log('  🔗 GITHUB DELETE WEBHOOK (DELETE):', PABBLY_GITHUB_DELETE_WEBHOOK);
     console.log('🔑 Device ID:', getDeviceId());
 });
 
