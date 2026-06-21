@@ -1,57 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WebCraft Pro – Registration & Dashboard</title>
-<link rel="stylesheet" href="reg.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebCraft Pro – Registration & Dashboard</title>
+  <link rel="stylesheet" href="reg.css" />
 </head>
 <body>
-<main class="container">
-  <section id="registration-section" class="auth-section">
-    <h2>Register</h2>
-    <form id="registrationForm" autocomplete="off">
-      <label for="reg-username">Username</label>
-      <input type="text" id="reg-username" name="username" required>
-      <label for="reg-password">Password</label>
-      <input type="password" id="reg-password" name="password" required>
-      <button type="submit" class="glow-button">Register</button>
-    </form>
-    <pre id="regResult" class="result"></pre>
-  </section>
+  <main class="container">
+    <!-- Registration Section -->
+    <section id="registration-section" class="auth-section">
+      <h2>Register</h2>
+      <form id="registrationForm" autocomplete="off">
+        <label for="reg-username">Username</label>
+        <input type="text" id="reg-username" name="username" required />
+        <label for="reg-password">Password</label>
+        <input type="password" id="reg-password" name="password" required />
+        <button type="submit" class="glow-button">Register</button>
+      </form>
+      <pre id="regResult" class="result"></pre>
+    </section>
 
-  <section id="login-section" class="auth-section">
-    <h2>Login</h2>
-    <form id="loginForm" autocomplete="off">
-      <label for="login-username">Username</label>
-      <input type="text" id="login-username" name="username" required>
-      <label for="login-password">Password</label>
-      <input type="password" id="login-password" name="password" required>
-      <button type="submit" class="glow-button">Login</button>
-    </form>
-    <pre id="loginResult" class="result"></pre>
-  </section>
+    <!-- Login Section -->
+    <section id="login-section" class="auth-section">
+      <h2>Login</h2>
+      <form id="loginForm" autocomplete="off">
+        <label for="login-username">Username</label>
+        <input type="text" id="login-username" name="username" required />
+        <label for="login-password">Password</label>
+        <input type="password" id="login-password" name="password" required />
+        <button type="submit" class="glow-button">Login</button>
+      </form>
+      <pre id="loginResult" class="result"></pre>
+    </section>
 
-  <section id="plan-section">
-    <h2>Plans</h2>
-    <div id="planContainer" class="plan-gradient">
-      <div class="plan-card" data-plan="free">Free</div>
-      <div class="plan-card" data-plan="pro">Pro</div>
-      <div class="plan-card" data-plan="enterprise">Enterprise</div>
-    </div>
-    <pre id="planResult" class="result"></pre>
-  </section>
+    <!-- Plans Section -->
+    <section id="plan-section">
+      <h2>Plans</h2>
+      <div id="planContainer" class="plan-gradient">
+        <div class="plan-card" data-plan="free">Free</div>
+        <div class="plan-card" data-plan="pro">Pro</div>
+        <div class="plan-card" data-plan="enterprise">Enterprise</div>
+      </div>
+      <pre id="planResult" class="result"></pre>
+    </section>
 
-  <section id="dashboard-section">
-    <h2>Dashboard</h2>
-    <div id="dashboard" class="dashboard"></div>
-    <div class="dashboard-controls">
-      <button id="saveProjectBtn" class="glow-button">Save Project</button>
-      <button id="loadProjectBtn" class="glow-button">Load Project</button>
-    </div>
-    <pre id="projectResult" class="result"></pre>
-  </section>
-</main>
-<script src="reg.js"></script>
+    <!-- Dashboard Section -->
+    <section id="dashboard-section">
+      <h2>Dashboard</h2>
+      <div id="dashboard" class="dashboard"></div>
+      <div class="dashboard-controls">
+        <button id="saveProjectBtn" class="glow-button">Save Project</button>
+        <button id="loadProjectBtn" class="glow-button">Load Project</button>
+      </div>
+      <pre id="projectResult" class="result"></pre>
+    </section>
+  </main>
+  <script src="reg.js"></script>
 </body>
 </html>
