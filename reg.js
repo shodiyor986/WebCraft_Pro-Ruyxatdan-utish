@@ -83,14 +83,19 @@ function showMessage(msg, type = "info") {
 // Navigation – show/hide sections based on tab click
 // -----------------------------------------------------------------
 function switchSection(target) {
+  // hide all sections
   document.querySelectorAll(".section").forEach((el) => (el.style.display = "none"));
+  // show the requested one
   const section = document.getElementById(`${target}-section`);
   if (section) section.style.display = "block";
   // update active tab styling
-  document.querySelectorAll("nav .tabs a").forEach((a) => a.classList.toggle("active", a.dataset.target === target);
+  document.querySelectorAll("nav.tabs a").forEach((a) => {
+    a.classList.toggle("active", a.dataset.target === target);
+  });
 }
 
-document.querySelectorAll("nav .tabs a").forEach((a) => {
+// tab click listeners
+document.querySelectorAll("nav.tabs a").forEach((a) => {
   a.addEventListener("click", (e) => {
     e.preventDefault();
     const target = a.dataset.target;
@@ -155,7 +160,7 @@ document.querySelectorAll("[data-target='plan']").forEach((btn) => {
 });
 
 // -----------------------------------------------------------------
-// Code editor – use CodeMirror if available, otherwise plain textarea
+// Code editor – plain textarea fallback if CodeMirror is not loaded
 // -----------------------------------------------------------------
 let editor = null;
 if (window.CodeMirror) {
@@ -229,7 +234,6 @@ if (loadBtn) {
     el.style.left = Math.random() * 100 + "%";
     el.style.top = Math.random() * 100 + "%";
     container.appendChild(el);
-    return el;
   };
   // particles
   for (let i = 0; i < 30; i++) create("particle");
