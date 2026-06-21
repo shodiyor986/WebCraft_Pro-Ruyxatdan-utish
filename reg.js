@@ -1,4 +1,4 @@
-/* WebCraft Pro - JavaScript core */
+/* WebCraft Pro – JavaScript core */
 const WEBHOOK_URL = "https://b519bdd3-f226-4505-97af-912dd1c5bcb4.noclick.run";
 
 // Utility: generate or retrieve a persistent device ID
@@ -38,7 +38,6 @@ async function sendAction(action, payload) {
       body: JSON.stringify(body),
     });
     const result = await response.json();
-    // If the backend returns a new session token, store it
     if (result.sessionToken) setSession(result.sessionToken);
     return result;
   } catch (err) {
@@ -62,6 +61,7 @@ if (registerForm) {
     const password = registerForm.password.value;
     const result = await sendAction("register", { username, password });
     showResult("registerResult", result);
+    if (result.error) toast(result.error, "error");
   });
 }
 
@@ -74,6 +74,7 @@ if (loginForm) {
     const password = loginForm.password.value;
     const result = await sendAction("login", { username, password });
     showResult("loginResult", result);
+    if (result.error) toast(result.error, "error");
   });
 }
 
@@ -83,6 +84,7 @@ document.querySelectorAll(".select_plan").forEach((btn) => {
     const plan = btn.closest(".plan_card").dataset.plan;
     const result = await sendAction("choose_plan", { plan });
     showResult("planResult", result);
+    if (result.error) toast(result.error, "error");
   });
 });
 
@@ -92,22 +94,23 @@ const loadBtn = document.getElementById("loadProjectBtn");
 if (saveBtn) {
   saveBtn.addEventListener("click", async () => {
     const projectData = {
-      // Example placeholder – in a real app you would collect the actual project state
       timestamp: new Date().toISOString(),
       content: "Sample project data",
     };
     const result = await sendAction("save_project", projectData);
     showResult("dashboardResult", result);
+    if (result.error) toast(result.error, "error");
   });
 }
 if (loadBtn) {
   loadBtn.addEventListener("click", async () => {
     const result = await sendAction("load_project", {});
     showResult("dashboardResult", result);
+    if (result.error) toast(result.error, "error");
   });
 }
 
-// Optional: visual feedback for actions (simple toast)
+// Simple toast for user feedback
 function toast(message, type = "info") {
   const div = document.createElement("div");
   div.textContent = message;
