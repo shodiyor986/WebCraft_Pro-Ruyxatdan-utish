@@ -1,4 +1,5 @@
-/* Dark Theme and Glassmorphism */
+/* WebCraft Pro - Stylesheet */
+/* Dark Theme, Glassmorphism, Neon Grid, Glow Orbs, Gradient Buttons, Responsive Layout */
 :root {
   --bg-color: #0a0a0a;
   --primary: #0ff;
@@ -86,7 +87,7 @@ body::before {
   .card {margin: 0.5rem; padding: 1rem;}
 }
 
-/* Additional Particle Effect (simple) */
+/* Particle Effect */
 .particle {
   position: absolute;
   width: 4px;
@@ -103,6 +104,4 @@ body::before {
 /* Utility Classes */
 .text-center {text-align:center;}
 .mt-2 {margin-top:0.5rem;}
-
-/* Ensure content sections have some padding */
 section {padding: 2rem 1rem;}
