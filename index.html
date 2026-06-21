@@ -1,86 +1,83 @@
 <!DOCTYPE html>
-<html lang="uz" data-theme="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WebCraft Pro – Ro‘yxatdan o‘tish, Kirish, Tarif, Dashboard</title>
-  <link rel="stylesheet" href="reg.css">
-  <script defer src="reg.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebCraft Pro - Ro'yxatdan o'tish</title>
+    <link rel="stylesheet" href="reg.css" />
 </head>
 <body>
-  <header class="header">
-    <h1>WebCraft Pro</h1>
-    <nav>
-      <ul class="nav-list">
-        <li><a href="#register">Ro‘yxatdan o‘tish</a></li>
-        <li><a href="#login">Kirish</a></li>
-        <li><a href="#plans">Tarif rejalari</a></li>
-        <li><a href="#dashboard">Dashboard</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Neon Grid Background -->
+    <div class="grid-bg"></div>
+    <main class="container">
+        <!-- Navigation Tabs -->
+        <nav class="tabs">
+            <button class="tab active" data-target="register">Ro'yxatdan o'tish</button>
+            <button class="tab" data-target="login">Kirish</button>
+            <button class="tab" data-target="plans">Tarif Rejalari</button>
+            <button class="tab" data-target="dashboard">Dashboard</button>
+        </nav>
 
-  <main class="container">
-    <!-- Registration Section -->
-    <section id="register" class="auth-section">
-      <h2>Ro‘yxatdan o‘tish</h2>
-      <form id="registerForm" class="auth-form">
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="password" name="password" placeholder="Parol" required>
-        <button type="submit" class="btn">Ro‘yxatdan o‘tish</button>
-        <div id="registerResponse" class="response"></div>
-      </form>
-    </section>
+        <!-- Register Form -->
+        <section class="panel" id="register">
+            <h2>Ro'yxatdan o'tish</h2>
+            <form id="registerForm" class="glass">
+                <input type="text" name="username" placeholder="Foydalanuvchi nomi" required />
+                <input type="email" name="email" placeholder="Email" required />
+                <input type="password" name="password" placeholder="Parol" required />
+                <button type="submit" class="gradient-btn">Ro'yxatdan o'tish</button>
+            </form>
+        </section>
 
-    <!-- Login Section -->
-    <section id="login" class="auth-section hidden">
-      <h2>Kirish</h2>
-      <form id="loginForm" class="auth-form">
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="password" name="password" placeholder="Parol" required>
-        <button type="submit" class="btn">Kirish</button>
-        <div id="loginResponse" class="response"></div>
-      </form>
-    </section>
+        <!-- Login Form -->
+        <section class="panel hidden" id="login">
+            <h2>Kirish</h2>
+            <form id="loginForm" class="glass">
+                <input type="email" name="email" placeholder="Email" required />
+                <input type="password" name="password" placeholder="Parol" required />
+                <button type="submit" class="gradient-btn">Kirish</button>
+            </form>
+        </section>
 
-    <!-- Plans Section -->
-    <section id="plans" class="dashboard-section hidden">
-      <h2>Tarif rejalari</h2>
-      <div class="plan-grid">
-        <div class="plan-card" data-plan="free">
-          <h3>Free</h3>
-          <p>Cheklangan funksiyalar</p>
-          <button class="btn select-plan" data-plan="free">Tanlash</button>
-        </div>
-        <div class="plan-card" data-plan="pro">
-          <h3>Pro</h3>
-          <p>To‘liq funksiyalar</p>
-          <button class="btn select-plan" data-plan="pro">Tanlash</button>
-        </div>
-        <div class="plan-card" data-plan="enterprise">
-          <h3>Enterprise</h3>
-          <p>Maxsus yechimlar</p>
-          <button class="btn select-plan" data-plan="enterprise">Tanlash</button>
-        </div>
-      </div>
-      <div id="planResponse" class="response"></div>
-    </section>
+        <!-- Plans -->
+        <section class="panel hidden" id="plans">
+            <h2>Tarif Rejalari</h2>
+            <div class="plans-grid">
+                <div class="plan-card glass">
+                    <h3>Free</h3>
+                    <p>Cheklangan funksiyalar</p>
+                    <button class="choose-plan gradient-btn" data-plan="free">Tanlash</button>
+                </div>
+                <div class="plan-card glass">
+                    <h3>Pro</h3>
+                    <p>To'liq funksiyalar</p>
+                    <button class="choose-plan gradient-btn" data-plan="pro">Tanlash</button>
+                </div>
+                <div class="plan-card glass">
+                    <h3>Enterprise</h3>
+                    <p>Korporativ paket</p>
+                    <button class="choose-plan gradient-btn" data-plan="enterprise">Tanlash</button>
+                </div>
+            </div>
+        </section>
 
-    <!-- Dashboard Section -->
-    <section id="dashboard" class="dashboard-section hidden">
-      <h2>Dashboard</h2>
-      <div class="project-panel">
-        <input type="text" id="projectName" placeholder="Loyiha nomi">
-        <textarea id="projectEditor" placeholder="Loyiha kodini kiriting..."></textarea>
-        <button id="saveProjectBtn" class="btn">Saqlash</button>
-        <div id="projectResponse" class="response"></div>
-      </div>
-      <ul id="projectList" class="project-list"></ul>
-    </section>
-  </main>
+        <!-- Dashboard -->
+        <section class="panel hidden" id="dashboard">
+            <h2>Dashboard</h2>
+            <div class="dashboard-content glass">
+                <p>Bu yerda foydalanuvchi loyihalari, statistikalar va sozlamalar ko'rsatiladi.</p>
+                <!-- Example Project List -->
+                <ul id="projectList"></ul>
+                <button id="saveProject" class="gradient-btn">Loyihani saqlash</button>
+                <button id="loadProject" class="gradient-btn">Loyihani yuklash</button>
+            </div>
+        </section>
 
-  <footer class="footer">
-    <p>&copy; 2024 WebCraft Pro. Barcha huquqlar himoyalangan.</p>
-  </footer>
+        <!-- Response Area -->
+        <section id="responseArea" class="response hidden"></section>
+    </main>
+
+    <script src="reg.js"></script>
 </body>
 </html>
