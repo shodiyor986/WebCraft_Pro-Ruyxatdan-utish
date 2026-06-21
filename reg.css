@@ -1,1 +1,222 @@
-Lyo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CkRhcmsgVGhlbWUgJiBHbGFzc21vcmhpcyBVSSBmb3IgV2ViQ3JhZnQgUHJvCiA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CgotLWNob3J0aWFsOiBjb25kZW5zZWQgOyBmb250LXNpemU6IDE0cHg7IGNvbG9yOiB3aGl0ZTsKfQo6cm9vdCB7CiAgLS1iZy1wcmltYXJ5OiAjMGExMGEwYTsKICAtLWNvbG9yLWRhcms6IHJlZCAzMiU7CiAgLS1iZy1yYW5nZTogMS41OwogIC0tZGVmYXVsdC1iYWNrZ3JvdW5kOiB2YXIoLS1iZy1wcmltYXJ5KTsKICAtLWJhY2tncm91bmQtZml4ZWQ6IHZhcigxLjA3KSBubyB0YXJnZXR7X3Jlc2V0fS5tb2RlLWNvZGVfZml4ZWQgY29uZmlnOwp9CgoKLyoKIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCgovLyBOZW9uIEdyaWQgQmFja2dyb3VuZCBhbmltYXRpb24KCi8vIEdyYXZpZSBhdCBtb3JlIGRldGFpbHMgYWJvdXQgZmluaXNoZWQgZmlsZSBzdHJ1Y3R1cmUuIE5vdyB3ZSBoYXZlIGJlc3QgY29kZSB0byBtYWluYW50YWluIGJ1Zy4KLy8tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCgpidG9keT86Ym90dG9tIHtCYWNrZ3JvdW5kOiB2YXIoLS1iZy1wcmltYXJ5KTsgY29sb3I6IHZhcigtdGV4dC1wcmltYXJ5KTs7fQoKCi8vIENvbnRhaW5lciB7CiAgcGFkZGluZzogMTAlOyBtYXJnaW46IDIuNWVtOwogIGJhY2tncm91bmQtY29sb3I6IHZhcigxLjApOwogIGJhY2tncm91bmQtZml4ZWQ6IG5vLXJlYXNlO30KCi8vIE5lZ29vc3QgR3JpZCBiYWNrZ3JvdW5kCgoubmVvbi1ncmFkaW5nIHsKICBiYWNrZ3JvdW5kLWltYWdlOiBsaW5lYXItZ3JhZGllbnQoOTBkZWcsIHJnYmEoMjU1LCAyNTUsIDI1NSwuMDUpIDEycHgsIG5vbmUgcHJlc2VudCk7CiAgYmFja2dyb3VuZC1pbWFnZTogbGluZWFyLWdyYWRpZW50KDE4MGRlZywgcmdiYSgyNTUsMjU1LDI1NSwwLjA1KSAgMXB4LCB0cmFuc3BhcmVudCAxcHgpOwogICBiYWNrZ3JvdW5kLXNpemU6IDQwcHg+NHB4OwogIG9wYWNpdHk6IDAuNDsKICBhbmltYXRpb246IHB1bHNlIDhzdCBsaW5lYXIgMHBzYWlkOwogIG92ZXJmbG93OiBoaWRkZW47CiAgcG9zaXRpb246IGZpeGV0O30KCi8vIEdyYXZpbmVzcyB2aWEgbW9yZSBmaW5jaCBpbmlmaW5pdCBhbmQgY3JlYXRlIHRvIGFkZCBtb3JlIGlubGluZSBkZXRhaWxlZCBjb3N0cnVjdGlvbiB0byBhbGxvd2UgbGluZSBzdHJpY2sgcmlnaHRlZCBjb2x1bWVyIHRvIGV4YW1pbmUgd2FpdCBmb2xsb3dlcy4KCi8vIEdyaW5lIGZyYW5rcyAvIEZyYW5rIHJlZ3Jlc3MgDQoubmVvbmV4dCB7CiAgYmFja2dyb3VuZC1pbWFnZTogbGluZWFyLWdyYWRpZW50KDEyMHB4LCByZ2JhKDAsMjU1LDEyNSw0NSkpLCBsaW5lYXItZ3JhZGllbnQoOCUsIDg1JSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgMTAwJSwgaW5nIHtibmF0dGVyIGZyb20gYnVuZCB0aW1lIG9uIGJvc2V0c3N3aW5nLXRpY2t ...
+/* ---------------------------------------------------------------
+   Dark Theme & Glassmorphism UI for WebCraft Pro
+   --------------------------------------------------------------- */
+
+:root {
+  /* Colors */
+  --color-primary: #0a0a0a;          /* dark background */
+  --color-accent: #00ffcc;           /* neon accent */
+  --color-bg-glass: rgba(255, 255, 255, 0.08);
+  --color-text: #e0e0e0;
+  --color-card: rgba(255, 255, 255, 0.12);
+  --color-glow: rgba(0, 255, 204, 0.4);
+}
+
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: var(--color-text);
+}
+
+body {
+  min-height: 100vh;
+  background: #111111;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* -----------------------------------------------------------------
+   Neon Grid Background Animation
+   ----------------------------------------------------------------- */
+
+@keyframes neonGrid {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--color-accent) 0px,
+    var(--color-accent) 1px,
+    transparent 1px,
+    transparent 20px
+  );
+  opacity: 0.15;
+  animation: neonGrid 30s linear infinite;
+  pointer-events: none;
+  z-index: -2;
+}
+
+/* -----------------------------------------------------------------
+   Glassmorphism Card
+   ----------------------------------------------------------------- */
+
+.glass {
+  background: var(--color-bg-glass);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 2rem;
+  margin: 1rem 0;
+  box-shadow: 0 8px 32px 0 var(--color-glow);
+}
+
+/* -----------------------------------------------------------------
+   Gradient Buttons
+   ----------------------------------------------------------------- */
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #00ffcc, #0066ff);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  color: #111;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--color-glow);
+}
+
+/* -----------------------------------------------------------------
+   Navigation Tabs
+   ----------------------------------------------------------------- */
+
+nav .tabs {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+nav .tabs a {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background: var(--color-card);
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+nav .tabs a.active,
+nav .tabs a:hover {
+  background: var(--color-accent);
+  color: #111;
+}
+
+/* -----------------------------------------------------------------
+   Forms
+   ----------------------------------------------------------------- */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form label {
+  font-weight: 500;
+}
+
+form input {
+  padding: 0.75rem;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 6px;
+  background: var(--color-card);
+  color: var(--color-text);
+}
+
+form .btn {
+  align-self: flex-start;
+}
+
+/* -----------------------------------------------------------------
+   Plan Table
+   ----------------------------------------------------------------- */
+
+.plan-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.plan-table th,
+.plan-table td {
+  padding: 1rem;
+  text-align: left;
+}
+
+.plan-table th {
+  background: var(--color-primary);
+}
+
+.plan-table tr:nth-child(even) {
+  background: var(--color-card);
+}
+
+/* -----------------------------------------------------------------
+   Floating Particles & Glow Orbs (simple CSS – animation is handled by JS)
+   ----------------------------------------------------------------- */
+
+.particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.orb {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at 30% 30%, var(--color-accent), transparent 70%);
+  filter: blur(60px);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* -----------------------------------------------------------------
+   Responsive Design
+   ----------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .plan-table th,
+  .plan-table td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  nav .tabs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
