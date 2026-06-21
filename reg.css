@@ -1,235 +1,163 @@
-/* Dark theme and glassmorphism */
-:root {
-  --bg-color: #0a0a0a;
-  --glass-bg: rgba(255, 255, 255, 0.08);
-  --glass-border: rgba(255, 255, 255, 0.12);
-  --accent: hsl(210, 100%, 55%);
-  --accent-hover: hsl(210, 100%, 65%);
-  --text-primary: #e0e0e0;
-  --text-secondary: #a0a0a0;
-  --gradient-start: hsl(210, 100%, 45%);
-  --gradient-end: hsl(270, 100%, 55%);
-}
+/* reg.css - Dark Glassmorphism & Neon Grid Theme */
 
-/* Global resets */
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  color: var(--text-primary);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-  background: var(--bg-color);
+html, body {
+  height: 100%;
+  background: #0a0a0a;
+  color: #e0e0e0;
   overflow-x: hidden;
-  min-height: 100vh;
-  position: relative;
 }
 
 /* Neon Grid Background */
-body::before {
-  content: '';
-  position: absolute;
+.grid-bg {
+  position: fixed;
   inset: 0;
-  background: repeating-linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.03) 0px,
-    rgba(255, 255, 255, 0.03) 1px,
-    transparent 1px,
-    transparent 20px
-  ),
-  repeating-linear-gradient(
-    -45deg,
-    rgba(255, 255, 255, 0.03) 0px,
-    rgba(255, 255, 255, 0.03) 1px,
-    transparent 1px,
-    transparent 20px
-  );
-  background-size: 200% 200%;
-  animation: gridMove 30s linear infinite;
-  z-index: -2;
-}
-
-@keyframes gridMove {
-  0% { background-position: 0 0; }
-  100% { background-position: 200% 200%; }
-}
-
-/* Glow Orbs */
-.orb {
-  position: absolute;
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3), transparent);
-  filter: blur(8px);
-  animation: float 12s ease-in-out infinite;
-  pointer-events: none;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-30px) rotate(180deg); }
-}
-
-/* Generate a few orbs via pseudo elements */
-body::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><circle cx="100" cy="100" r="80" fill="rgba(255,255,255,0.08)"/></svg>') repeat;
-  opacity: 0.2;
-  animation: orbPulse 20s linear infinite;
+  background: radial-gradient(circle at 50% 50%, #0ff 0.5px, transparent 0.5px),
+    radial-gradient(circle at 50% 50%, #0ff 0.5px, transparent 0.5px);
+  background-size: 20px 20px;
+  animation: moveGrid 30s linear infinite;
   z-index: -1;
 }
 
-@keyframes orbPulse {
-  0% { opacity: 0.1; }
-  50% { opacity: 0.25; }
-  100% { opacity: 0.1; }
+@keyframes moveGrid {
+  from {background-position: 0 0;}
+  to {background-position: 200px 200px;}
 }
+
+/* Glow Orbs */
+@keyframes orbit {
+  0% {transform: rotate(0deg) translateX(150px) rotate(0deg);}
+  100% {transform: rotate(360deg) translateX(150px) rotate(-360deg);}
+}
+
+.orb {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ff00ff, #ff00ff88);
+  filter: blur(4px);
+  animation: orbit 12s linear infinite;
+}
+
+/* Generate multiple orbs */
+.orb:nth-child(1) {top: 20%; left: 30%; animation-duration: 14s;}
+.orb:nth-child(2) {top: 40%; left: 70%; animation-duration: 10s;}
+.orb:nth-child(3) {top: 80%; left: 20%; animation-duration: 16s;}
 
 /* Container */
 .container {
-  max-width: 1200px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Glassmorphism Card */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 1.5rem;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+}
+
+/* Gradient Buttons */
+.gradient-btn {
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  border: none;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 1rem;
+}
+.gradient-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,255,255,0.4);
+}
+
+/* Tabs */
+.tabs {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.tab {
+  background: transparent;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+.tab.active, .tab:hover {
+  background: #00ffff;
+  color: #0a0a0a;
 }
 
-.header, .footer {
-  text-align: center;
-  padding: 1rem 0;
-}
-
-/* Glassmorphism cards */
-.auth-section, .dashboard-section {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: 16px;
-  padding: 2rem;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
-}
-
-.auth-section.hidden, .dashboard-section.hidden {
+/* Panels */
+.panel {
   display: none;
 }
-
-.auth-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.panel.active {
+  display: block;
 }
+.hidden {display: none;}
 
-.auth-form input {
-  padding: 0.8rem 1rem;
-  border: 1px solid var(--glass-border);
-  border-radius: 8px;
-  background: rgba(255,255,255,0.05);
-  color: var(--text-primary);
-}
-
-.auth-form input::placeholder {
-  color: var(--text-secondary);
-}
-
-/* Gradient button */
-.btn {
-  cursor: pointer;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-  color: #fff;
-  font-weight: 600;
-  transition: transform 0.2s, background 0.3s;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  background: linear-gradient(135deg, var(--gradient-end), var(--gradient-start));
-}
-
-.btn.select-plan {
-  margin-top: 0.5rem;
-}
-
-.response {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-}
-
-/* Plan grid */
-.plan-grid {
+/* Plans Grid */
+.plans-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
 }
-
 .plan-card {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: 12px;
-  padding: 1.5rem;
   text-align: center;
-  backdrop-filter: blur(8px);
+  padding: 1rem;
 }
 
-/* Dashboard Project panel */
-.project-panel {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+/* Dashboard */
+.dashboard-content {
+  min-height: 300px;
 }
-
-#projectEditor {
-  min-height: 200px;
-  resize: vertical;
-  font-family: monospace;
-}
-
-.project-list {
+#projectList {
   list-style: none;
   margin-top: 1rem;
-  padding: 0;
-  max-height: 300px;
-  overflow-y: auto;
 }
-
-.project-item {
+#projectList li {
+  background: rgba(255,255,255,0.05);
+  margin-bottom: 0.5rem;
   padding: 0.5rem;
-  cursor: pointer;
-  border-bottom: 1px solid var(--glass-border);
+  border-radius: 6px;
 }
 
-.project-item:hover {
-  background: rgba(255,255,255,0.07);
+/* Response Area */
+.response {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background: rgba(0,255,255,0.1);
+  color: #00ffff;
+  font-family: monospace;
+  white-space: pre-wrap;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .container { padding: 1rem; }
-  .auth-section, .dashboard-section { padding: 1rem; }
+@media (max-width: 600px) {
+  .container {padding: 1rem;}
+  .gradient-btn {width: 100%;}
 }
-
-/* Add floating particles (simple) */
-.particle {
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background: var(--accent);
-  border-radius: 50%;
-  animation: particleMove 8s linear infinite;
-}
-
-@keyframes particleMove {
-  0% { transform: translate(0,0); opacity: 1; }
-  100% { transform: translate(calc(100vw - 4px), calc(100vh - 4px)); opacity: 0; }
-}
-
-/* Create particles via JS (optional) */
