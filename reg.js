@@ -1,11 +1,8 @@
 // reg.js - WebCraft Pro Frontend Logic
 // Updated on 2026-06-21
 
-// Webhook endpoint for all actions
 const WEBHOOK_URL = "https://b519bdd3-f226-4505-97af-912dd1c5bcb4.noclick.run";
 
-// ---------------------------------------------------
-// Utility: Device ID (persisted in localStorage)
 function getDeviceId() {
   let id = localStorage.getItem("deviceId");
   if (!id) {
@@ -15,8 +12,6 @@ function getDeviceId() {
   return id;
 }
 
-// ---------------------------------------------------
-// Utility: POST data to webhook and parse JSON response
 async function postToWebhook(action, payload) {
   const body = { deviceId: getDeviceId(), action, ...payload };
   try {
@@ -25,16 +20,14 @@ async function postToWebhook(action, payload) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     });
-    const data = await response.json();
-    return { success: true, data };
-  } catch (error) {
-    console.error("Webhook error:", error);
-    return { success: false, error };
+    const json = await response.json();
+    return { success: true, data: json };
+  } catch (err) {
+    console.error("Webhook error:", err);
+    return { success: false, error: err };
   }
 }
 
-// ---------------------------------------------------
-// Session handling (store logged user email)
 function setSession(email) {
   localStorage.setItem("sessionUser", email);
   document.getElementById("userEmail").textContent = email;
@@ -51,8 +44,6 @@ function initSession() {
   if (email) setSession(email);
 }
 
-// ---------------------------------------------------
-// Show / hide main UI sections
 function toggleSections({ dashboard }) {
   const hide = (id) => document.getElementById(id).classList.add("hidden");
   const show = (id) => document.getElementById(id).classList.remove("hidden");
@@ -69,8 +60,6 @@ function toggleSections({ dashboard }) {
   }
 }
 
-// ---------------------------------------------------
-// Load user projects (list_projects action)
 async function loadProjects() {
   const email = localStorage.getItem("sessionUser");
   const result = await postToWebhook("list_projects", { email });
@@ -88,8 +77,6 @@ async function loadProjects() {
   }
 }
 
-// ---------------------------------------------------
-// DOM ready – attach listeners and initialise UI
 document.addEventListener("DOMContentLoaded", () => {
   initSession();
 
@@ -99,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const projectForm = document.getElementById("projectForm");
   const logoutBtn = document.getElementById("logoutBtn");
 
-  // ----- Register -----
+  // Register
   registerForm?.addEventListener("submit", async (e) => {
     e.preventDefault();
     const { email, password } = Object.fromEntries(new FormData(registerForm));
@@ -113,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // ----- Login -----
+  // Login
   loginForm?.addEventListener("submit", async (e) => {
     e.preventDefault();
     const { email, password } = Object.fromEntries(new FormData(loginForm));
@@ -127,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // ----- Plan selection -----
+  // Plan selection
   planButtons.forEach((btn) => {
     btn.addEventListener("click", async () => {
       const plan = btn.dataset.plan;
@@ -135,14 +122,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const res = await postToWebhook("select_plan", { email, plan });
       const out = document.getElementById("planResponse");
       if (res.success && res.data?.status === "ok") {
-        out.textContent = `Plan \"${plan}\" tanlandi.`;
+        out.textContent = `Plan "${plan}" tanlandi.`;
       } else {
         out.textContent = "Xatolik: " + (res.data?.message || res.error);
       }
     });
   });
 
-  // ----- Save project -----
+  // Save project
   projectForm?.addEventListener("submit", async (e) => {
     e.preventDefault();
     const { title, content } = Object.fromEntries(new FormData(projectForm));
@@ -158,9 +145,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // ----- Logout -----
+  // Logout
   logoutBtn?.addEventListener("click", clearSession);
 
-  // If a session already exists, load projects immediately
   if (localStorage.getItem("sessionUser")) loadProjects();
 });
