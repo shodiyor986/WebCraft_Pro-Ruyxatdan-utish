@@ -1,1 +1,189 @@
-OnJvb3R7LS1wcmltYXJ5OiMwMGZmY2M7LS1wcmltYXJ5LWRhcms6IzAwOTk4ODstLWJnOiMwYTBhMGE7LS1iZy1kYXJrZXI6IzA1MDUwNTstLXRleHQ6I2UwZTBlMDstLXdoaXRlOiNmZmZmZmY7LS1ibHVyLXJhZGl1czoxMnB4Oy0tZ2xh c3MtYmc6cmdiYSgyNTUsMjU1LDI1NSwwLjA4KTt9Cmh0bWwsYm9keXtoZWlnaHQ6MTAwJTttYXJnaW46MDtmb250LWZhbWlseTonU2Vnb2UgVUknLFRhaG9t YSxBcmlhbCxzYW5zLXNlcmlmO2JhY2tncm91bmQ6dmFyKC0tYmcpO2NvbG9yOnZhcigtLXRleHQpO292ZXJmbG93OmhpZGRlbjt9Ci5jb250YWluZXJ7bWluLWhlaWdodDoxMDB2aDtkaXNwbGF5OmZsZXg7ZmxleC1kaXJlY3Rpb246Y29sdW1uO2p1c3RpZnktY29udGVudDpjZW50ZXI7YWxpZ24taXRlbXM6Y2VudGVyO3BhZGRpbmc6MnJlbTtiYWNrZ3JvdW5kOnZhcigtLWdsYXNzLWJnKTtiYWNrZHJvcC1maWx0ZXI6Ymx1cigxMHB4KSBzYXR1cmF0ZSgxODAlKTtib3JkZXItcmFkaXVzOjIwcHg7Ym94LXNoYWRvdzowIDAgMjBweCByZ2JhKDAsMjU1LDI1NSwwLjMpO30KLnRhYi1idG57cGFkZGluZzowLjVyZW0gMXJlbTttYXJnaW46MCAwLjVyZW07YmFja2dyb3VuZDp0cmFuc3BhcmVudDtib3JkZXI6MnB4IHNvbGlkIHZhcigtLXByaW1hcnkpO2JvcmRlci1yYWRpdXM6OHB4O2NvbG9yOnZhcigtLXByaW1hcnkpO2N1cnNvcjpwb2ludGVyO30KLnRhYi1idG4uYWN0aXZle2JhY2tncm91bmQ6dmFyKC0tcHJpbWFyeSk7Y29sb3I6dmFyKC0tYmcpO30KLmF1dGgtZm9ybXtkaXNwbGF5Om5vbmU7fQouYXV0aC1mb3JtLmFjdGl2ZXtk aXNwbGF5OmJsb2NrO30KI21zZy1ib3h7cG9zaXRpb246Zml4ZWQ7dG9wOjFyZW07cmlnaHQ6MXJlbTtwYWRkaW5nOjFyZW0gMS41cmVtO2JhY2tncm91bmQ6cmdiYSgwLDAsMCwwLjcpO2NvbG9yOiNmZmY7Ym9yZGVyLXJhZGl1czo4cHg7ei1pbmRleDoxMDAwO30KQGtleWZyYW1lcyBuZW9uR3JpZHswJXtiYWNrZ3JvdW5kLXBvc2l0aW9uOjAgMDt9MTAwJXtiYWNrZ3JvdW5kLXBvc2l0aW9uOjIwMCUgMjAwJTt9fQpib2R5OjpiZWZvcmV7Y29udGVudDoiIjtwb3NpdGlvbjphYnNvbHV0ZTtpbnNldDowO2JhY2tncm91bmQ6bGluZWFyLWdyYWRpZW50KDQ1ZGVnLCMwZmYsI2YwZiwjZmYwLCMwZmYpO2JhY2tncm91bmQtc2l6ZTo0MDAlIDQwMCU7YW5pbWF0aW9uOm5lb25HcmlkIDIwcyBsaW5lYXIgaW5maW5pdGU7b3BhY2l0eTowLjE1O3BvaW50ZXItZXZlbnRzOm5vbmU7fQpAa2V5ZnJhbWVzIG9yYnswJXt0cmFuc2Zvcm06dHJhbnNsYXRlWSgwKSBzY2FsZSgxKTt9NTAl e3RyYW5zZm9ybTp0cmFuc2xhdGVZKC0zMHB4KSBzY2FsZSgxLjIpO30xMDAl e3RyYW5zZm9ybTp0cmFuc2xhdGVZKDApIHNjYWxlKDEpO319Ci5vcmJ7cG9zaXRpb246YWJzb2x1dGU7d2lkdGg6NjBweDtoZWlnaHQ6NjBweDtiYWNrZ3JvdW5kOnJhZGlhbC1ncmFkaWVudChjaXJjbGUscmdiYSgwLDI1NSwyNTUsMC42KSx0cmFuc3BhcmVudCk7Ym9yZGVyLXJhZGl1czo1MCU7YW5pbWF0aW9uOm9yYiA2cyBlYXNlLWluLW91dCBpbmZpbml0ZTtmaWx0ZXI6Ymx1cig4cHgpO30=
+/*============================================================
+   Dark Theme & Glassmorphism UI for WebCraft Pro
+   =============================================================*/
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-glass: rgba(255, 255, 255, 0.07);
+  --bg-glass-border: rgba(255, 255, 255, 0.2);
+  --accent: #00e5ff;
+  --gradient-start: #ff00ff;
+  --gradient-end: #00ffff;
+  --text-primary: #e0e0e0;
+  --error: #ff4d4d;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow: hidden;
+}
+.app-container {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+/*------------------------------------------------------------
+   Neon Grid Background
+  ------------------------------------------------------------*/
+body::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.4;
+  pointer-events: none;
+  animation: pulse 8s linear infinite;
+}
+@keyframes pulse {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.5; }
+  100% { opacity: 0.3; }
+}
+/*------------------------------------------------------------
+   Glassmorphism Sections
+  ------------------------------------------------------------*/
+.form-section {
+  background: var(--bg-glass);
+  border: 1px solid var(--bg-glass-border);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  padding: 2rem;
+  margin-top: 1.5rem;
+  display: none;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+}
+.form-section.active {
+  display: block;
+}
+/*------------------------------------------------------------
+   Tabs Navigation
+  ------------------------------------------------------------*/
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.tab-btn {
+  background: none;
+  border: 2px solid var(--bg-glass-border);
+  color: var(--text-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.tab-btn.active,
+.tab-btn:hover {
+  background: var(--bg-glass);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+/*------------------------------------------------------------
+   Gradient Buttons
+  ------------------------------------------------------------*/
+.gradient-btn {
+  background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+  border: none;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.gradient-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.4);
+}
+/*------------------------------------------------------------
+   Input Styles
+  ------------------------------------------------------------*/
+.auth-form input,
+.auth-form select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--bg-glass-border);
+  background: rgba(255,255,255,0.05);
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+.auth-form input::placeholder,
+.auth-form select {
+  color: rgba(255,255,255,0.5);
+}
+/*------------------------------------------------------------
+   Toast Message Box
+  ------------------------------------------------------------*/
+#msg-box {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  display: none;
+  z-index: 1000;
+}
+/*------------------------------------------------------------
+   Responsive Adjustments
+  ------------------------------------------------------------*/
+@media (max-width: 768px) {
+  .app-container { padding: 1rem; }
+  .form-section { padding: 1.5rem; }
+  .gradient-btn { width: 100%; }
+}
+@media (max-width: 480px) {
+  .tabs { flex-direction: column; }
+  .tab-btn { width: 100%; text-align: center; }
+}
+/*------------------------------------------------------------
+   Optional Animated Orbs (floating particles) – simple version
+  ------------------------------------------------------------*/
+.orb {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle at 30% 30%, rgba(0,255,255,0.8), transparent);
+  border-radius: 50%;
+  animation: float 12s infinite alternate;
+  pointer-events: none;
+  opacity: 0.6;
+}
+@keyframes float {
+  from { transform: translate(0,0) scale(1); }
+  to { transform: translate(calc(100vw - 60px), calc(100vh - 60px)) scale(1.2); }
+}
+/* Create a few orbs via pseudo‑elements */
+body::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(255,0,255,0.3), transparent 20%),
+    radial-gradient(circle at 80% 70%, rgba(0,255,255,0.3), transparent 20%);
+  animation: orbMove 20s linear infinite;
+}
+@keyframes orbMove {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
