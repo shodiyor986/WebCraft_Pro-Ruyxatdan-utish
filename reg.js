@@ -1,1 +1,132 @@
-Ly8gV2ViQ3JhZnQgUHJvIC0gRnVsbCBGcm9udGVuZCBMb2dpYwovLyBVcGRhdGVkIG9uIDIwMjYtMDYtMjEKCmNvbnN0IFdFQkhPT0tfVVJMID0gImh0dHBzOi8vYjUxOWJkMzAtZjIyNi00NTA1LTk3YWYtOTEyZGQxYzViY2I0Lm5vY2xpY2sucnVuIjsKCi8vIFV0aWxpdHk6IGdlbmVyYXRlIG9yIHJldHJpZXZlIGEgcGVyc2lzdGVudCBkZXZpY2UgSUQKZnVuY3Rpb24gZ2V0RGV2aWNlSWQoKSB7CiAgbGV0IGlkID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oImRldmljZUlkIik7CiAgaWYgKCFpZCkgewogICAgLy8gU2ltcGxlIHJhbmRvbSBVVUlEIChub3QgY3J5cHRvZ3JhcGhpY2FsbHkgc3Ryb25nIGJ1dCBzdWZmaWNpZW50IGZvciBkZW1vKQogICAgaWQgPSBjcnlwdG8ucmFuZG9tVVVJRCgpOwogICAgbG9jYWxTdG9yYWdlLnNldEl0ZW0oImRldmljZUlkIiwgaWQpOwogIH0KICByZXR1cm4gaWQ7Cn0KCi8vIEdlbmVyaWMgUE9TVCBoZWxwZXIgdG8gdGhlIHdlYmhvb2sKYXN5bmMgZnVuY3Rpb24gcG9zdFRvV2ViaG9vayhhY3Rpb24sIHBheWxvYWQpIHsKICBjb25zdCBib2R5ID0gewogICAgYWN0aW9uLAogICAgZGV2aWNlSWQ6IGdldERldmljZUlkKCksCiAgICAuLi5wYXlsb2FkLAogIH07CiAgdHJ5IHsKICAgIGNvbnN0IHJlc3BvbnNlID0gYXdhaXQgZmV0Y2goV0VCSE9PS19VUkwsIHsKICAgICAgbWV0aG9kOiAiUE9TVCIsCiAgICAgIGhlYWRlcnM6IHsgIkNvbnRlbnQtVHlwZSI6ICJhcHBsaWNhdGlvbi9qc29uIiB9LAogICAgICBib2R5OiBKU09OLnN0cmluZ2lmeShib2R5KSwKICAgIH0pOwogICAgY29uc3QgZGF0YSA9IGF3YWl0IHJlc3BvbnNlLmpzb24oKTsKICAgIHJldHVybiB7IHN1Y2Nlc3M6IHRydWUsIGRhdGEgfTsKICB9IGNhdGNoIChlcnIpIHsKICAgIGNvbnNvbGUuZXJyb3IoIldlYmhvb2sgZXJyb3I6IiwgZXJyKTsKICAgIHJldHVybiB7IHN1Y2Nlc3M6IGZhbHNlLCBlcnJvcjogZXJyIH07CiAgfQp9CgovLyBTZXNzaW9uIGhhbmRsaW5nIOKAkyBzdG9yZSBsb2dnZWQgZGV0YWlsIChlbWFpbCkKZnVuY3Rpb24gc2V0U2Vzc2lvbihlbWFpbCkgewogIGxvY2FsU3RvcmFnZS5zZXRJdGVtKCJzZXNzaW9uVXNlciIsIGVtYWlsKTsKfQpmdW5jdGlvbiBjbGVhclNlc3Npb24oKSB7CiAgbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oInNlc3Npb25Vc2VyIik7fQpmdW5jdGlvbiBnZXRzZXNzaW9uKCkgeyByZXR1cm4gbG9jYWxTdG9yYWdlLmdldEl0ZW0oInNlc3Npb25Vc2VyIik7fQp9CgovLyBVSSBoZWxwZXJzCmZ1bmN0aW9uIHNob3dSZXNwb25zZShlbGVtZW50SWQsIG1lc3NhZ2UsIG9rID0gdHJ1ZSkgewogIGNvbnN0IGVsID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoZWxlbWVudElkKTsKICBpZiAoZWwpIHsKICAgIGVsLnRleHRDb250ZW50ID0gbWVzc2FnZTsKICAgIGVsLnN0eWxlLmNvbG9yID0gb2sgPyAiIzAwZmYwMCIgOiAiI2ZmNTU1NSI7CiAgfQp9CmZ1bmN0aW9uIHRvZ2dlbERhc2hib2FyZChzaG93KSB7CiAgY29uc3QgZGFzaCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJkYXNoYm9hcmQiKTsKICBjb25zdCBzZWN0aW9ucyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoInNlY3Rpb24uY2FyZCIpOwogIHNlY3Rpb25zLmZvckVhY2goKHMpID0+IChzLnN0eWxlLmRpc3BsYXkgPSBzaG93ID8gIm5vbmUiIDogImJsb2NrIikpOwogIGRhc2guc3R5bGUuZGlzcGxheSA9IHNob3cgPyAiYmxvY2siIDogIm5vbmUiOwp9CgovLyBSZWdpc3RlciBmb3JtIGhhbmRsaW5nCmRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJyZWdpc3RlckZvcm0iKS5hZGRFdmVudExpc3RlbmVyKCJzdWJtaXQiLCBhc3luYyAoZSkgPT4gewogIGUucHJldmVudERlZmF1bHQoKTsKICBjb25zdCBlbWFpbCA9IGUudGFyZ2V0LmVtYWlsLnZhbHVlLnRyaW0oKTsKICBjb25zdCBwYXNzd29yZCA9IGUudGFyZ2V0LnBhc3N3b3JkLnZhbHVlOwogIGNvbnN0IHJlcyA9IGF3YWl0IHBvc3RUb1dlYmhvb2soInJlZ2lzdGVyIiwgeyBlbWFpbCwgcGFzc3dvcmQgfSk7CiAgaWYgKHJlcy5zdWNjZXNzICYmIHJlcy5kYXRhPy5zdGF0dXMgPT09ICJvayIpIHsKICAgIHNob3dSZXNwb25zZSgiUmVnaXN0cmF0aW9uIHJlc3BvbnNlIiwgIlJhbXVsYXMgaW5hIGZyZWVsaW5hISIpOwogICAgc2V0U2Vzc2lvbihlbWFpbCk7CiAgICB0b2dnbGVkYXNoYm9hcmQodHJ1ZSk7CiAgICBsb2FkUHJvamVjdHMoKTsKICB9IGVsc2UgewogICAgc2hvd1Jlc3BvbnNlKCJyZWdpc3RlckZhaWxlZCIsIHJlcy5kYXRhPy5tZXNzYWdlIHx8IHJlcy5lcnJvci5tZXNzYWdlIHx8ICJTdW5kZWQgYnkgY2F0Y2giKTsKICB9Cn0pOwovLyBMb2dpbiBmb3JtIGhhbmRsaW5nCmRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJsb2dpbkZvcm0iKS5hZGRFdmVudExpc3RlbmVyKCJzdWJtaXQiLCBhc3luYyAoZSkgPT4gewogIGUucHJldmVudERlZmF1bHQoKTsKICBjb25zdCBlbWFpbCA9IGUudGFyZ2V0LmVtYWlsLnZhbHVlLnRyaW0oKTsKICBjb25zdCBwYXNzd29yZCA9IGUudGFyZ2V0LnBhc3N3b3JkLnZhbHVlOwogIGNvbnN0IHJlcyA9IGF3YWl0IHBvc3RUb1dlYmhvb2soImxvZ2luIiwgeyBlbWFpbCwgY2FzZXN0b3J5OiBlbWFpbCB9KTsKICBpZiAocmVzLnN1Y2Nlc3MgJiYgcmVzLmRhdGE/LmRhdGEuc3RhdHVzID09PSAib2siKSB7CiAgICBzZW5kUmVzcG9uc2UoImxvZ2luUmVzcG9uc2UiLCAiU3VjY2Vzc2Z1bGx5IGxvZ2dlZCBpbiIpOwogICAgc2V0U2Vzc2lvbihlbWFpbCk7CiAgICB0b2dnbGVEYXNoYm9hcmQodHJ1ZSk7CiAgICBsb2FkUHJvamVjdHMoKTsKICB9IGVsc2UgewogICAgc2hvd1Jlc3BvbnNlKCJsb2dpblJlY3BvbnNlIiwgcmVzLmRhdGE/Lm1lc3NhZ2UgfHwgcmVzLmVycm9yLndhcnRpbmVtZXNzIHRvby0gKShyZXMuZW5jb2RlU3RyaW5nKSkgfHwgIkVycm9yIik7CiAgfQp9KTsKCi8vIFBsYW4gc2VsZWN0aW9uIGhhbmRsaW5nCmh0dHBzOi8vYXNzZXRzLmV4YW1wbGUuY29tL3BsYW5zL2NvbG9ycy5jc3M8L2h0dHBzPgoKZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInBsYW5zTWFuYWdlciIpLmFkZEV2ZW50TGlzdGVuZXIoImNsaWNrIiwgYXN5bmMgKGIpID0+IHsKICBjb25zdCBwbGFuID0gYnkKIC5kYXRhc2V0LnBsYW5uYW1lOwogIGNvbnN0IGVtYWlsID0gZ2V0U2Vzc2lvbigpOwogIGlmICghZW1haWwpIHsKICAgIHNob3dSZXNwb25zZShcIlBsYW4gU2VsZWN0aW9uXCIsIFwiVGVuYW50IG5vIGVtYWlsIGZvciBzcGVjaWZ5IGVtYWlsXCIsIHRydWUpOwogIH0KICBjb25zdCByZXMgPSBhd2FpdCBwb3N0VG9XZWJob29rKClcInNlbGVjdF9wbGFuXCIsIHsgZW1haWwsIHBsYW4gfSk7CiAgaWYgKHJlcy5zdWNjZXNzICYmIHJlcy5kYXRhPy5zdGF0dXMgPT09IFwidW5kZWZpbmVkXCJcKSB7CiAgICBzaG93UmVzcG9uc2UoXCJQbGFuIHJlc3BvbnNlXCIsIGBcYXI1aGFtZSBhZ3JlcG9zIG5vdCBmb3JjZSwgY2hlY2sgbG9vc3VjIikKICB9IGVsc2UgewogICAgaW5zdGFuY2F0ZVJlc3BvbnNlKHJlcy5kYXRhLnBsYW5zKSB9Cg==
+// WebCraft Pro - Full Frontend Logic
+const WEBHOOK_URL = "https://b519bdd3-f226-4505-97af-912dd1c5bcb4.noclick.run";
+
+function getDeviceId() {
+  let id = localStorage.getItem("deviceId");
+  if (!id) {
+    id = crypto.randomUUID();
+    localStorage.setItem("deviceId", id);
+  }
+  return id;
+}
+
+async function postToWebhook(action, payload = {}) {
+  const body = { action, deviceId: getDeviceId(), ...payload };
+  const response = await fetch(WEBHOOK_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+  const data = await response.json();
+  return { success: response.ok, data };
+}
+
+function showMessage(containerId, message, success = true) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  el.textContent = message;
+  el.style.color = success ? "#00ff00" : "#ff5555";
+}
+
+// ---------- Registration ----------
+document.getElementById("registerForm")?.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const email = e.target.email.value.trim();
+  const password = e.target.password.value;
+  const { success, data } = await postToWebhook("register", { email, password });
+  if (success && data?.status === "ok") {
+    localStorage.setItem("sessionUser", email);
+    showMessage("registerResponse", "✅ Registration successful!");
+    loadDashboard();
+  } else {
+    showMessage("registerResponse", data?.message || "Registration failed", false);
+  }
+});
+
+// ---------- Login ----------
+document.getElementById("loginForm")?.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const email = e.target.email.value.trim();
+  const password = e.target.password.value;
+  const { success, data } = await postToWebhook("login", { email, password });
+  if (success && data?.status === "ok") {
+    localStorage.setItem("sessionUser", email);
+    showMessage("loginResponse", "✅ Logged in!");
+    loadDashboard();
+  } else {
+    showMessage("loginResponse", data?.message || "Login failed", false);
+  }
+});
+
+// ---------- Plan selection ----------
+document.querySelectorAll(".select-plan").forEach((btn) => {
+  btn.addEventListener("click", async () => {
+    const plan = btn.dataset.plan;
+    const { success, data } = await postToWebhook("select_plan", { plan });
+    if (success && data?.status === "ok") {
+      showMessage("planResponse", `Plan "${plan}" selected`);
+    } else {
+      showMessage("planResponse", data?.message || "Failed to select plan", false);
+    }
+  });
+});
+
+// ---------- Dashboard helpers ----------
+function loadDashboard() {
+  const user = localStorage.getItem("sessionUser");
+  if (!user) {
+    document.querySelectorAll(".dashboard-section").forEach((el) => el.classList.add("hidden"));
+    return;
+  }
+  document.querySelectorAll(".dashboard-section").forEach((el) => el.classList.remove("hidden"));
+  document.querySelectorAll(".auth-section").forEach((el) => el.classList.add("hidden"));
+  loadProjects();
+}
+
+// ---------- Project storage ----------
+async function saveProject(name, content) {
+  const { success, data } = await postToWebhook("save_project", { name, content });
+  if (success && data?.status === "ok") {
+    showMessage("projectResponse", `Project "${name}" saved`);
+    loadProjects();
+  } else {
+    showMessage("projectResponse", data?.message || "Save failed", false);
+  }
+}
+
+async function loadProjects() {
+  const listEl = document.getElementById("projectList");
+  if (!listEl) return;
+  listEl.innerHTML = "";
+  const { success, data } = await postToWebhook("load_projects");
+  if (success && Array.isArray(data?.projects)) {
+    data.projects.forEach((proj) => {
+      const li = document.createElement("li");
+      li.textContent = proj.name;
+      li.className = "project-item";
+      li.addEventListener("click", () => {
+        const editor = document.getElementById("projectEditor");
+        if (editor) editor.value = proj.content;
+      });
+      listEl.appendChild(li);
+    });
+  } else {
+    showMessage("projectResponse", "No projects found", false);
+  }
+}
+
+// ---------- Save button in dashboard ----------
+document.getElementById("saveProjectBtn")?.addEventListener("click", () => {
+  const name = document.getElementById("projectName")?.value.trim();
+  const content = document.getElementById("projectEditor")?.value;
+  if (!name) {
+    showMessage("projectResponse", "Enter a project name", false);
+    return;
+  }
+  saveProject(name, content);
+});
+
+// Initialize UI on page load
+window.addEventListener("DOMContentLoaded", () => {
+  loadDashboard();
+});
