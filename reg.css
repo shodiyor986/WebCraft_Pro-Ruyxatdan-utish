@@ -190,9 +190,7 @@ input:focus, textarea:focus, select:focus {
     padding: 1.5rem;
     max-width: 100%;
   }
-  .gradient-btn {
-    width: 100%;
-  }
+  .gradient-btn { width: 100%; }
 }
 
 /* ---------- Utility: Message Box ---------- */
@@ -208,4 +206,3 @@ input:focus, textarea:focus, select:focus {
   z-index: 1000;
   display: none;
 }
-
