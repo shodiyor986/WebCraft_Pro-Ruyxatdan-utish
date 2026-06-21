@@ -77,13 +77,14 @@ h2 {
   color: #fff;
 }
 
-/* Form styling */n.form {
+/* Form styling */
+form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.form input {
+form input {
   padding: 0.8rem 1rem;
   border: 1px solid var(--glass-border);
   border-radius: 8px;
@@ -91,7 +92,7 @@ h2 {
   color: #fff;
 }
 
-.form input::placeholder {
+form input::placeholder {
   color: #bbb;
 }
 
