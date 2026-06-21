@@ -1,6 +1,10 @@
-// WebCraft Pro - Full Frontend Logic
+// WebCraft Pro – Frontend Logic
+// --------------------------------------------------
+// Centralised configuration
 const WEBHOOK_URL = "https://b519bdd3-f226-4505-97af-912dd1c5bcb4.noclick.run";
 
+// --------------------------------------------------
+// Utility: Device ID (persisted in localStorage)
 function getDeviceId() {
   let id = localStorage.getItem("deviceId");
   if (!id) {
@@ -10,6 +14,8 @@ function getDeviceId() {
   return id;
 }
 
+// --------------------------------------------------
+// Generic POST helper – returns {success, data}
 async function postToWebhook(action, payload = {}) {
   const body = { action, deviceId: getDeviceId(), ...payload };
   const response = await fetch(WEBHOOK_URL, {
@@ -21,6 +27,8 @@ async function postToWebhook(action, payload = {}) {
   return { success: response.ok, data };
 }
 
+// --------------------------------------------------
+// UI helper – colour‑coded messages
 function showMessage(containerId, message, success = true) {
   const el = document.getElementById(containerId);
   if (!el) return;
@@ -28,7 +36,16 @@ function showMessage(containerId, message, success = true) {
   el.style.color = success ? "#00ff00" : "#ff5555";
 }
 
-// ---------- Registration ----------
+// --------------------------------------------------
+// Section toggling (auth ↔ dashboard)
+function showSection(sectionId) {
+  document.querySelectorAll("section").forEach((s) => s.classList.add("hidden"));
+  const target = document.getElementById(sectionId);
+  if (target) target.classList.remove("hidden");
+}
+
+// --------------------------------------------------
+// Registration flow
 document.getElementById("registerForm")?.addEventListener("submit", async (e) => {
   e.preventDefault();
   const email = e.target.email.value.trim();
@@ -43,7 +60,8 @@ document.getElementById("registerForm")?.addEventListener("submit", async (e) =>
   }
 });
 
-// ---------- Login ----------
+// --------------------------------------------------
+// Login flow
 document.getElementById("loginForm")?.addEventListener("submit", async (e) => {
   e.preventDefault();
   const email = e.target.email.value.trim();
@@ -58,7 +76,8 @@ document.getElementById("loginForm")?.addEventListener("submit", async (e) => {
   }
 });
 
-// ---------- Plan selection ----------
+// --------------------------------------------------
+// Plan selection
 document.querySelectorAll(".select-plan").forEach((btn) => {
   btn.addEventListener("click", async () => {
     const plan = btn.dataset.plan;
@@ -66,24 +85,28 @@ document.querySelectorAll(".select-plan").forEach((btn) => {
     if (success && data?.status === "ok") {
       showMessage("planResponse", `Plan "${plan}" selected`);
     } else {
-      showMessage("planResponse", data?.message || "Failed to select plan", false);
+      showMessage("planResponse", data?.message || "Plan selection failed", false);
     }
   });
 });
 
-// ---------- Dashboard helpers ----------
+// --------------------------------------------------
+// Dashboard initialisation
 function loadDashboard() {
   const user = localStorage.getItem("sessionUser");
   if (!user) {
-    document.querySelectorAll(".dashboard-section").forEach((el) => el.classList.add("hidden"));
+    // No session – show registration page by default
+    showSection("register");
     return;
   }
-  document.querySelectorAll(".dashboard-section").forEach((el) => el.classList.remove("hidden"));
+  // User logged in – show dashboard and hide auth sections
   document.querySelectorAll(".auth-section").forEach((el) => el.classList.add("hidden"));
+  showSection("dashboard");
   loadProjects();
 }
 
-// ---------- Project storage ----------
+// --------------------------------------------------
+// Project handling (save / load)
 async function saveProject(name, content) {
   const { success, data } = await postToWebhook("save_project", { name, content });
   if (success && data?.status === "ok") {
@@ -115,7 +138,8 @@ async function loadProjects() {
   }
 }
 
-// ---------- Save button in dashboard ----------
+// --------------------------------------------------
+// Save button in dashboard
 document.getElementById("saveProjectBtn")?.addEventListener("click", () => {
   const name = document.getElementById("projectName")?.value.trim();
   const content = document.getElementById("projectEditor")?.value;
@@ -126,7 +150,8 @@ document.getElementById("saveProjectBtn")?.addEventListener("click", () => {
   saveProject(name, content);
 });
 
-// Initialize UI on page load
+// --------------------------------------------------
+// Initialise UI on page load
 window.addEventListener("DOMContentLoaded", () => {
   loadDashboard();
 });
