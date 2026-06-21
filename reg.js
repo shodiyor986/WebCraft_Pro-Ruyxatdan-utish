@@ -1,1 +1,120 @@
-Y29uc3QgV0VCSE9PS19VUkwgPSAiaHR0cHM6Ly9iNTE5YmRkMy1mMjI2LTQ1MDUtOTdhZi05MTJkZDFjNWJjYjQubm9jbGljay5ydW4iOwovLyBFbnN1cmUgYSB1bmlxdWUgdGVjaCBpZGVudGlmaWVyCmlmICghbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ2RldmljZUlkJykpIHsKICBsb2NhbFN0b3JhZ2Uuc2V0SXRlbSgnZGV2aWNlSWQnLCBjcmlwdG8ucmFuZG9tVVVJRCgpKTsKfQoKLyoqCiAqIEhlbHBlciB0byBQT1NUIGRhdGEgdG8gdGhlIHdlYmhvb2suCiAqIEBwYXJh bSB7c3RyaW5nfSBhY3Rpb24gLSBUaGUgYWN0aW9uIG5hbWUgKHJlZ2lzdGVyLCBsb2dpbiwgZXRjLikKICogQHBhcmFtIHtPYmplY3R9IHBheWxvYWQgLSBBZGRpdGlvbmFsIGRhdGEgdG8gc2VuZC4KICogQHJldHVybnMge1Byb21pc2U8b2JqZWN0Pn0gUGFyc2VkIEpTT04gcmVzcG9uc2UuCiAqLwphc3luYyBmdW5jdGlvbiBwb3N0VG9XZWhvb2sobmV3b3JkIGFjdGlvbiwgcGF5bG9hZCA9IHt9KSB7CiAgY29uc3QgYm9keSA9IHsKICAgIGFjdGlvbiwKICAgIGRldmljZUlkOiBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgnZGV2aWNlSWQnKSwKICAgIC4uLnBheWxvYWQsCiAgfTsKICBjb25zdCByZXNwb25zZSA9IGF3YWl0IGZldGNoKFdFQkhPT1JfVVJMLCB7CiAgICBtZXRob2Q6ICJQT1NUIiwKICAgIGhlYWRlcnM6IHsgIkNvbnRlbnQtVHlwZSI6ICJhcHBsaWNhdGlvbi9qc29uIiB9LAogICAgYm9keTogSlNPTi5zdHJpbmdpZnkoYm9keSksCiAgfSk7CiAgaWYgKCFyZXNwb25zZS5vaykgewogICAgdGhyb3cgbmV3IEVycm9yKGBXZWJob29rIGVycm9yOiAke3Jlc3BvbnNlLnN0YXR1c31gKTsKICB9CiAgcmV0dXJuIHJlc3BvbnNlLmpzb24oKTsKfQoKLyoqIERpc3BsYXkgZm9ybWF0dGVkIEpTT04gaW4gYTxwcmU+IGVsZW1lbnQgKi8KZnVuY3Rpb24gc2hvd1Jlc3VsdChlbGVtZW50SWQsIGRhdGEpIHsKICBjb25zdCBlbCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGVsZW1lbnRJZCk7CiAgaWYgKGVsKSB7CiAgICBlbC50ZXh0Q29udGVudCA9IEpTT04uc3RyaW5naWZ5KGRhdGEsIG51bGwsIDIpOwogIH0KfQoKLy8gUmVnaXN0cmF0aW9uIGZvcm0gaGFuZGxpbmcKY29uc3QgcmVnaXN0cmF0aW9uRm9ybSA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCd... (truncated)
+// WebCraft Pro - Frontend Logic
+const WEBHOOK_URL = "https://b519bdd3-f226-4505-97af-912dd1c5bcb4.noclick.run";
+
+// Ensure a unique device identifier
+if (!localStorage.getItem("deviceId")) {
+  const deviceId = crypto.randomUUID();
+  localStorage.setItem("deviceId", deviceId);
+}
+const getDeviceId = () => localStorage.getItem("deviceId");
+
+/**
+ * Generic POST helper to the webhook.
+ * @param {string} action - Action name (register, login, selectPlan, saveProject, loadProject)
+ * @param {object} payload - Additional data to send
+ * @returns {Promise<object>} Parsed JSON response
+ */
+async function postToWebhook(action, payload = {}) {
+  const body = {
+    action,
+    deviceId: getDeviceId(),
+    payload,
+  };
+  const response = await fetch(WEBHOOK_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+  if (!response.ok) {
+    throw new Error(`Webhook error: ${response.status}`);
+  }
+  return response.json();
+}
+
+/** Utility to show formatted JSON in a <pre> element */
+function showResult(elementId, data) {
+  const el = document.getElementById(elementId);
+  if (!el) return;
+  el.textContent = JSON.stringify(data, null, 2);
+}
+
+/** Registration handling */
+const registrationForm = document.getElementById("registrationForm");
+if (registrationForm) {
+  registrationForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const username = document.getElementById("reg-username").value.trim();
+    const password = document.getElementById("reg-password").value;
+    try {
+      const resp = await postToWebhook("register", { username, password });
+      showResult("regResult", resp);
+    } catch (err) {
+      showResult("regResult", { error: err.message });
+    }
+  });
+}
+
+/** Login handling */
+const loginForm = document.getElementById("loginForm");
+if (loginForm) {
+  loginForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const username = document.getElementById("login-username").value.trim();
+    const password = document.getElementById("login-password").value;
+    try {
+      const resp = await postToWebhook("login", { username, password });
+      showResult("loginResult", resp);
+    } catch (err) {
+      showResult("loginResult", { error: err.message });
+    }
+  });
+}
+
+/** Plan selection handling */
+const planCards = document.querySelectorAll(".plan-card");
+planCards.forEach((card) => {
+  card.addEventListener("click", async () => {
+    const plan = card.dataset.plan;
+    try {
+      const resp = await postToWebhook("selectPlan", { plan });
+      showResult("planResult", resp);
+    } catch (err) {
+      showResult("planResult", { error: err.message });
+    }
+  });
+});
+
+/** Dashboard project saving */
+const saveBtn = document.getElementById("saveProjectBtn");
+const loadBtn = document.getElementById("loadProjectBtn");
+const dashboard = document.getElementById("dashboard");
+
+if (saveBtn) {
+  saveBtn.addEventListener("click", async () => {
+    const content = dashboard.innerHTML;
+    try {
+      const resp = await postToWebhook("saveProject", { content });
+      showResult("projectResult", resp);
+    } catch (err) {
+      showResult("projectResult", { error: err.message });
+    }
+  });
+}
+
+if (loadBtn) {
+  loadBtn.addEventListener("click", async () => {
+    try {
+      const resp = await postToWebhook("loadProject");
+      // Expecting {content: "..."}
+      if (resp.content !== undefined) {
+        dashboard.innerHTML = resp.content;
+      }
+      showResult("projectResult", resp);
+    } catch (err) {
+      showResult("projectResult", { error: err.message });
+    }
+  });
+}
+
+// Export for debugging (optional)
+window.WebCraft = { postToWebhook, showResult };
