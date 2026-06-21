@@ -1,65 +1,67 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WebCraft Pro – Ro'yxatdan o'tish, Kirish, Tarif rejalari va Dashboard</title>
-<link rel="stylesheet" href="reg.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WebCraft Pro – Ro'yxatdan o'tish, Kirish, Tarif rejalari va Dashboard</title>
+  <link rel="stylesheet" href="reg.css" />
 </head>
 <body>
-<div class="container">
-  <section id="auth-section" class="auth-section">
-    <div class="tabs">
-      <button class="tab-btn active" data-target="register-form">Ro'yxatdan o'tish</button>
-      <button class="tab-btn" data-target="login-form">Kirish</button>
-    </div>
-    <form id="register-form" class="auth-form">
-      <h2>Ro'yxatdan o'tish</h2>
-      <input type="text" name="username" placeholder="Foydalanuvchi nomi" required>
-      <input type="password" name="password" placeholder="Parol" required>
-      <button type="submit" class="gradient-btn">Ro'yxatdan o'tish</button>
-    </form>
-    <form id="login-form" class="auth-form" hidden>
-      <h2>Kirish</h2>
-      <input type="text" name="username" placeholder="Foydalanuvchi nomi" required>
-      <input type="password" name="password" placeholder="Parol" required>
-      <button type="submit" class="gradient-btn">Kirish</button>
-    </form>
-  </section>
-
-  <section id="dashboard" class="dashboard" hidden>
-    <header class="dashboard-header">
-      <h2 id="welcome">Xush kelibsiz</h2>
-      <button id="logout_btn" class="gradient-btn">Chiqish</button>
-    </header>
-
-    <article class="plan-section">
-      <h3>Tarif rejalari</h3>
-      <form id="plan-form" class="plan-form">
-        <select name="plan" required>
-          <option value="" disabled selected>Rejani tanlang</option>
-          <option value="free">Free</option>
-          <option value="pro">Pro</option>
-          <option value="enterprise">Enterprise</option>
-        </select>
-        <button type="submit" class="gradient-btn">Tanlash</button>
+  <div class="container">
+    <!-- Authentication Section -->
+    <section id="auth-section" class="auth-section">
+      <div class="tabs">
+        <button class="tab-btn active" data-target="register-form">Ro'yxatdan o'tish</button>
+        <button class="tab-btn" data-target="login-form">Kirish</button>
+      </div>
+      <form id="register-form" class="auth-form">
+        <h2>Ro'yxatdan o'tish</h2>
+        <input type="text" name="username" placeholder="Foydalanuvchi nomi" required />
+        <input type="password" name="password" placeholder="Parol" required />
+        <button type="submit" class="gradient-btn">Ro'yxatdan o'tish</button>
       </form>
-    </article>
+      <form id="login-form" class="auth-form" hidden>
+        <h2>Kirish</h2>
+        <input type="text" name="username" placeholder="Foydalanuvchi nomi" required />
+        <input type="password" name="password" placeholder="Parol" required />
+        <button type="submit" class="gradient-btn">Kirish</button>
+      </form>
+    </section>
 
-    <article class="project-section">
-      <h3>Loyihalar</h3>
-      <form id="save_project_form" class="project-form">
-        <input type="text" name="project_name" placeholder="Loyiha nomi" required>
-        <textarea name="project_data" placeholder="Loyiha ma'lumotlari..." rows="4" required></textarea>
-        <button type="submit" class="gradient-btn">Saqlash</button>
-      </form>
-      <form id="load_project_form" class="project-form" style="margin-top:1rem;">
-        <input type="text" name="project_name" placeholder="Loyiha nomi" required>
-        <button type="submit" class="gradient-btn">Yuklash</button>
-      </form>
-    </article>
-  </section>
-</div>
-<script src="reg.js"></script>
+    <!-- Dashboard Section (hidden until login) -->
+    <section id="dashboard" class="dashboard" hidden>
+      <header class="dashboard-header">
+        <h2 id="welcome">Xush kelibsiz</h2>
+        <button id="logout_btn" class="gradient-btn">Chiqish</button>
+      </header>
+
+      <article class="plan-section">
+        <h3>Tarif rejalari</h3>
+        <form id="plan-form" class="plan-form">
+          <select name="plan" required>
+            <option value="" disabled selected>Rejani tanlang</option>
+            <option value="free">Free</option>
+            <option value="pro">Pro</option>
+            <option value="enterprise">Enterprise</option>
+          </select>
+          <button type="submit" class="gradient-btn">Tanlash</button>
+        </form>
+      </article>
+
+      <article class="project-section">
+        <h3>Loyihalar</h3>
+        <form id="save_project_form" class="project-form">
+          <input type="text" name="project_name" placeholder="Loyiha nomi" required />
+          <textarea name="project_data" placeholder="Loyiha ma'lumotlari..." rows="4" required></textarea>
+          <button type="submit" class="gradient-btn">Saqlash</button>
+        </form>
+        <form id="load_project_form" class="project-form" style="margin-top:1rem;">
+          <input type="text" name="project_name" placeholder="Loyiha nomi" required />
+          <button type="submit" class="gradient-btn">Yuklash</button>
+        </form>
+      </article>
+    </section>
+  </div>
+  <script src="reg.js"></script>
 </body>
 </html>
