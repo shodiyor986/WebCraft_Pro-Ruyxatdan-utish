@@ -1,1 +1,158 @@
-Ly8gcmVnLmpzIC0gV2ViQ3JhZnQgUHJvIEZyb250ZW5kIExvZ2ljCi8vIFVwZGF0ZWQgb24gMjAyNi0wNi0yMQoKY29uc3QgV0VCSE9PS19VUkwID0gImh0dHBzOi8vYjUxOWJkZDMtZjIyNi00NTA1LTk3YWYtOTEyZGQxYzViY2Iubm9jbGljay5ydW4iOwoKLy8gLS0tLS0tLS0tLSBVdGlsaXR5IEZ1bmN0aW9ucyAtLS0tLS0tLS0tCmxldCBnZXRkZXZpY2VJZCA9ICgpID0+IHsKICBsZXQgaWQgPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgiZGV2aWNlSWQiKTsKICBpZiAoIWlkKSB7CiAgICBpZCA9IGNyeXB0by5yYW5kb21VVUlkKCk7CiAgICBsb2NhbFN0b3JhZ2Uuc2V0SXRlbSgiZGV2aWNlSWQiLCBpZCk7CiAgfQogIHJldHVybiBpZDsKfQoKYXN5bmMgZnVuY3Rpb24gcG9zdFRvV2ViaG9vayhhY3Rpb24sIHBheWxvYWQpIHsKICBjb25zdCBib2R5ID0geyBkZXZpY2VJZDogZ2V0ZGV2aWNlSWQoKSwgYWN0aW9uLC4uLnBheWxvYWQgfTsKICB0cnkgewogICAgY29uc3QgcmVzID0gYXdhaXQgZmV0Y2goV0VCSE9PS19VVIwLCAgewogICAgICBtZXRob2Q6ICJQT1NUIiwKICAgICAgaGVhZGVyczogeyAiQ29udGVudC1UeXBlIjogImFwcGxpY2F0aW9uL2pzb24iIH0sCiAgICAgIGJvZHk6IEpTT04uc3RyaW5naWZ5KGJvZHkpLAogICAgfSk7CiAgICBjb25zdCBqc29uID0gYXdhaXQgcmVzLmpzb24oKTsKICAgIHJldHVybiB7IHN1Y2Nlc3M6IHRydWUsIGRhdGE6IGpzb24gfTsKICB9IGNhdGNoIChlKSB7CiAgICBjb25zb2xlLmVycm9yKCJXZWJob29rIGVycm9yOiIsIGUpOwogICAgcmV0dXJuIHsgc3VjY2VzczogZmFsc2UsIGVycm9yOiBlIH07CiAgfQp9CgpmdW5jdGlvbiBzZXRzZXNzaW9uKGVtYWlsKSB7CiAgbG9jYWxTdG9yYWdlLnNldEl0ZW0oInNlc3Npb25Vc2VyIiwgZW1haWwpOwogIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJ1c2VyRW1haWwiKS50ZXh0Q29udGVudCA9IGVtYWlsOwogIHRvZ2dlbFNlY3Rpb25zKHsgZGFzaGJvYXJkOiB0cnVlIH0pOwp9CgpmdW5jdGlvbiBjbGVhc1Nlc3Npb24oKSB7CiAgbG9jYWxTdG9yYWdlLnJlbW92ZUltZW0oInNlc3Npb25Vc2VyIik7CiAgdG9nZ2xlU2VjdGlvbnMoe3Jlbm8gO3Jldm9yc2U6IGZhbHNlfSk7fQoKZnVuY3Rpb24gdG9nZ2xlU2VjdGlvbnMobmV3U2V0KSB7CiAgY29uc3QgZGlkID0gKG5ldyBTZXQ8U2V0Pik7CiAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoIm5ld0lkIikucGFyZW50Tm9kZS5hcHBlbmRDaGlsZChkaWQpOwogIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKG5ld0lkKS5yZW1vdmUoKTsKfQoKLy8gLS0tLS0tLS0tLSBQcm9qZWN0IEhhbmRsaW5nIC0tLS0tLS0tLS0KZnVuY3Rpb24gbG9hZFByb2plY3RzKCkgewogIGNvbnN0IGVtYWlsID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oInNlc3Npb25Vc2VyIik7CiAgY29uc3QgcmVzdWx0ID0gYXdhaXQgcG9zdFRvV2ViaG9vaygibGlzdF9wcm9qZWN0cyIsIHsgZW1haWwsIGVtYWlsOiBlbWFpbCB9KTsKICBjb25zdCBsaXN0RWwgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgicHJvamVjdExpc3QiKTsKICBsaXN0RWwuaW5uZXJIVE1MID0gIiI7CiAgaWYgKHJlc3VsdC5zdWNjZXNzICYmIEFycmF5LmlzQXJyYXkocmVzdWx0LmRhdGE/LnByb2plY3RzKSkgewogICAgcmVzdWx0LmRhdGEucHJvamVjdHMuZm9yRWFjaCgocCkgPT4gewogICAgICBjb25zdCBkaXYgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCI8ZGl2Iik7CiAgICAgIGRpdi5jbGFzc05hbWUgPSAicHJvamVjdC1pdGVtIGNhcmQgZ2xhc3MiOwogICAgICBkdi5pbm5lckhUTUwgPSBgPGg0PiR7cC50aXRsZX08L2g0PjxwPiR7cC5jb250ZW50fTwvcD5gOwogICAgICBsaXN0RWwuYXBwZW5kQ2hpbGQoZGl2KTsKICAgIH0pOwogIH0gZWxzZSB7CiAgICBsaXN0RWwudGV4dENvbnRlbnQgPSAiTG95aWhhbGFyIHRvcGlsbWFkaS4iOwogIH0KfQoKLy8gLS0tLS0tLS0tLSBQbGFjZSBFZmZlY3QgKG9wdGlvbmFsKSAtLS0tLS0tLS0tCgpmdW5jdGlvbiBjcmVhdGVQYXJ0aWNsZXMobmV3U2l6ZSA9IDMwKSB7CiAgZm9yIChsZXQgaSA9IDA7IGkgPHJlc3QuY29udGVudC5sZW5ndGg7IGkrKykgewogICAgY29uc3QgcCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoImRpdikiOwogICAgcC5jbGFzc05hbWUgPSAicGFydGljbGUgY2FyZCBwYXJ0aWNsZSI7CiAgICBwLnN0eWxlLmxlZnQgPSBNYXRoLnJhbmRvbSgpICogMTAwICsgInZ3IjsKICAgIHBzdHlsZS50b3AgPSBNYXRoLnJhbmRvbSgpICogMTAwICsgInZpIjsKICAgIGRvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQocCk7CiAgIC8vIFJlbW92ZSBhZnRlciBhbmltYXRpb24KICAgc2V0VGltZW91dCgoKSA9PiBwLnJlbW92ZSgpLCAxMjAwMCk7CiAgfQp9CgovLyAtLS0tLS0tLS0tIEV2ZW50IExpc3RlbmVycyAtLS0tLS0tLS0tCgpkb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKCJEb0NvbnRlbnRMYW5kaW5nIiwgKCkgPT4gewogIGluaXRzZXNzaW9uKCk7CiAgY3JlYXRlUGFydGljbGVzKCk7CiAgY29uc3QgcmVnaXN0ZXJGb3JtID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInJlZ2lzdGVyRm9ybSIpOwogIGNvbnN0IGxvZ2luRm9ybSA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJsb2dpbkZvcm0iKTsKICBjb25zdCBwbGFuQnV0dG9ucyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoIi5zZWxlY3QtcGxhbiIpOwogIGNvbnN0IHByb2plY3RGb3JtID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInByb2plY3RGb3JtIik7CiAgY29uc3QgbG9nb3V0QnRuID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoImxvZ291dEJ0biIpOwoKICAvLyBSZWdpc3RlciAKIHJlZ2lzdGVyRm9ybS5hZGRFdmVudExpc3RlbmVyKCJzdWJtaXQiLCBhc3luYyAoZSkgPT4gewogICAgZSBwcmV2ZW50RGVmYXVsdCgpOwogICAgY29uc3Qge30gPSBPYmplY3QuZnJvbUVudHJpZXMobyBGb3JtRGF0YShyZWdpc3RlckZvcm0pKTsKICAgIGNvbnN0IHJlc3MgPSBhd2FpdCBwb3N0VG9XZWJob29rKCJyZWdpc3RlciIsIHsgZW1haWwsIHBhc3N3b3JkOiBwYXNzd29yZC5wYXNzd29yZCB9KTsKICAgIGNvbnN0IG91dCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJyZWdpc3RlclJlc3BvbnNlIik7CiAgIGlmIChyZXMuc3VjY2VzcyAmJiByZXMudGFyZ2V0LmRhdGEgJiYgcmVzLmRhdGEuc3RhdHVzID09PSAib2siKSB7CiAgICAgIG91dC50ZXh0Q29udGVudCA9ICJSw6l5YW50IG11dmFmZmFxaXlhbGl0aSBvY2hhbm5hIjsKICAgICAgc2V0U2Vzc2lvbihlLmVtYWlsKTsKICAgIH0gZWxzZSB7CiAgICAgIG91dC50ZXh0Q29udGVudCA9ICJYYXRvbGlrOiAiICsgKHJlcy5kYXRhPy5tZXNzYWdlIHx8IHJlcy5lcnJvcik7CiAgICB9CiAgfSk7CgogIC8vIExvZ2luCiBsb2dpbkZvcm0/JGFkZEV2ZW50TGlzdGVuZXIoInN1Ym1pdCIsIGFzeW5jIChlKSA9PiB7CiAgICBlLnByZXZlbnREZWZhdWx0KCk7CiAgICBjb25zdCB7IGVtYWlsLCBwYXNzd29yZCB9ID0gT2JqZWN0LmZyb21FbnRyaWVzKG5ldyBGb3JtRGF0YShsb2dpbkZvcm0pKTsKICAgIGNvbnN0IHJlcyA9IGF3YWl0IHBvc3RUb1dlYmhvb2soImxvZ2luIiwgeyBlbWFpbCwgcGFzc3dvcmQgfSk7CiAgICBjb25zdCBvdXQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgibG9naW5SZXNwb25zZSIpOwogICAgaWYgKHJlcy5zdWNjZXNzICYmIHJlcy5kYXRhPy5zdGF0dXMgPT09ICJvayIpIHsKICAgICAgb3V0LnRleHRDb250ZW50ID0gIktpcmlzaCBtdXZhZmZhYXlhbGl0aSEiOwogICAgICAgc2V0U2Vzc2lvbihlLmVtYWlsKTsKICAgIH0gZWxzZSB7CiAgICAgIG91dC50ZXh0Q29udGVudCA9ICJYYXRvbGlrOiAiICsgKHJlcy5kYXRhPy5tZXNzYWdlIHx8IHJlcy5lcnJvcik7CiAgICB9CiAgfSk7CgogIC8vIFBsYW4gc2VsZWN0aW9uCiBwYW5CbXR0b25zLmZvckVhY2goKGJ0bikgPT4gewogICAgYnRuLmFkZEV2ZW50TGlzdGVuZXIoImNsaWNrIiwgYXN5bmMgKCkgPT4gewogICAgICBjb25zdCBwbGFuID0gYnRuLmRhdGFzZXQucGxhbnM7CiAgICAgIGNvbnN0IGVtYWlsID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oInNlc3Npb25Vc2VyIik7CiAgICAgIGNvbnN0IHJlc3MgPSBhd2FpdCBwb3N0VG9XZWhvb2soInNlbGVjdF9wbGFuIiwgeyBlbWFpbCwgcGxhbiB9KTsKICAgICAgY29uc3Qgb3V0ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInBsYW5SZXNwb25zZSIpOwogICAgICBpZiAoKHJlcy5zdWNjZXNzICYmIHJlcy5kYXRhPy5zdGF0dXMgPT09ICJvayIpIHsKICAgICAgICBvdXQudGV4dENvbnRlbnQgPSBgUGxhbiAiJG5ldCIgdGFsYW5zaGFyZC5gOwogICAgICB9IGVsc2UgewogICAgICAgIG91dC50ZXh0Q29udGVudCA9ICJYYXRvbGlrOiAiICsgKHJlcy5kYXRhPy5tZXNzYWdlIHx8IHJlcy5lcnJvcik7CiAgICB9CiAgfSk7Cn0KCi8vIC8vIFNhdmUgcHJvamVjdAogIHByb2plY3RGb3JtLmFkZEV2ZW50TGlzdGVuZXIoInN1Ym1pdCIsIGFzeW5jIChlKSA9PiB7CiAgICBlLnByZXZlbnREZWZhdWx0KCk7CiAgICBjb25zdCB7IHRpdGxlLCBjb250ZW50IH0gPSBPYmplY3QuZnJvbUVudHJpZXMobmV3IEZvcm1EYXRhKHByb2plY3RGb3JtKSk7CiAgICBjb25zdCBlbWFpbCA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKCJzZXNzaW9uVXNlciIpOwogICAgaWYgKGVtYWlsKSBzZXRTZXNzaW9uKGVtYWlsKTsKICAgIGNvbnN0IHJlcyA9IGF3YWl0IHBvc3RUb1dlYmhvb2soInNhdmVfcHJvamVjdCIsIHsgZW1haWwsIHRpdGxlLCBjb250ZW50IH0pOwogICAgY29uc3Qgb3V0ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInByb2plY3RSZXNwb25zZSIpOwogICAgaWYgKHJlcy5zdWNjZXNzICYmIHJlcy5kYXRhPy5zdGF0dXMgPT09ICJvayIpIHsKICAgICAgb3V0LnRleHRDb250ZW50ID0gIkxveWloYSBzYXFsYW5kaS4iOwogICAgICBwcm9qZWN0Rm9ybS5yZXNldCgpOwogICAgICBsb2FkUHJvamVjdHMoKTsKICAgIH0gZWxzZSB7CiAgICAgIG91dC50ZXh0Q29udGVudCA9ICJYYXRvbGlrOiAiICsgKHJlcy5kYXRhPy5tZXNzYWdlIHx8IHJlcy5lcnJvcik7CiAgICB9CiAgfSk7CgogIC8vIExvZ291dAogIGxvZ291dEJ0bj8uYWRkRXZlbnRMaXN0ZW5lcigiY2xpY2siLCBjbGVhclNlc3Npb24pOwoKICBpZiAobG9jYWxTdG9yYWdlLmdldEl0ZW0oInNlc3Npb25Vc2VyIikpIGxvYWRQcm9qZWN0cygpOwp9KTsK
+// WebCraft Pro - Full Frontend Logic
+// Updated on 2026-06-21
+
+const WEBHOOK_URL = "https://b519bdd3-f226-4505-97af-912dd1c5bcb4.noclick.run";
+
+// Utility: generate or retrieve a persistent device ID
+function getDeviceId() {
+  let id = localStorage.getItem("deviceId");
+  if (!id) {
+    // Simple random UUID (not cryptographically strong but sufficient for demo)
+    id = crypto.randomUUID();
+    localStorage.setItem("deviceId", id);
+  }
+  return id;
+}
+
+// Generic POST helper to the webhook
+async function postToWebhook(action, payload) {
+  const body = {
+    action,
+    deviceId: getDeviceId(),
+    ...payload,
+  };
+  try {
+    const response = await fetch(WEBHOOK_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+    const data = await response.json();
+    return { success: true, data };
+  } catch (err) {
+    console.error("Webhook error:", err);
+    return { success: false, error: err };
+  }
+}
+
+// Session handling – store logged‑in user email
+function setSession(email) {
+  localStorage.setItem("sessionUser", email);
+}
+function clearSession() {
+  localStorage.removeItem("sessionUser");
+}
+function getSession() {
+  return localStorage.getItem("sessionUser");
+}
+
+// UI helpers
+function showResponse(elementId, message, ok = true) {
+  const el = document.getElementById(elementId);
+  if (el) {
+    el.textContent = message;
+    el.style.color = ok ? "#00ff00" : "#ff5555";
+  }
+}
+function toggleDashboard(show) {
+  const dash = document.getElementById("dashboard");
+  const sections = document.querySelectorAll("section.card");
+  sections.forEach((s) => (s.style.display = show ? "none" : "block"));
+  dash.style.display = show ? "block" : "none";
+}
+
+// Register form handling
+document.getElementById("registerForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const email = e.target.email.value.trim();
+  const password = e.target.password.value;
+  const res = await postToWebhook("register", { email, password });
+  if (res.success && res.data?.status === "ok") {
+    showResponse("registerResponse", "Ro‘yxatdan o‘tish muvaffaqiyatli!");
+    setSession(email);
+    toggleDashboard(true);
+    loadProjects();
+  } else {
+    showResponse(
+      "registerResponse",
+      res.data?.message || res.error?.message || "Xatolik",
+      false
+    );
+  }
+});
+
+// Login form handling
+document.getElementById("loginForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const email = e.target.email.value.trim();
+  const password = e.target.password.value;
+  const res = await postToWebhook("login", { email, password });
+  if (res.success && res.data?.status === "ok") {
+    showResponse("loginResponse", "Kirish muvaffaqiyatli!");
+    setSession(email);
+    toggleDashboard(true);
+    loadProjects();
+  } else {
+    showResponse(
+      "loginResponse",
+      res.data?.message || res.error?.message || "Xatolik",
+      false
+    );
+  }
+});
+
+// Plan selection handling
+document.querySelectorAll(".select-plan").forEach((btn) => {
+  btn.addEventListener("click", async () => {
+    const plan = btn.dataset.plan;
+    const email = getSession();
+    if (!email) {
+      showResponse("planResponse", "Avvalo kirish qiling", false);
+      return;
+    }
+    const res = await postToWebhook("select_plan", { email, plan });
+    if (res.success && res.data?.status === "ok") {
+      showResponse("planResponse", `Reja ${plan} tanlandi`);
+    } else {
+      showResponse(
+        "planResponse",
+        res.data?.message || res.error?.message || "Xatolik",
+        false
+      );
+    }
+  });
+});
+
+// Project handling – simple in‑memory storage via webhook
+async function loadProjects() {
+  const email = getSession();
+  if (!email) return;
+  const res = await postToWebhook("list_projects", { email });
+  const container = document.getElementById("projectList");
+  container.innerHTML = "";
+  if (res.success && Array.isArray(res.data?.projects)) {
+    res.data.projects.forEach((proj) => {
+      const div = document.createElement("div");
+      div.className = "project-item";
+      div.textContent = proj.name;
+      container.appendChild(div);
+    });
+  } else {
+    container.textContent = "Loyiha yo‘q";
+  }
+}
+
+// Logout handling
+document.getElementById("logoutBtn").addEventListener("click", () => {
+  clearSession();
+  toggleDashboard(false);
+});
+
+// On page load – check for existing session
+window.addEventListener("DOMContentLoaded", () => {
+  const user = getSession();
+  if (user) {
+    toggleDashboard(true);
+    loadProjects();
+  }
+});
