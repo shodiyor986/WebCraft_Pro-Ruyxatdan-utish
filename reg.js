@@ -9,14 +9,14 @@
     );
   };
 
-  // Device ID
+  // Device ID – persistent per browser
   let deviceId = localStorage.getItem("wc_device_id");
   if (!deviceId) {
     deviceId = genUUID();
     localStorage.setItem("wc_device_id", deviceId);
   }
 
-  // Session handling
+  // Session handling – stored in localStorage
   const setSession = (user) => {
     localStorage.setItem("wc_session", JSON.stringify(user));
     updateUI(user);
@@ -30,22 +30,22 @@
     updateUI(null);
   };
 
-  // UI updates based on session
+  // UI updates based on authentication state
   const updateUI = (user) => {
-    const dashboard = document.getElementById("dashboard");
-    const authSection = document.getElementById("auth-section");
+    const dash = document.getElementById("dashboard");
+    const auth = document.getElementById("auth-section");
     if (user) {
-      if (dashboard) dashboard.style.display = "block";
-      if (authSection) authSection.style.display = "none";
+      dash && (dash.style.display = "block");
+      auth && (auth.style.display = "none");
       const welcome = document.getElementById("welcome");
-      if (welcome) welcome.textContent = `Welcome, ${user.username}`;
+      welcome && (welcome.textContent = `Welcome, ${user.username}`);
     } else {
-      if (dashboard) dashboard.style.display = "none";
-      if (authSection) authSection.style.display = "block";
+      dash && (dash.style.display = "none");
+      auth && (auth.style.display = "block");
     }
   };
 
-  // Generic request sender
+  // Generic sender – POST to the webhook with deviceId
   const send = async (action, payload) => {
     const body = { action, deviceId, ...payload };
     try {
@@ -60,14 +60,13 @@
     }
   };
 
-  // Form handlers
+  // ==== Form handlers ==== //
   const handleRegister = async (e) => {
     e.preventDefault();
-    const username = e.target.username.value.trim();
-    const password = e.target.password.value;
-    const result = await send("register", { username, password });
+    const { username, password } = e.target;
+    const result = await send("register", { username: username.value.trim(), password: password.value });
     if (result.success) {
-      setSession({ username, token: result.token });
+      setSession({ username: username.value.trim(), token: result.token });
       alert("Registration successful!");
     } else {
       alert(result.message || "Registration failed");
@@ -76,11 +75,10 @@
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    const username = e.target.username.value.trim();
-    const password = e.target.password.value;
-    const result = await send("login", { username, password });
+    const { username, password } = e.target;
+    const result = await send("login", { username: username.value.trim(), password: password.value });
     if (result.success) {
-      setSession({ username, token: result.token });
+      setSession({ username: username.value.trim(), token: result.token });
       alert("Login successful!");
     } else {
       alert(result.message || "Login failed");
@@ -90,57 +88,43 @@
   const handlePlan = async (e) => {
     e.preventDefault();
     const plan = e.target.plan.value;
-    const session = getSession();
-    if (!session) { alert("Please login first"); return; }
-    const result = await send("choose_plan", { plan, token: session.token });
-    if (result.success) {
-      alert(`Plan ${plan} selected`);
-    } else {
-      alert(result.message || "Failed to select plan");
-    }
+    const sess = getSession();
+    if (!sess) return alert("Please log in first");
+    const result = await send("choose_plan", { plan, token: sess.token });
+    alert(result.message || (result.success ? `Plan ${plan} selected` : "Plan selection failed"));
   };
 
   const handleSaveProject = async (e) => {
     e.preventDefault();
-    const name = e.target.project_name.value.trim();
-    const data = e.target.project_data.value;
-    const session = getSession();
-    if (!session) { alert("Login required"); return; }
-    const result = await send("save_project", { name, data, token: session.token });
+    const { project_name, project_data } = e.target;
+    const sess = getSession();
+    if (!sess) return alert("Login required");
+    const result = await send("save_project", { name: project_name.value.trim(), data: project_data.value, token: sess.token });
     alert(result.message || "Project saved");
   };
 
   const handleLoadProject = async (e) => {
     e.preventDefault();
-    const name = e.target.project_name.value.trim();
-    const session = getSession();
-    if (!session) { alert("Login required"); return; }
-    const result = await send("load_project", { name, token: session.token });
+    const { project_name } = e.target;
+    const sess = getSession();
+    if (!sess) return alert("Login required");
+    const result = await send("load_project", { name: project_name.value.trim(), token: sess.token });
     if (result.success) {
-      const textarea = document.getElementById("project_data");
-      if (textarea) textarea.value = result.data;
-    } else {
-      alert(result.message || "Failed to load project");
+      const area = document.getElementById("project_data");
+      if (area) area.value = result.data;
     }
+    alert(result.message || (result.success ? "Project loaded" : "Load failed"));
   };
 
-  // Attach listeners after DOM ready
+  // ==== Event listeners ==== //
   document.addEventListener("DOMContentLoaded", () => {
-    const regForm = document.getElementById("register_form");
-    const loginForm = document.getElementById("login_form");
-    const planForm = document.getElementById("plan_form");
-    const saveForm = document.getElementById("save_project_form");
-    const loadForm = document.getElementById("load_project_form");
-    const logoutBtn = document.getElementById("logout_btn");
-
-    if (regForm) regForm.addEventListener("submit", handleRegister);
-    if (loginForm) loginForm.addEventListener("submit", handleLogin);
-    if (planForm) planForm.addEventListener("submit", handlePlan);
-    if (saveForm) saveForm.addEventListener("submit", handleSaveProject);
-    if (loadForm) loadForm.addEventListener("submit", handleLoadProject);
-    if (logoutBtn) logoutBtn.addEventListener("click", clearSession);
-
-    // Initial UI state
+    document.getElementById("register_form")?.addEventListener("submit", handleRegister);
+    document.getElementById("login_form")?.addEventListener("submit", handleLogin);
+    document.getElementById("plan_form")?.addEventListener("submit", handlePlan);
+    document.getElementById("save_project_form")?.addEventListener("submit", handleSaveProject);
+    document.getElementById("load_project_form")?.addEventListener("submit", handleLoadProject);
+    document.getElementById("logout_btn")?.addEventListener("click", clearSession);
+    // Initialise UI based on stored session
     updateUI(getSession());
   });
 })();
