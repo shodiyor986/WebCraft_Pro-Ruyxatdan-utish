@@ -126,4 +126,20 @@ function toast(message, type = "info") {
   setTimeout(() => div.remove(), 3000);
 }
 
+// Particle generation for neon effect
+function createParticle() {
+  const p = document.createElement("div");
+  p.className = "particle";
+  const size = Math.random() * 8 + 4; // 4-12px
+  p.style.width = `${size}px`;
+  p.style.height = `${size}px`;
+  p.style.left = `${Math.random() * 100}%`;
+  p.style.top = `${Math.random() * 100}%`;
+  document.body.appendChild(p);
+  // Remove after animation duration
+  setTimeout(() => p.remove(), 8000);
+}
+// Spawn particles continuously
+setInterval(createParticle, 300);
+
 // End of reg.js
