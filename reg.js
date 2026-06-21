@@ -9,7 +9,6 @@ const WEBHOOK_URL = "https://b519bdd3-f226-4505-97af-912dd1c5bcb4.noclick.run";
 function getDeviceId() {
   let id = localStorage.getItem("deviceId");
   if (!id) {
-    // Use Crypto API if available, otherwise fallback to random string
     if (crypto && crypto.randomUUID) {
       id = crypto.randomUUID();
     } else {
@@ -25,29 +24,21 @@ function getDeviceId() {
  * Returns parsed JSON response.
  */
 async function postToWebhook(action, payload = {}) {
-  const body = {
-    action,
-    deviceId: getDeviceId(),
-    ...payload,
-  };
+  const body = { action, deviceId: getDeviceId(), ...payload };
   try {
     const response = await fetch(WEBHOOK_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     });
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
-    }
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return await response.json();
   } catch (err) {
     return { error: true, message: err.message };
   }
 }
 
-/**
- * Utility to pretty‑print result objects into a target element.
- */
+/** Utility to pretty‑print result objects into a target element. */
 function showResult(targetId, data) {
   const el = document.getElementById(targetId);
   if (!el) return;
@@ -63,9 +54,7 @@ if (registerForm) {
     const username = registerForm.username.value.trim();
     const password = registerForm.password.value;
     const result = await postToWebhook("register", { username, password });
-    if (result?.token) {
-      localStorage.setItem("sessionToken", result.token);
-    }
+    if (result?.token) localStorage.setItem("sessionToken", result.token);
     showResult("registerResult", result);
   });
 }
@@ -79,9 +68,7 @@ if (loginForm) {
     const username = loginForm.username.value.trim();
     const password = loginForm.password.value;
     const result = await postToWebhook("login", { username, password });
-    if (result?.token) {
-      localStorage.setItem("sessionToken", result.token);
-    }
+    if (result?.token) localStorage.setItem("sessionToken", result.token);
     showResult("loginResult", result);
   });
 }
@@ -104,7 +91,6 @@ const loadBtn = document.getElementById("loadProjectBtn");
 
 if (saveBtn) {
   saveBtn.addEventListener("click", async () => {
-    // Example payload – in a real app you would collect actual project data
     const projectData = {
       timestamp: new Date().toISOString(),
       dummy: "example project data",
@@ -117,14 +103,11 @@ if (saveBtn) {
 if (loadBtn) {
   loadBtn.addEventListener("click", async () => {
     const result = await postToWebhook("loadProject", {});
-    // Here you could populate UI with result.projectData if needed
     showResult("dashboardResult", result);
   });
 }
 
-/** ------------------------------------------------------------------ */
 /** Initialise – ensure deviceId exists */
 getDeviceId();
 
-// Export functions for possible external testing (optional)
 export { getDeviceId, postToWebhook, showResult };
