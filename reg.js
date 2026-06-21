@@ -1,1 +1,108 @@
-Ly8gV2ViQ3JhZnQgUHJvIC0gRnJvbnRlbmQgTG9naWMgYW5kIEphdmFTY3JpcHQgTG9naW4gYW5kIFJlZ2lzdHJhdGlvbiBtYXJrZXJzCgpjb25zdCBXRUJIT09LX1VSTCA9ICJodHRwczovL2I1MTliZGQzLWYyMjYtNDUwNS05N2FmLTkxMmRkMWM1YmNiNC5ub2NsaWNrLnJ1biI7Cgpjb25zdCBkZXZpY2VJZFN0b3JlS2V5ID0gIndlYl9jcmFmdF9kZXZpY2VfaWQiOwovLyBFbmNvcHl0aW9uIG9mIGRlZmluaW5nIGFuZCBnZXR0aW5nIGEgdW5pcXVlIGRldmljZSBJRCBmb3Igc2Vzc2lvbiB0cmFja2luZyB1c2luZyBsb2NhbFN0b3JhZ2UuCi8vIFdlIGN1cnJlbnRseSB1c2UgdGhpcyBzdG9yZSB0byBhdm9pZCBjcmVhdGluZyB1c2VycyB3aXRob3V0IGV4cHJlc3NpbmcgdGhlaXIgcHJpdmF0ZSBJRC4KY29uc3QgZ2V0RGV2aWNlSWQgPSAoKSA9PiBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgiZGV2aWNlSWQiKSB8fCBsb2NhbFN0b3JhZ2UuZ2V0SXRlbShkZXZpY2VJZFN0b3JlS2V5KTsKCi8vIFVuaXF1ZSBkZXZpY2UgSUQgZ2VuZXJhdGlvbiB3aGVuIG5lY2Vzc2FyeS4KY29uc3QgZ2VuZXJhdGVVdWlkID0gKCkgPT4gY3J5cHRvLnJhbmRvbVVVSUQoKTsKaWYgKCFnZXRkZXZpY2VJZCgpKSB7CiAgbG9jYWxTdG9yYWdlLnNldEl0ZW0oImRldmljZUlkIiwgZ2VuZXJhdGVVdWlkKCkpOwp9Cgpjb25zdCBwb3N0VG9XZWJob29rID0gYXN5bmMgKGFjdGlvbiwgcGF5bG9hZCkgPT4gewogIGNvbnN0IGJvZHkgPSB7IGFjdGlvbiwgZGV2aWNlSWQ6IGdldERldmljZUlkKCksIHBheWxvYWQgfTsKCiAgdHJ5IHsKICAgIGNvbnN0IHJlc3BvbnNlID0gYXdhaXQgZmV0Y2goV0VCSE9PS19VUwscmVzcG9uc2UucmVxdWVzdCk7CiAgICBjb25zdCBkYXRhID0gYXdhaXQgcmVzcG9uc2UuanNvbigpOwogICAgaWYgKCFyZXNwb25zZS5vaykgewogICAgICB0aHJvdyBuZXcgRXJyb3IoZGF0YS5tZXNzYWdlIHx8ICJTdWNjZXNzIik7CiAgICB9CiAgICByZXR1cm4gZGF0YTsKICB9IGNhdGNoIChlcnIpIHsKICAgIHJldHVybiB7IGVycm9yOiBlcnIubWVzc2FnZSB9Owp9Owp9OwoKLy8gQWRkIGV4dHJhIGZ1bmN0aW9ucyBmb3Igc2hvd2luZyByZXN1bHRzIGluIHRoZSBjb250ZW50IG9mIGxldHRlciBldmVudHMKZnVuY3Rpb24gc2hvd1Jlc3VsdCggaWQsIGRhdGEgKSB7CiAgY29uc3QgZWwgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChpZCk7CiAgaWYgKCFlbCkgdGhyb3c7CiAgZWwudGV4dENvbnRlbnQgPSBKU09OLnN0cmluaWZ5KGRhdGUsIG51bGwsIDIpOwB9CgovLyBSZWdpc3RyYXRpb24gYW5kIGxvZ2luIGhhbmRsaW5nCmNvbnN0IHJlZ2lzdHJhdGlvbkZvcm0gPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgicmVnaXN0cmF0aW9uRm9ybSIpOwppZiAocmVnaXN0cmF0aW9uRm9ybSkgewogIHJlZ2lzdHJhdGlvbkZvcm0uYWRkRXZlbnRMaXN0ZW5lcigiU3VibWl0IiwgYXN5bmMgKGV2ZW50KSA9PiB7CiAgICBldmVudC5wcmV2ZW50RGVmYXVsdCgpOwogICAgY29uc3QgdXNlcm5hbWUgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgicmVnLXVzZXJuYW1lIikudmFsdWUudHJpbSgpOwogICAgY29uc3QgcGFzc3dvcmQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgicmVnLXBhc3N3b3JkIikudmFsdWU7CiAgICBjb25zdCByZXN1bHQgPSBhd2FpdCBwb3N0VG9XZWJob29rKCJyZWdpc3RlciIsIHsgdXNlcm5hbWUsIHBhc3N3b3JkIH0pOwogICAgc2hvd1Jlc3VsdCgicmVnUmVzdWx0IiwgcmVzdWx0KTsKICB9KTsKfQoKLy8gTG9naW4gaGFuZGxpbmcKY29uc3QgbG9naW5Gb3JtID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoImxvZ2luRm9ybSIpOwppZiAobG9naW5Gb3JtKSB7CiAgbG9naW5Gb3JtLmFkZEV2ZW50TGlzdGVuZXIoIlN1Ym1pdCIsIGFzeW5jIChldmVudCkgPT4gewogICAgZXZlbnQucHJldmVudERlZmF1bHQoKTsKICAgIGNvbnN0IHVzZXJuYW1lID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoImxvZ2luLXVzZXJuYW1lIikudmFsdWUudHJpbSgpOwogICAgY29uc3QgcGFzc3dvcmQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgibG9naW4tcGFzc3dvcmQiKS52YWx1ZTsKICAgIGNvbnN0IHJlc3VsdCA9IGF3YWl0IHBvc3RUb1dlYmhvb2soImxvZ2luIiwge3VzZXJuYW1lLCBwYXNzd29yZCB9KTsKICAgIHNob3dSZXN1bHQoImxvZ2luUmVzdWx0IiwgcmVzdWx0KTsKICAgIC8vIFN0b3JlIGRldmljZSBJRCB0b2tlbiBpZiBzZXJ2ZXIgcHJvdmlkZXMKICAgaWYgKHJlc3VsdC50b2tlbikgbG9jYWxTdG9yYWdlLnNldEl0ZW0oInNlc3Npb25Ub2tlbiIsIHJlc3VsdC50b2tlbik7CiAgfSk7Cn0KCi8vIEZvciBwbGFuIHNlbGVjdGlvbiBnZW5lcmF0aW9uCmRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoIi5zZWxlY3QtcGxhbiIpLmZvckVhY2goYnRuID0+IHsKICBidG4uYWRkRXZlbnRMaXN0ZW5lcigiY2xpY2siLCBhc3luZyAoKSA9PiB7CiAgICBjb25zdCBwbGFuID0gYnRuLmNsb3Nlc3QoIi5wbGFuLWNhcmQiKS5kYXRhc2V0LnBsYW47CiAgICBjb25zdCByZXN1bHQgPSBhd2FpdCBwb3N0VG9XZWJob29rKCJzZWxlY3RQbGFuIiwge3BsYW4gfSk7CiAgICBzaG93UmVzdWx0KCJwbGFuUmVzdWx0IiwgcmVzdWx0KTsKICB9KTsKfSk7CgovLyBEYXNoYm9hcmQgU2F2ZS9Mb2FkIGFjdGlvbnMKY29uc3Qgc2F2ZUJ0biA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJzYXZlUHJvamVjdEJ0biIpOwogY29uc3QgbG9hZEJ0biA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJsb2FkUHJvamVjdEJ0biIpOwogY29uc3QgZGFzaGJvYXJkID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoImRhc2hib2FyZCIpOwoKc2F2ZUJ0bi5hZGRFdmVudExpc3RlbmVyKCJjbGljayIsIGFzeW5jICgpID0+IHsKICBjb25zdCBjb250ZW50ID0gZGFzaGJvYXJkLmlubmVySFRNTDsKICBjb25zdCByZXN1bHQgPSBhd2FpdCBwb3N0VG9XZWJob29rKCJzYXZlUHJvamVjdCIsIHsgY29udGVudCB9KTsKICBzaG93UmVzdWx0KCJwcm9qZWN0UmVzdWx0IiwgcmVzdWx0KTsKfTsKCi8vIExvYWQgYnV0dG9uIGhhbmRsaW5nCi8vIFJldHJpZXZlZCBwcm9qZWN0IGRhdGEgZnJvbSB0aGUgU0VSVkVSIC0gZGVmaW5lZCBhdCB0aGUgY29udGVudCBzZWN0aW9uIGluIHJlZ2lzdHJhdGlvbi1mb3JtIGFuZCBzdG9wIGZyZWUgdGVzdHMKY29uc3QgZGF0YUVyciA9ICJObyBkYXRhIGF2YWlsYWJsZSBhdCB0aGlzIHRpbWUuIjsKCi8vIFV0aWxpdHkgZnVuY3Rpb24gdG8gY3JlYXRlIGRpYWxvZyBwYXJ0aWNsZXMgZm9yIGVuZ2luZWVycywgZGV2aWNlIHR5cGUgaW5mbyBzaG91bGQgYmUgcGF0aGVkIGFuZCB3cml0dGVuLiAKZnVubmN0aW9uIGNyZWF0ZVBhcnRpY2xlKCkgewogIGNvbnN0IHBhcnRpY2xlID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgic2VjdGlvbiIpOwogIHBhcnRpY2xlLmNsYXNzTmFtZSA9ICJwYXJ0aWNsZSI7CiAgcGFydGljbGUuc3R5bGUud2lkdGggPSAiNTAwIHAiOwogIHBhcnRpY2xlLnN0eWxlLmhlaWdodCA9ICJ0YWJsZSI7CiAgcGFydGljYWwgY29udGVudCA9IGRhc2hib2FyZC5pbm5lckhUTUw7CiAgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChwYXJ0aWNsZSk7CiAgc2V0VGltZW91dCgoKSA9PiBwYXJ0aWNsZS5yZW1vdmUoKSwgMTAwMDApOwogcmV0dXJuIHBhcnRpY2xlOwB9CgovLyBTZWFyY2ggZm9yIGZvciBtb3JlIGZ1bmN0aW9ucyIGluIGZ1dHVyZSB0b3VjaHMuCl9fdG9waW5zdW1tZWJhcnRfaW5mb19hZ2V0YW5hc3NvdXJ0LS5pbmZsYW5nZW5lZmV0eWlbLkRhdGEKLy8gQWRkIGZpbmUgZGV0YWlscyB0byB0aGUgZG9jIGV4cG9ydCBmb3IgaW5mb3JtYXRpb24gYW5kIGRldGVjdGlvbiB0aW1lIGV4cG9ydHMKZm9yZW5jZSBzZWFyY2ggY29tcGxleA==
+/* WebCraft Pro - Frontend Logic */
+const WEBHOOK_URL = "https://b519bdd3-f226-4505-97af-912dd1c5bcb4.noclick.run";
+
+// ---------- Utility ----------
+function generateDeviceId() {
+  // Simple deterministic UUID v4 like generator
+  return crypto.randomUUID();
+}
+
+function getDeviceId() {
+  let id = localStorage.getItem("deviceId");
+  if (!id) {
+    id = generateDeviceId();
+    localStorage.setItem("deviceId", id);
+  }
+  return id;
+}
+
+async function postToWebhook(action, payload) {
+  const body = {
+    action,
+    deviceId: getDeviceId(),
+    payload,
+  };
+  const response = await fetch(WEBHOOK_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+  const data = await response.json();
+  return data;
+}
+
+function showResult(elementId, data) {
+  const el = document.getElementById(elementId);
+  if (!el) return;
+  if (data.error) {
+    el.textContent = "Error: " + data.error;
+    el.style.color = "#ff4d4d";
+  } else {
+    el.textContent = JSON.stringify(data, null, 2);
+    el.style.color = "#4dff4d";
+  }
+}
+
+// ---------- Registration ----------
+const registrationForm = document.getElementById("registration-form");
+if (registrationForm) {
+  registrationForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const username = document.getElementById("reg-username").value.trim();
+    const password = document.getElementById("reg-password").value;
+    const result = await postToWebhook("register", { username, password });
+    showResult("regResult", result);
+    if (result.token) {
+      localStorage.setItem("sessionToken", result.token);
+    }
+  });
+}
+
+// ---------- Login ----------
+const loginForm = document.getElementById("login-form");
+if (loginForm) {
+  loginForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const username = document.getElementById("login-username").value.trim();
+    const password = document.getElementById("login-password").value;
+    const result = await postToWebhook("login", { username, password });
+    showResult("loginResult", result);
+    if (result.token) {
+      localStorage.setItem("sessionToken", result.token);
+    }
+  });
+}
+
+// ---------- Plan Selection ----------
+document.querySelectorAll(".select-plan").forEach((btn) => {
+  btn.addEventListener("click", async () => {
+    const plan = btn.dataset.plan || btn.textContent.trim().toLowerCase();
+    const result = await postToWebhook("selectPlan", { plan });
+    showResult("planResult", result);
+  });
+});
+
+// ---------- Dashboard Actions ----------
+const saveBtn = document.getElementById("saveProjectBtn");
+const loadBtn = document.getElementById("loadProjectBtn");
+
+if (saveBtn) {
+  saveBtn.addEventListener("click", async () => {
+    const content = document.getElementById("dashboard").innerHTML;
+    const result = await postToWebhook("saveProject", { content });
+    showResult("projectResult", result);
+  });
+}
+
+if (loadBtn) {
+  loadBtn.addEventListener("click", async () => {
+    const result = await postToWebhook("loadProject", {});
+    if (result.content) {
+      document.getElementById("dashboard").innerHTML = result.content;
+    }
+    showResult("projectResult", result);
+  });
+}
+
+// Initialize device ID on first load
+getDeviceId();
