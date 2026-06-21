@@ -1,1 +1,108 @@
-LyogRGFyayBUaGVtZSB3aXRoIEdsYXNzbW9ycGhpc20sIE5lb24gR3JpZCwgR2xvdyBPcmJzLCBGbG9hdGluZyBQYXJ0aWNsZXMgKi8KCi8qIEJhc2UgdmFyaWFibGVzICovCjpyb290IHsKICAtLWJnLWNvbG9yOiAjMGQwZDBkOwogIC0tcHJpbWFyeTogIzAwZmZmZjsKICAtLXNlY29uZGFyeTogI2ZmMDBmZjsKICAtLWdsYXNzLWJnOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDgpOwogIC0tZ2xhc3MtYm9yZGVyOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMik7CiAgLS1ncmFkaWVudC1zdGFydDogIzBhMGEwYTsKICAtLWdyYWRpZW50LWVuZDogIzFhMWExYTsKfQoKLyogR2xvYmFsIFN0eWxlcyAqLwoqIHsKICBtYXJnaW46IDA7CiAgcGFkZGluZzogMDsKICBib3gtc2l6aW5nOiBib3JkZXItYm94OwogIGZvbnQtZmFtaWx5OiAnU2Vnb2UgVUknLCBUYWhvbWEsIEdlbmV2YSwgVmVyZGFuYSwgc2Fucy1zZXJpZjsKfQoKaHRtbCwgYm9keSB7CiAgd2lkdGg6IDEwMCU7CiAgaGVpZ2h0OiAxMDAlOwogIGJhY2tncm91bmQ6IHZhcigtLWJnLWNvbG9yKTsKICBvdmVyZmxvdzogaGlkZGVuOwogIGNvbG9yOiAjZTBlMGUwOwp9CgovKiBOZW9uIEdyaWQgQmFja2dyb3VuZCAqLwpib2R5OjpiZWZvcmUgewogIGNvbnRlbnQ6ICcnOwogIHBvc2l0aW9uOiBhYnNvbHV0ZTsKICBpbnNldDogMDsKICBiYWNrZ3JvdW5kOiByZXBlYXRpbmctbGluZWFyLWdyYWRpZW50KAogICAgNDVkZWcsCiAgICB2YXIoLS1ncmFkaWVudC1zdGFydCkgMCwKICAgIHZhcigtLWdyYWRpZW50LXN0YXJ0KSAxcHgsCiAgICB2YXIoLS1ncmFkaWVudC1lbmQpIDJweCwKICAgIHZhcigtLWdyYWRpZW50LWVuZCkgNHB4CiAgKTsKICBvcGFjaXR5OiAwLjE1OwogIHotaW5kZXg6IC0yOwogIGFuaW1hdGlvbjogZ3JpZE1vdmUgMjBzIGxpbmVhciBpbmZpbml0ZTsKfQoKQGtleWZyYW1lcyBncmlkTW92ZSB7CiAgZnJvbSB7IGJhY2tncm91bmQtcG9zaXRpb246IDAgMDsgfQogIHRvIHsgYmFja2dyb3VuZC1wb3NpdGlvbjogMjAwcHggMjAwcHg7IH0KfQoKLyogR2xhc3Ntb3JwaGlzbSBDYXJkICovCi5nbGFzcy1jYXJkIHsKICBiYWNrZ3JvdW5kOiB2YXIoLS1nbGFzcy1iZyk7CiAgYm9yZGVyLXJhZGl1czogMTJweDsKICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1nbGFzcy1ib3JkZXIpOwogIGJhY2Ryb3AtZmlsdGVyOiBibHVyKDEycHgpIHNhdHVyYXRlKDE4MCUpOwogIC13ZWJraXQtYmFja2Ryb3AtZmlsdGVyOiBibHVyKDEycHgpIHNhdHVyYXRlKDE4MCUpOwogIHBhZGRpbmc6IDJyZW07CiAgbWF4LXdpZHRoOiA0MjBweDsKICB3aWR0aDogOTAlOwogIG1hcmdpbjogMnJlbSBhdXRvczsKICBib3gtc2hhZG93OiAwIDhweCAzMnB4IHJnYmEoMCwwLDAsMC42KTsKfQoKLyogR3JhZGllbnQgQnV0dG9ucyAqLwoubnRuIHsKICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7CiAgcGFkZGluZzogMC43NXJlbSAxLjVyZW07CiAgYm9yZGVyLXJhZGl1czogMzBweDsKICBib3JkZXI6IG5vbmU7CiAgY3Vyc29yOiBwb2ludGVyOwogIGZvbnQtd2VpZ2h0OiA2MDA7CiAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDQ1ZGVnLCB2YXIoLS1wcmltYXJ5KSwgdmFyKC0tc2Vjb25kYXJ5KSk7CiAgY29sb3I6ICMxMTE7CiAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMnMsIGJveC1zaGFkbyAwLjJzOwp9CgouYnRuOmhvdmVyIHsKICB0cmFuc2Zvcm06IHNjYWxlKDEuMDUpOwogIGJveC1zaGFk b3c6IDAgMCAxNXB4IHZhcigtLXByaW1hcnkpLCAwIDAgMzBweCB2YXIoLS1zZWNvbmRheSk7fQoKLyogRm9ybSBTdHlsZXMgKi8KZm9ybSB . . .
+/* Dark Theme and Glassmorphism */
+:root {
+  --bg-color: #0a0a0a;
+  --primary: #0ff;
+  --secondary: #ff0;
+  --gradient-start: rgba(255, 255, 255, 0.05);
+  --gradient-end: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.12);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: var(--bg-color);
+  color: #e0e0e0;
+  overflow-x: hidden;
+}
+
+/* Neon Grid Background */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(45deg, rgba(0,255,255,.02) 25%, transparent 25%, transparent 50%, rgba(0,255,255,.02) 50%, rgba(0,255,255,.02) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+  z-index: -2;
+  animation: gridMove 20s linear infinite;
+}
+@keyframes gridMove {
+  from {background-position: 0 0;}
+  to {background-position: 40px 40px;}
+}
+
+/* Glow Orbs */
+.orb {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at 30% 30%, rgba(0,255,255,.4), transparent);
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: floatOrb 30s ease-in-out infinite;
+}
+@keyframes floatOrb {
+  0% {transform: translate(0,0) scale(1);}
+  50% {transform: translate(200px, -150px) scale(1.2);}
+  100% {transform: translate(0,0) scale(1);}
+}
+
+/* Glassmorphism Card */
+.card {
+  background: var(--glass-bg);
+  border-radius: 16px;
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  padding: 2rem;
+  margin: 1rem;
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,.37);
+}
+
+/* Gradient Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+  text-decoration: none;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,255,255,.4);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .navigation ul {flex-direction: column;}
+  .navigation li {margin: 0.5rem 0;}
+  .card {margin: 0.5rem; padding: 1rem;}
+}
+
+/* Additional Particle Effect (simple) */
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 50%;
+  animation: particleMove 5s linear infinite;
+}
+@keyframes particleMove {
+  from {transform: translateY(0) translateX(0); opacity:1;}
+  to {transform: translateY(-100vh) translateX(100vw); opacity:0;}
+}
+
+/* Utility Classes */
+.text-center {text-align:center;}
+.mt-2 {margin-top:0.5rem;}
+
+/* Ensure content sections have some padding */
+section {padding: 2rem 1rem;}
