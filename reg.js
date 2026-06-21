@@ -1,1 +1,235 @@
-Ly8gV2ViQ3JhZnQgUHJvIOKAkyBSZWdpc3RyYXRpb24sIExvZ2luLCBQbGFucywKICBEYXNoYm9hcmQgTG9naWMKLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KLy8gV2ViaG9vayBVUkwgKHJlcGxhY2Ugd2l0aCB5b3VyIGFjdHVhbCBlbmRwb2ludCkKY29uc3QgV0VCSE9PS19VExSRSAgPSAiaHR0cHM6Ly9iNTE5YmRkMy1mMjI2LTQ1MDUtOTdhZi05MTJkZDFjNWJjYjQubm9jbGljay5ydW4iOwoKLy8gRGV2aWNlIElEIOKAkyBwZXJzaXN0ZW50IHBlciBicm93c2VyIChzdG9yZWQgaW4gbG9jYWxTdG9yYWdlKQpmdW5jdGlvbiBnZXREZXZpY2VJZCgpIHsKICBsZXQgZGV2aWNlSWQgPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgid2NfZGV2aWNlX2lkIik7CiAgifihkZXZpY2VJZCkgfHsgZGV2aWNlSWQgPSB... [TRUNCATED]
+// WebCraft Pro – Front‑end logic for registration, login, plans and dashboard
+// ---------------------------------------------------------------
+// All actions are sent to a single webhook endpoint. The endpoint
+// receives a JSON payload and returns a JSON response. The response
+// may contain a new session token which we store in localStorage.
+// ---------------------------------------------------------------
+
+const WEBHOOK_URL = "https://b519bdd3-f226-4505-97af-912dd1c5bcb4.noclick.run";
+
+// -----------------------------------------------------------------
+// Helper: generate or retrieve a persistent device identifier
+// -----------------------------------------------------------------
+function getDeviceId() {
+  let id = localStorage.getItem("wc_device_id");
+  if (!id) {
+    // crypto.randomUUID is widely supported in modern browsers
+    id = crypto.randomUUID();
+    localStorage.setItem("wc_device_id", id);
+  }
+  return id;
+}
+
+// -----------------------------------------------------------------
+// Session handling – simple token stored in localStorage
+// -----------------------------------------------------------------
+function setSession(token) {
+  if (token) localStorage.setItem("wc_session", token);
+}
+function getSession() {
+  return localStorage.getItem("wc_session") || null;
+}
+
+// -----------------------------------------------------------------
+// Generic POST helper – sends action name + payload to the webhook
+// -----------------------------------------------------------------
+async function postAction(action, payload = {}) {
+  const body = {
+    action,
+    deviceId: getDeviceId(),
+    session: getSession(),
+    ...payload,
+  };
+  try {
+    const response = await fetch(WEBHOOK_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+    const data = await response.json();
+    if (data.session) setSession(data.session);
+    return data;
+  } catch (err) {
+    return { error: err.message };
+  }
+}
+
+// -----------------------------------------------------------------
+// UI feedback – a tiny message box that lives at the top of the page
+// -----------------------------------------------------------------
+function showMessage(msg, type = "info") {
+  let box = document.getElementById("message-box");
+  if (!box) {
+    box = document.createElement("div");
+    box.id = "message-box";
+    box.style.position = "fixed";
+    box.style.top = "0";
+    box.style.left = "0";
+    box.style.right = "0";
+    box.style.padding = "0.75rem";
+    box.style.textAlign = "center";
+    box.style.zIndex = "1000";
+    box.style.fontWeight = "600";
+    document.body.appendChild(box);
+  }
+  box.textContent = msg;
+  box.style.background = type === "error" ? "rgba(255,107,107,0.9)" : "rgba(0,255,204,0.9)";
+  box.style.color = "#111";
+  setTimeout(() => (box.style.display = "none"), 5000);
+  box.style.display = "block";
+}
+
+// -----------------------------------------------------------------
+// Registration form handling
+// -----------------------------------------------------------------
+const registerForm = document.getElementById("register-form");
+if (registerForm) {
+  registerForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const username = e.target.username.value.trim();
+    const password = e.target.password.value;
+    if (!username || !password) {
+      showMessage("Both fields are required", "error");
+      return;
+    }
+    const result = await postAction("register", { username, password });
+    if (result.error) {
+      showMessage(result.error, "error");
+    } else {
+      showMessage("Registration successful – you can now log in.");
+    }
+  });
+}
+
+// -----------------------------------------------------------------
+// Login form handling
+// -----------------------------------------------------------------
+const loginForm = document.getElementById("login-form");
+if (loginForm) {
+  loginForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const username = e.target.username.value.trim();
+    const password = e.target.password.value;
+    if (!username || !password) {
+      showMessage("Both fields are required", "error");
+      return;
+    }
+    const result = await postAction("login", { username, password });
+    if (result.error) {
+      showMessage(result.error, "error");
+    } else if (result.session) {
+      setSession(result.session);
+      showMessage("Login successful – loading dashboard…");
+      // Switch UI to dashboard view
+      document.querySelectorAll(".section").forEach((el) => (el.style.display = "none"));
+      const dash = document.getElementById("dashboard-section");
+      if (dash) dash.style.display = "block";
+    } else {
+      showMessage("Unexpected response from server", "error");
+    }
+  });
+}
+
+// -----------------------------------------------------------------
+// Plan selection – buttons with data-plan attribute
+// -----------------------------------------------------------------
+document.querySelectorAll("[data-target='plan']").forEach((btn) => {
+  btn.addEventListener("click", async (e) => {
+    const plan = e.currentTarget.dataset.plan;
+    const result = await postAction("choosePlan", { plan });
+    if (result.error) showMessage(result.error, "error");
+    else showMessage(`Plan "${plan}" selected.`);
+  });
+});
+
+// -----------------------------------------------------------------
+// Simple code editor – we try to use CodeMirror if available, otherwise
+// fall back to a plain textarea (id="code-editor").
+// -----------------------------------------------------------------
+let editor = null;
+if (window.CodeMirror) {
+  const txt = document.getElementById("code-editor");
+  if (txt) {
+    editor = CodeMirror.fromTextArea(txt, {
+      lineNumbers: true,
+      mode: "javascript",
+      theme: "material-darker",
+    });
+  }
+}
+if (!editor) {
+  // fallback wrapper exposing the same API we need
+  const txt = document.getElementById("code-editor");
+  editor = {
+    getValue: () => (txt ? txt.value : ""),
+    setValue: (val) => {
+      if (txt) txt.value = val;
+    },
+  };
+}
+
+// -----------------------------------------------------------------
+// Project save – expects inputs #project-title and button #save-project
+// -----------------------------------------------------------------
+const saveBtn = document.getElementById("save-project-btn");
+if (saveBtn) {
+  saveBtn.addEventListener("click", async () => {
+    const title = document.getElementById("project-title")?.value?.trim();
+    if (!title) {
+      showMessage("Project title is required", "error");
+      return;
+    }
+    const code = editor.getValue();
+    const result = await postAction("saveProject", { title, code });
+    if (result.error) showMessage(result.error, "error");
+    else showMessage("Project saved successfully.");
+  });
+}
+
+// -----------------------------------------------------------------
+// Project load – expects input #project-id and button #load-project
+// -----------------------------------------------------------------
+const loadBtn = document.getElementById("load-project-btn");
+if (loadBtn) {
+  loadBtn.addEventListener("click", async () => {
+    const id = document.getElementById("project-id")?.value?.trim();
+    if (!id) {
+      showMessage("Project ID is required", "error");
+      return;
+    }
+    const result = await postAction("loadProject", { id });
+    if (result.error) {
+      showMessage(result.error, "error");
+    } else if (result.project) {
+      const { title, code } = result.project;
+      document.getElementById("project-title").value = title || "";
+      editor.setValue(code || "");
+      showMessage("Project loaded.");
+    } else {
+      showMessage("Project not found", "error");
+    }
+  });
+}
+
+// -----------------------------------------------------------------
+// Optional – generate some floating particles & orbs for visual flair.
+// The CSS defines .particle and .orb classes; here we create a few
+// elements and animate them using requestAnimationFrame.
+// -----------------------------------------------------------------
+(function createVisuals() {
+  const container = document.body;
+  const create = (cls) => {
+    const el = document.createElement("div");
+    el.className = cls;
+    el.style.left = Math.random() * 100 + "%";
+    el.style.top = Math.random() * 100 + "%";
+    container.appendChild(el);
+    return el;
+  };
+  // particles
+  for (let i = 0; i < 30; i++) create("particle");
+  // glowing orbs
+  for (let i = 0; i < 5; i++) create("orb");
+})();
+
+// End of reg.js – all listeners are now active.
