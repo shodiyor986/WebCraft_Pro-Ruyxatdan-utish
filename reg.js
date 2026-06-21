@@ -1,1 +1,146 @@
-Ly8gcmVnLmpzIC0gV2ViQ3JhZnQgUHJvIEZyb250ZW5kIExvZ2ljCgovLyBVdGlsaXR5OiBnZW5lcmF0ZSBVVUlEIHY0IGZvciBkZXZpY2UgSUQKZnVuY3Rpb24gZ2VuZXJhdGVVVUlEKCkgeyByZXR1cm4gKFsxZTd9Ky0xZTdNLys0ZTMrLThlMysrMWUxMSkucmVwbGFjZSgvWzAxOF0vZywgYyA9PiAoYyB4IGNyeXB0by5nZXRSYW5kb21WYWx1ZXMobmV3IFVpbnQ4QXJyYXkoMSkpWzBdICYgMTUgPj4gYyAvIDQpLnRvU3RyaW5nKDE2KQogIH07CgovLyBFbnN1cmUgYSBkZXZpY2UgSUQgZXhpc3RzCmlmICghbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ2RldmljZUltZScpKSB7CiAgbG9jYWxTdG9yYWdlLnNldEl0ZW0oJ2RldmljZUltZScsIGdlbmVyYXRlVVVJRShbMSBlN10rLTFlbisdLTFlNycnKSkpOwp9CmNvbnN0IGRldmljZUlEID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ2RldmljZUltZScpOwpjb25zdCB3ZWJob29rVXJsID0gImh0dHBzOi8vYjUxOWJkZDNmMjI2LTQ1MDUtOTdhZi05MTJkZDFjNWJjYjQubm9jbGljay5ydW4iOwoKLy8gVUkgaGVscA0KY29uc3QgdGFicyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJy50YWInKTsKY29uc3QgcGFuZWxzID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgnLnBhbmVsJyk7CmNvbnN0IHJlc3BvbnNlQXJlYSA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdSZXNwb25zZUFyZWFzJyk7CgoKZnVuY3Rpb24gc2hvd1BhbmVsKHRhcmdldElkKSB7CiAgcGFuZWxzLmZvckVhY2gocCA9PiB7CiAgICBpZiAocC5pZCA9PT0gdGFyZ2V0SWQpIHsKICAgICAgcC5jbGFzc0xpc3QucmVtb3ZlKCdoaWRkZW4nKTsKICAgICAgcC5jbGFzc0xpc3QuYWRkKCdhY3RpdmUnKTsKICAgIH0gZWxzZSB7CiAgICAgIHAuY2xhc3NMaXN0LmFkZCgnaGlkZGVuJyk7CiAgICAgIHAuY2xhc3NMaXN0LnJlbW92ZSgnYWN0aXZlJyk7CiAgICB9CiAgfSk7CiAgdGFicy5mb3JFYWNoKHR0ID0+IHsKICAgIGlmICh0LnNldHRpbWVzLmRhdGFzZXQudGFyZ2V0ID09PSB0YXJldElkKSB7CiAgICAgIHR0LmNsYXNzTGlzdC5hZGQoJ2FjdGl2ZScpOwogICAgfSBlbHNlIHsKICAgICAgdHQuY2xhc3NMaXN0LnJlbW92ZSgnYWN0aXZlJyk7CiAgICB9CiAgfSk7Cn0KCi8vIFRhYiBjbGljayBoYW5kbGluZwp0YWJzLmZvckVhY2godGFiID0+IHsKICB0YWIuYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCBhc3luYyAoKSA9PiB7CiAgICBzaG93UGFuZWwodGFiLmRhdGFzZXQudGFyZ2V0KTsKICB9KTsKfSk7CgovLyBJbml0aWFsIHZpZXcKc2hvd1BhbmVsKCdSZWdpc3RlcnInKTsKCi8vIEdlbmVyaWMgUE9TVCBoZWxwZXIKYXN5bmMgZnVuY3Rpb24gcG9zdFRvV2ViaG9vayhhY3Rpb24sIHBheWxvYWQpIHsKICBjb25zdCBib2R5ID0gewogICAgYWN0aW9uLAogICAgZGV2aWNlSWQsCiAgICAuLi5wYXlsb2FkLAogIH07CiAgdHJ5IHsKICAgIGNvbnN0IHJlcyA9IGF3YWl0IGZldGNoKHdlYmhvb2tVcmwsIHsKICAgICAgbWV0aG9kOiAnUE9TVCcsCiAgICAgIGhlYWRlcnM6IHsgJ0NvbnRlbnQtVHlwZSc6ICdhcHBsaWNhdGlvbi9qc29uJyB9LAogICAgICBib2R5OiBKU09OLnN0cmluZ2lmeShiYXNlNjQgc2VuZCkKICAgIH0pOwogICAgY29uc3QgZGF0YSA9IGF3YWl0IHJlcy5qc29uKCk7CiAgICByZXR1cm4geyBzdWNjZXNzOiB0cnVlLCBkYXRhIH07CiAgfSBjYXRjaCAoZSkgewogICAgcmV0dXJuIHsgc3VjY2VzczogZmFsc2UsIGVycm9yOiBlLm1lc3NhZ2UgfTsKICB9Cn0KCmZ1bmN0aW9uIGRpc3BsYXlSZXNwb25zZShyZXN1bHQpIHsKICByZXNwb25zZUFyZWEuY2xhc3NMaXN0LnJlbW92ZSgnaGlkZGVuJyk7CiAgcmVzcG9uc2VBcmVhLnRleHRDb250ZW50ID0gSlNPTi5zdHJpbmdpZnkocmVzdWx0LCBudWxsLCAyKTsKfQoKLy8gUmVnaXN0ZXIgRm9ybQpjb25zdCByZWdpc3RlckZvcm0gPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncmVnaXN0ZXJGb3JtJyk7aWYoIHJlZ2lzdGVyRm9ybSkgeyByZWdpc3RlckZvcm0uYWRkRXZlbnRMaXN0ZW5lcignc3VibWl0JywgYXN5bmMgZSA9PiB7CiAgICBlLnByZXZlbnREZWZhdWx0KCk7CiAgICBjb25zdCBmb3JtRGF0YSA9IG5ldyBGb3JtRGF0YShyZWdpc3RlckZvcm0pOwogICAgY29uc3QgcGF5bG9hZCA9IHsKICAgICAgdXNlcm5hbWU6IGZvcm1EYXRhLmdldCgndXNlcm5hbWUnKSwKICAgICAgZW1haWw6IGZvcm1EYXRhLmdldCg nZW1haWwnKSwKICAgICAgcGFzc3dvcmQ6IGZvcm1EYXRhLmdldCg ncGFzc3dvcmQnKSwKICAgIH07CiAgY29uc3QgcmVzdWx0ID0gYXdhaXQgcG9zdFRvV2ViaG9vaygncmVnaXN0ZXInLCBwYXlsb2FkKTsKICAgaWYgKHJlc3VsdC5zdWNjZXNzKSB7CiAgICAvLyBBc3N1bWUgbmV3IHRva2VuCiAgICBpZiAocmVzdWx0LmRhdGEudG9rZW4pIHsgbG9jYWxTdG9yYWdlLnNldEl0ZW0oJ3Nlc3Npb25Ub2tlbicsIHJlc3VsdC5kYXRhLnRva2VuKSB9CiAgfSBkaXNwbGF5UmVzcG9uc2UocmVzdWx0KTsKfQoKLy8gTG9naW4gRm9ybQpjb25zdCBsb2dpbkZvcm0gPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnbG9naW5Gb3JtJyk7aWYoIGxvZ2luRm9ybSkgeyBsb2dpbkZvcm0uYWRkRXZlbnRMaXN0ZW5lcignc3VibWl0JywgYXN5bmMgZSA9PiB7CiAgICBlLnByZXZlbnREZWZhdWx0KCk7CiAgICBjb25zdCBmb3JtRGF0YSA9IG5ldyBGb3JtRGF0YShsb2dpbkZvcm0pOwogICAgY29uc3QgcGF5bG9hZCA9IHsKICAgICAgZW1haWw6IGZvcm1EYXRhLmdldCg nZW1haWwnKSwKICAgICAgcGFzc3dvcmQ6IGZvcm1EYXRhLmdldCg ncGFzc3dvcmQnKSwKICAgIH07CiAgY29uc3QgcmVzdWx0ID0gYXdhaXQgcG9zdFRvV2ViaG9vaygnbG9naW4nLCBwYXlsb2FkKTsKICAgaWYgKHJlc3VsdC5zdWNjZXNzICYmIHJlc3VsdC5kYXRhLnRva2VuKSB7CiAgICBsb2NhbFN0b3JhZ2Uuc2V0SXRlbSgnc2Vzc2lvblRva2VuJywgcmVzdWx0LmRhdGEudG9rZW4pOwogICAgLy8gR2V0IGxvZ2luIGFuZCBldmVudGlyYWxseSB0byBkYXNoYm9hcmQKICAgIHNob3dQYW5lbCgnZGFzaGJvYXJkJyk7CiAgfSBkaXNwbGF5UmVzcG9uc2UocmVzdWx0KTsKfQoKLy8gUGxhbiBzZWxlY3Rpb24KZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgnLmNob29zZS1wbGFuJykuaW5kZXhBZCgiYmJ0biIpLmZvckVhY2goYnRuID0+IHsKICBjb25zdCBwbGFuID0gYnRuLmRhdGFzZXQucGxhbnM7CiAgY29uc3QgdG9rZW4gPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgnc2Vzc2lvblRva2VuJyB8fCAiIik7CiAgY29uc3QgcmVzdWx0ID0gYXdhaXQgcG9zdFRvV2ViaG9vaygnc2VsZWN0X3BsYW4nLCB7IHBsYW4sIHRva2VuIH0pOwogIGRpc3BsYXlSZXNwb25zZShyZXN1bHQpOwp9KTsKfQoKLy8gRGFzaGJvYXJkIGFjdGlvbnMKY29uc3QgYnV0dG9uU2F2ZUgKPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgic2F2ZVByb2plY3QiKTsKY29uc3QgYnV0dG9uTG9hZCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdsb2FkUHJvamVjdCcpOwoKZnVuY3Rpb24gcmVuZGVyUHJvamVjdHMocHJvamVjdHMpIHsKICBwcm9qZWN0TGlzdC5pbm5lckhUTUw9JycnOwogIHByb2plY3RzLmZvckVhY2gocCA9PiB7CiAgICBjb25zdCBsaSA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2xpJyk7CiAgICBsby50ZXh0Q29udGVudCA9IHBcL25hbWU7CiAgICBwcm9qZWN0TGlzdC5hcHBlbmRDaGlsZChsaSk7CiAgfSk7Cn0KCi8vIFNhdmUgUHJvamVjdCAoZHVtbXkgcGF5bG9hZCkKaWYgKHNhdmVCdG4pIHsgc2F2ZUJ0bi5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsIGFzeW5jICgpID0+IHsgY29uc3QgdG9rZW4gPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgnc2Vzc2lvblRva2VuJyB8fCAiIjsKICBjb25zdCBwYXlsb2FkID0gewogICAgbmFtZTogJ015IFByb2plY3QgJyArIG5ldyBEYXRlKCkudG9Jc09TdHJpbmcoKSwKICAgIGRhdGE6IHt9LAogIH07CiAgY29uc3QgcmVzdWx0ID0gYXdhaXQgcG9zdFRvV2ViaG9vaygnc2F2ZV9wcm9qZWN0JywgeyB0b2tlbixwcm9qZWN0OiBwYXlsb2FkIH0pOwogIGRpc3BsYXlSZXNwb25zZShyZXN1bHQpOwogIC8vIFJlZnJlc2ggbGlzdCBpZiBzdWNjZXNzCiAgc2hhbGwgKGlmIChyZXN1bHQuc3VjY2VzcykgeyBsb2FkUHJvamVjdHMocik7IH0KfQoKLy8gTG9hZCBQcm9qZWN0cwphc3luYyBmdW5jdGlvbiBsb2FkUHJvamVjdHMoKSB7CiAgY29uc3QgdG9rZW4gPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgnc2Vzc2lvblRva2VuJyB8fCAiIjsKICBjb25zdCByZXN1bHQgPSBhd2FpdCBwb3N0VG9XZWhvb2soJ2xpc3RfcHJvamVjdHMnLCB7IHRva2VuIH0pOwogIGlmIChBcnJheS5pc0FycmF5KHJlc3VsdC5kYXRhLnByb2plY3RzKSkgeyByZW5kZXJQcm9qZWN0cyhyZXN1bHQuZGF0YS5wcm9qZWN0cyk7IH0KICBkaXNwbGF5UmVzcG9uc2UocmVzdWx0KTsKfQoKaWYgKGxvYWRCdG4pIHsgbG9hZEJ0bi5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsIGxvYWRQcm9qZWN0cyk7IH0KCi8vIEF1dG8tbG9hZCBwcm9qZWN0cyB3aGVuIGRhc2hib2FyZCBiZWNvbWUgdmFsaWQgdmVyaWZpY2F0aW9uDQpjb25zdCBvYnNlcnZlciA9IG5ldyBNdXRhdGlvbk9ic2VydmVyKG11dGF0aW9ucyA9PiB7CiAgbXV0YXRpb25zLmZvckVhY2gobSA9PiB7CiAgICBpZiAobS50YXJnZXRDbGFzcy5jb250YWlucygndHJlYW5kJyl8fCBtLnRhcmdldC5pZCA9PT0gJ2Rhc2hib2FyZCcpIHsKICAgICAgbG9hZFByb2plY3RzKCk7CiAgICB9CiAgfSk7CiAgb2JzZXJ2ZXIub2JzZXJ2ZShkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgkRGFzaGJvYXJkJykpOw==
+// reg.js - WebCraft Pro front‑end logic
+(() => {
+  const webhook = "https://b519bdd3-f226-4505-97af-912dd1c5bcb4.noclick.run";
+
+  // Utility: generate UUID v4
+  const genUUID = () => {
+    return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+      (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c/4).toString(16)
+    );
+  };
+
+  // Device ID
+  let deviceId = localStorage.getItem("wc_device_id");
+  if (!deviceId) {
+    deviceId = genUUID();
+    localStorage.setItem("wc_device_id", deviceId);
+  }
+
+  // Session handling
+  const setSession = (user) => {
+    localStorage.setItem("wc_session", JSON.stringify(user));
+    updateUI(user);
+  };
+  const getSession = () => {
+    const s = localStorage.getItem("wc_session");
+    return s ? JSON.parse(s) : null;
+  };
+  const clearSession = () => {
+    localStorage.removeItem("wc_session");
+    updateUI(null);
+  };
+
+  // UI updates based on session
+  const updateUI = (user) => {
+    const dashboard = document.getElementById("dashboard");
+    const authSection = document.getElementById("auth-section");
+    if (user) {
+      if (dashboard) dashboard.style.display = "block";
+      if (authSection) authSection.style.display = "none";
+      const welcome = document.getElementById("welcome");
+      if (welcome) welcome.textContent = `Welcome, ${user.username}`;
+    } else {
+      if (dashboard) dashboard.style.display = "none";
+      if (authSection) authSection.style.display = "block";
+    }
+  };
+
+  // Generic request sender
+  const send = async (action, payload) => {
+    const body = { action, deviceId, ...payload };
+    try {
+      const resp = await fetch(webhook, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body)
+      });
+      return await resp.json();
+    } catch (e) {
+      return { error: true, message: e.message };
+    }
+  };
+
+  // Form handlers
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    const username = e.target.username.value.trim();
+    const password = e.target.password.value;
+    const result = await send("register", { username, password });
+    if (result.success) {
+      setSession({ username, token: result.token });
+      alert("Registration successful!");
+    } else {
+      alert(result.message || "Registration failed");
+    }
+  };
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    const username = e.target.username.value.trim();
+    const password = e.target.password.value;
+    const result = await send("login", { username, password });
+    if (result.success) {
+      setSession({ username, token: result.token });
+      alert("Login successful!");
+    } else {
+      alert(result.message || "Login failed");
+    }
+  };
+
+  const handlePlan = async (e) => {
+    e.preventDefault();
+    const plan = e.target.plan.value;
+    const session = getSession();
+    if (!session) { alert("Please login first"); return; }
+    const result = await send("choose_plan", { plan, token: session.token });
+    if (result.success) {
+      alert(`Plan ${plan} selected`);
+    } else {
+      alert(result.message || "Failed to select plan");
+    }
+  };
+
+  const handleSaveProject = async (e) => {
+    e.preventDefault();
+    const name = e.target.project_name.value.trim();
+    const data = e.target.project_data.value;
+    const session = getSession();
+    if (!session) { alert("Login required"); return; }
+    const result = await send("save_project", { name, data, token: session.token });
+    alert(result.message || "Project saved");
+  };
+
+  const handleLoadProject = async (e) => {
+    e.preventDefault();
+    const name = e.target.project_name.value.trim();
+    const session = getSession();
+    if (!session) { alert("Login required"); return; }
+    const result = await send("load_project", { name, token: session.token });
+    if (result.success) {
+      const textarea = document.getElementById("project_data");
+      if (textarea) textarea.value = result.data;
+    } else {
+      alert(result.message || "Failed to load project");
+    }
+  };
+
+  // Attach listeners after DOM ready
+  document.addEventListener("DOMContentLoaded", () => {
+    const regForm = document.getElementById("register_form");
+    const loginForm = document.getElementById("login_form");
+    const planForm = document.getElementById("plan_form");
+    const saveForm = document.getElementById("save_project_form");
+    const loadForm = document.getElementById("load_project_form");
+    const logoutBtn = document.getElementById("logout_btn");
+
+    if (regForm) regForm.addEventListener("submit", handleRegister);
+    if (loginForm) loginForm.addEventListener("submit", handleLogin);
+    if (planForm) planForm.addEventListener("submit", handlePlan);
+    if (saveForm) saveForm.addEventListener("submit", handleSaveProject);
+    if (loadForm) loadForm.addEventListener("submit", handleLoadProject);
+    if (logoutBtn) logoutBtn.addEventListener("click", clearSession);
+
+    // Initial UI state
+    updateUI(getSession());
+  });
+})();
