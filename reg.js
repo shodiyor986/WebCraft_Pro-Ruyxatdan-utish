@@ -1,9 +1,105 @@
-Ly8gV2ViQ3JhZnQgUHJvIC0gRm9yd2FyZCBMb2dpYyBzdHlsZSBhbmQgV2ViIEhvbWUgQ29kZQpjb25zdCBXRUJIT09LX1VSTCA9ICJodHRwczovL2I1MTliZGQzLWYyMjYtNDUwNS05N2FmLTkxMmRkMWM1YmNiNC5ub2NsaWNrLnJ1biI7CgovLyBTYXZlIGFuZCBnZXQgYSB1bmlxdWUgdGVtcGVyYWxpdHkgZm9yIGRlY2lkZQppZiAoIWxvY2FsU3RvcmFnZS5nZXQoImRldmljZUlEIikpIHsKICBjb25zdCBkZXZpY2VJZCA9IGNyeXB0by5yYW5kb21VVUlEKCglb2JzdHJvc2Ugd2l0aCBkZXZpY2VJZCgpOwogIGxvY2FsU3RvcmFnZS5zZXQoImRldmljZUlkIiwgZGV2aWNlSWQpOwp9Cgpjb25zdCBnZXRkZXZpY2VJZCA9KCkgPT4gbG9jYWxTdG9yYWdlLmdldCg iZGV2aWNlSWQiKTsK
+// WebCraft Pro - Frontend Logic
+const WEBHOOK_URL = "https://b519bdd3-f226-4505-97af-912dd1c5bcb4.noclick.run";
 
-Ly8gR2VuZXJpYyBQT1NUIGhlbHBlciB0byBzZW5kIGRhdGEgdG8gdGhlIHdlYmhvb2sgd2l0aCBhY3Rpb24gbmFtZQphc3luYyBmdW5jdGlvbiBwb3N0VG9XZWJob29rKGlkZW50aWZpZXIsIHBheWxvYWQgPSB7fSkgewogIGNvbnN0IGJvZHkgPSB7IGlkZW50aWZpZXIsIHBheWxvYWQgfTsKCiAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBmZXRjaChXRUJIT09LX1VSTCwgewogICAgbWV0aG9kOiAiUE9TVCIsCiAgICBoZWFkZXJzOiB7ICJDb250ZW50LVR5cGUiOiAiYXBwbGljYXRpb24vanNvbiIgfSwKICAgIGJvZHk6IEpTT04uc3RyaW5naWZ5KGJvZHkpLAogIH0pOwogIGlmICghcmVzcG9uc2Uub2spIHsKICAgIHRocm93IG5ldyBFcnJvcihgV2ViaG9vayBlcnJvcjogJHtyZXNwb25zZS5zdGF0dXN9YCk7CiAgfQogIHJldHVybiByZXNwb25zZS5qc29uKCk7Cn0K
+// Ensure a unique device ID stored in localStorage
+if (!localStorage.getItem("deviceId")) {
+  const generateUUID = () => crypto.randomUUID();
+  localStorage.setItem("deviceId", generateUUID());
+}
+const getDeviceId = () => localStorage.getItem("deviceId");
 
-Ly8gVXRpbCBmdW5jdGlvbiB0byBkaXNwbGF5IGpzb24gZm9yIGVuZCByZXN1bHQgZWxlbWVudAovLyBpbmNsdWRlcyBjb2x1bW4gcHJlZmVyZW5jZSBmb3Igc2VydmljZSBhbmQgcHJvZHVjZWQgZm9yIGRldGFpbAovLyB1c2UgbW9yZSBzcGVjaWZpYyB0YWdzIGFzIG5lZWRlZApmdW5jdGlvbiBzaG93UmVzdWx0KGVsZW1lbnRJZCwgZGF0YSkgewogIGNvbnN0IGVsID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoZWxlbWVudElkKTsKIGlmICghZWwpIHJldHVybiA7CiAgaWYoZWwuc2N5bGluZSBpbiA8dGV4dD4pIHsKICAgIGVsLnRleHRDb250ZW50ID0gSlNPTi5zdHJpbmdpZnkoc3RydWN0aW5nLmRlc2NyaXB0aW9uLCBuYW1lLCBjb25maXJtYXRpb24pOwogIH0gZWxzZSB7CiAgICBlbC50ZXh0Q29udGVudCA9IEpTT04uc3RyaW5naWZ5KHdpdGgoZGF0YSwgbnVsbCwgMiIpOyB9Cn0KCi8vIFJlZ2lzdHJhdGlvbiBmb3JtIGhhbmRsaW5nCmNvbnN0IHJlZ2lzdHJhdGlvbkZvcm0gPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgicmVnaXN0cmF0aW9uRm9ybSIpOwppZiAoIHJlZ2lzdHJhdGlvbkZvcm0pIHsKICByZWdpc3RyYXRpb25Gb3JtLmFkZEV2ZW50TGlzdGVuZXIoInN1Ym1pdCIsIGFzeW5jIChldmVudCkgPT4gewogIGV2ZW50LnByZXZlbnREZWZhdWx0KCk7CiAgY29uc3QgdXNlcm5hbWUgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgicmVnLXVzZXJuYW1lIikudmFsdWUudHJpbSgpOwogIGNvbnN0IHBhc3N3b3JkID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInJlZy1wYXNzd29yZCIpLnZhbHVlOwogIHRyeSB7CiAgICBjb25zdCByZXNwID0gYXdhaXQgcG9zdFRvV2ViaG9vaygicmVnaXN0ZXIiLCAge3VzZXJuYW1lLCBwYXNzd29yZH0pOwogICAgc2hvd1Jlc3VsdCgicmVnUmVzdWx0IiwgcmVzcCk7CiAgfSBjYXRjaCAoZXJyKSB7CiAgICBzaG93UmVzdWx0KCJyZWdSZXN1bHQiLCB7IGVycm9yOiBlcnIubWVzc2FnZSB9KTsKICB9CiAgfSk7Cn0K
+// Generic POST helper
+async function postToWebhook(action, payload) {
+  const body = { action, deviceId: getDeviceId(), payload };
+  try {
+    const response = await fetch(WEBHOOK_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+    const data = await response.json();
+    if (!response.ok) throw new Error(data?.message || "Server error");
+    return data;
+  } catch (err) {
+    return { error: err.message };
+  }
+}
 
-Ly8gTG9naW4gZm9ybSBobWFpbGluZyB3aXRoIHVuaXF1ZSB2YWx1ZXMgdG8gc2VuZCB0byB0aGUgd2ViaG9vayAkaW5wdXRzCmNvbnN0IGxvZ2luRm9ybSA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJsb2dpbkZvcm0iKTsKaWYgKGxvZ2luRm9ybSkgewogIGxvZ2luRm9ybS5hZGRFdmVudExpc3RlbmVyKCJzdWJtaXQiLCBhc3luYyAoZXZlbnQgPT4gewogIGV2ZW50LnByZXZlbnREZWZhdWx0KCk7CiAgY29uc3QgdXNlcm5hbWUgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgibG9naW4tdXNlcm5hbWUiKS52YWx1ZS50cmltKCk7CiAgY29uc3QgcGFzc3dvcmQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgibG9naW4tcGFzc3dvcmQiKS52YWx1ZTsKICB0cnkgewogICAgY29uc3QgcmVzcCA9IGF3YWl0IHBvc3RUb1dlYmhvb2soImxvZ2luIiwge3VzZXJuYW1lLCBwYXNzd29yZH0pOwogICAgc2hvd1Jlc3VsdCgibG9naW5SZXN1bHQiLCByZXNwKTsKICB9IGNhdGNoIChlcnIpIHsKICAgIHNob3dSZXN1bHQoImxvZ2luUmVzdWx0IiwgeyBlcnJvcjogZXJyLm1lc3NhZ2UgfSk7CiAgfQogIH0pO30K
+// Utility to display result in a <pre> element
+function showResult(elementId, data) {
+  const el = document.getElementById(elementId);
+  if (!el) return;
+  el.textContent = JSON.stringify(data, null, 2);
+}
 
-Ly8gUGxhbiBzZWxlY3Rpb24gaGFuZGxpbmcgYW5kIHJlYWRpbmcgY2FyZHMKY29uc3QgY2FyZEF0dHJpYnV0ZWQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCIucGxhbi1jYXJkIik7CmNhcmFBdHRyaWJ1dGVzLmZvckVhY2goKGNhcmQgPT4gewogIGNhcmQuYWRkRXZlbnRMaXN0ZW5lcigiY2xpY2siLCBhc3luYyAoKSA9PiB7CiAgICBjb25zdCBwbGFuID0gY2FyZC5kYXRhc2V0LnBsYW46CiAgICB0cnkgewogICAgICBjb25zdCByZXNwID0gYXdhaXQgcG9zdFRvV2ViaG9vayAic2VsZWN0UGxhbiIsIHsgcGxhbiB9KTsKICAgICAgc2hvd1Jlc3VsdCgicGxhblJlc3VsdCIsIHJlc3ApOwogICAgfSBjYXRjaCAoZXJyKSB7CiAgICAgIHNob3dSZXN1bHQocGxhblJlc3VsdCwgeyBlcnJvcjogZXJyLm1lc3NhZ2UgfSk7CiAgICB9CiAgfSk7fSk7CgovLyBEYXNoYm9hcmQgcHJvamVjdCBzYXZpbmcgYW5kIGxvYWRpbmcKY29uc3Qgc2F2ZUJ0biA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJzYXZlUHJvamVjdEJ0biIpOwogY29uc3QgbG9hZEJ0biA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJsb2FkUHJvamVjdEJ0biIpOwogY29uc3QgZGFzaGJvYXJkID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoImRhc2hib2FyZCIpOwoKaWYgKHNhdmVCdG4pIHsKICBzYXZlQnRuLmFkZEV2ZW50TGlzdGVuZXIoImNsaWNrIiwgYXN5bmMgKCkgPT4gewogIGNvbnN0IGNvbnRlbnQgPSBkYXNoYm9hcmQuaW5uZXJIVE1MOwogIHRyeSB7CiAgICBjb25zdCByZXNwID0gYXdhaXQgcG9zdFRvV2ViaG9vayAic2F2ZVByb2plY3QiLCB7IGNvbnRlbnQgfSk7CiAgICBzaG93UmVzdWx0KCJwcm9qZWN0UmVzdWx0IiwgcmVzcCk7CiAgfSBjYXRjaCAoZXJyKSB7CiAgICBzaG93UmVzdWx0KCJwcm9qZWN0UmVzdWx0IiwgeyBlcnJvcjogZXJyLm1lc3NhZ2UgfSk7CiAgfQogIH0pOwp9CgppZiAoZmV0Y2hCdG4pIHsKICBsb2FkQnRuLmFkZEV2ZW50TGlzdGVuZXIoImNsaWNrIiwgYXN5bmMgKCkgPT4gewogIHRyeSB7CiAgICBjb25zdCByZXNwID0gYXdhaXQgcG9zdFRvV2ViaG9vayAibG9hZFByb2plY3QiLCB7fSk7CiAgICAvLyBTdWNjZXNzOiB3ZSBzdW5kYXJpZ2UgY29udGVudCBpZiB0aGVyZSBpcyB0byBjdXJyZW50bHkgb3JkZXIgYW5kIG5vL1Jlc2V0aW5nIHRoZSBkYXNoYm9hcmQKICAgIGlmIChyZXNwLmNvbnRlbnQgIT09IHVuZGVmaW5lZCkgewogICAgICBkYXNoYm9hcmQuaW5uZXJIVE1MID0gcmVzcC5jb250ZW50OwogICAgfQogICAgc2hvd1Jlc3VsdCgicHJvamVjdFJlc3VsdCIsIHJlc3ApOwogIH0gY2F0Y2ggKGVycikgewogICAgc2hvd1Jlc3VsdCgicHJvamVjdFJlc3VsdCIsIHsgZXJyb3I6IGVyci5tZXNzYWdlIH0pOwogIH0KICB9KTsKfQoKLy8gRm9yIGRlYnVnZ2luZyBhdHRhY2htZW50IGFuZCBleHRyYSwgdXNlIGl0IGFzIGEgZ2l0IHJlcG9zaXRvcnkKZ2l0UHV0V29ya2luZy5WZWJjcmFmdCA9IHsgcG9zdFRvV2ViaG9vaywgc2hvd1Jlc3VsdCB9Ow==
+// Registration handling
+const registrationForm = document.getElementById("registrationForm");
+if (registrationForm) {
+  registrationForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const username = document.getElementById("reg-username").value.trim();
+    const password = document.getElementById("reg-password").value;
+    const result = await postToWebhook("register", { username, password });
+    showResult("regResult", result);
+  });
+}
+
+// Login handling
+const loginForm = document.getElementById("loginForm");
+if (loginForm) {
+  loginForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const username = document.getElementById("login-username").value.trim();
+    const password = document.getElementById("login-password").value;
+    const result = await postToWebhook("login", { username, password });
+    showResult("loginResult", result);
+    // Store session token if provided
+    if (result?.token) localStorage.setItem("sessionToken", result.token);
+  });
+}
+
+// Plan selection handling
+document.querySelectorAll(".select-plan").forEach((btn) => {
+  btn.addEventListener("click", async () => {
+    const plan = btn.closest(".plan-card").dataset.plan;
+    const result = await postToWebhook("selectPlan", { plan });
+    showResult("planResult", result);
+  });
+});
+
+// Dashboard actions – Save / Load project
+const saveBtn = document.getElementById("saveProjectBtn");
+const loadBtn = document.getElementById("loadProjectBtn");
+const dashboard = document.getElementById("dashboard");
+
+if (saveBtn) {
+  saveBtn.addEventListener("click", async () => {
+    const content = dashboard.innerHTML;
+    const result = await postToWebhook("saveProject", { content });
+    showResult("projectResult", result);
+  });
+}
+
+if (loadBtn) {
+  loadBtn.addEventListener("click", async () => {
+    const result = await postToWebhook("loadProject", {});
+    if (result?.content) dashboard.innerHTML = result.content;
+    showResult("projectResult", result);
+  });
+}
+
+// Optional: simple particle generation for visual effect (adds to body)
+function createParticle() {
+  const p = document.createElement("div");
+  p.className = "particle";
+  const size = Math.random() * 3 + 2;
+  p.style.width = p.style.height = `${size}px`;
+  p.style.left = `${Math.random() * 100}%`;
+  p.style.top = `${Math.random() * 100}%`;
+  document.body.appendChild(p);
+  setTimeout(() => p.remove(), 8000);
+}
+setInterval(createParticle, 300);
+
+// Export for debugging (optional)
+window.WebCraft = { postToWebhook, getDeviceId };
