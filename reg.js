@@ -123,6 +123,4 @@ function toast(message, type = "info") {
   setTimeout(() => div.remove(), 3000);
 }
 
-// Example of using toast on global fetch errors – already logged in sendAction
-
 // End of reg.js
