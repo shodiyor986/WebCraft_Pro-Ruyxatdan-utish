@@ -1,90 +1,80 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="uz" data-theme="dark">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WebCraft Pro - Dashboard</title>
-    <link rel="stylesheet" href="reg.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WebCraft Pro – Ro‘yxatdan o‘tish & Dashboard</title>
+<link rel="stylesheet" href="reg.css">
 </head>
 <body>
-    <!-- Neon Grid Background -->
-    <div class="grid-bg"></div>
-    
-    <main class="container">
-        <!-- Navigation -->
-        <nav class="nav-bar">
-            <h1>WebCraft Pro</h1>
-            <ul>
-                <li><a href="#register">Ro'yxatdan o'tish</a></li>
-                <li><a href="#login">Kirish</a></li>
-                <li><a href="#plans">Tarif rejalari</a></li>
-                <li><a href="#dashboard">Dashboard</a></li>
-            </ul>
-        </nav>
-        
-        <!-- Register Section -->
-        <section id="register" class="card glass">
-            <h2>Ro'yxatdan o'tish</h2>
-            <form id="registerForm">
-                <input type="email" name="email" placeholder="Email" required />
-                <input type="password" name="password" placeholder="Parol" required />
-                <button type="submit" class="btn gradient">Ro'yxatdan o'tish</button>
-            </form>
-            <div class="response" id="registerResponse"></div>
-        </section>
-        
-        <!-- Login Section -->
-        <section id="login" class="card glass">
-            <h2>Kirish</h2>
-            <form id="loginForm">
-                <input type="email" name="email" placeholder="Email" required />
-                <input type="password" name="password" placeholder="Parol" required />
-                <button type="submit" class="btn gradient">Kirish</button>
-            </form>
-            <div class="response" id="loginResponse"></div>
-        </section>
-        
-        <!-- Plans Section -->
-        <section id="plans" class="card glass">
-            <h2>Tarif rejalari</h2>
-            <div class="plan-grid">
-                <div class="plan card glass" data-plan="free">
-                    <h3>Free</h3>
-                    <p>Basic features</p>
-                    <button class="btn gradient select-plan" data-plan="free">Tanlash</button>
-                </div>
-                <div class="plan card glass" data-plan="pro">
-                    <h3>Pro</h3>
-                    <p>All premium features</p>
-                    <button class="btn gradient select-plan" data-plan="pro">Tanlash</button>
-                </div>
-                <div class="plan card glass" data-plan="enterprise">
-                    <h3>Enterprise</h3>
-                    <p>Custom solutions</p>
-                    <button class="btn gradient select-plan" data-plan="enterprise">Tanlash</button>
-                </div>
-            </div>
-            <div class="response" id="planResponse"></div>
-        </section>
-        
-        <!-- Dashboard Section -->
-        <section id="dashboard" class="card glass hidden">
-            <h2>Dashboard</h2>
-            <p>Welcome, <span id="userEmail"></span>!</p>
-            <button class="btn gradient" id="logoutBtn">Chiqish</button>
-            <div class="projects">
-                <h3>Loyihalar</h3>
-                <div id="projectList"></div>
-                <form id="projectForm" class="mt-2">
-                    <input type="text" name="title" placeholder="Loyiha nomi" required />
-                    <textarea name="content" placeholder="Loyiha tavsifi" required></textarea>
-                    <button type="submit" class="btn gradient">Saqlash</button>
-                </form>
-                <div class="response" id="projectResponse"></div>
-            </div>
-        </section>
-    </main>
-
-    <script src="reg.js"></script>
+<div class="grid-bg"></div>
+<header class="header">
+  <h1>WebCraft Pro</h1>
+  <nav class="nav-bar">
+    <ul>
+      <li><a href="#register">Ro‘yxatdan o‘tish</a></li>
+      <li><a href="#login">Kirish</a></li>
+      <li><a href="#plans">Tarif rejalari</a></li>
+      <li><a href="#dashboard">Dashboard</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="container">
+  <section id="register" class="card glass">
+    <h2>Ro‘yxatdan o‘tish</h2>
+    <form id="registerForm">
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Parol" required>
+      <button type="submit" class="btn gradient">Ro‘yxatdan o‘tish</button>
+    </form>
+    <div class="response" id="registerResponse"></div>
+  </section>
+  <section id="login" class="card glass">
+    <h2>Kirish</h2>
+    <form id="loginForm">
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Parol" required>
+      <button type="submit" class="btn gradient">Kirish</button>
+    </form>
+    <div class="response" id="loginResponse"></div>
+  </section>
+  <section id="plans" class="card glass">
+    <h2>Tarif rejalari</h2>
+    <div class="plan-grid">
+      <div class="plan card glass" data-plan="free">
+        <h3>Free</h3>
+        <p>Basic features</p>
+        <button class="btn gradient select-plan" data-plan="free">Tanlash</button>
+      </div>
+      <div class="plan card glass" data-plan="pro">
+        <h3>Pro</h3>
+        <p>All premium features</p>
+        <button class="btn gradient select-plan" data-plan="pro">Tanlash</button>
+      </div>
+      <div class="plan card glass" data-plan="enterprise">
+        <h3>Enterprise</h3>
+        <p>Custom solutions</p>
+        <button class="btn gradient select-plan" data-plan="enterprise">Tanlash</button>
+      </div>
+    </div>
+    <div class="response" id="planResponse"></div>
+  </section>
+  <section id="dashboard" class="card glass hidden">
+    <h2>Dashboard</h2>
+    <p>Xush kelibsiz, <span id="userEmail"></span>!</p>
+    <button class="btn gradient" id="logoutBtn">Chiqish</button>
+    <div class="projects">
+      <h3>Loyihalar</h3>
+      <div id="projectList"></div>
+      <form id="projectForm" class="mt-2">
+        <input type="text" name="title" placeholder="Loyiha nomi" required>
+        <textarea name="content" placeholder="Loyiha tavsifi" required></textarea>
+        <button type="submit" class="btn gradient">Saqlash</button>
+      </form>
+      <div class="response" id="projectResponse"></div>
+    </div>
+  </section>
+</main>
+<script src="reg.js"></script>
 </body>
 </html>
