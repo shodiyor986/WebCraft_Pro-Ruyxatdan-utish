@@ -36,10 +36,7 @@ body {
   max-width: 1200px;
 }
 
-/* -----------------------------------------------------------------
-   Neon Grid Background Animation
-   ----------------------------------------------------------------- */
-
+/* Neon Grid Background Animation */
 @keyframes neonGrid {
   0% { background-position: 0% 0%; }
   100% { background-position: 100% 100%; }
@@ -62,10 +59,7 @@ body::before {
   z-index: -2;
 }
 
-/* -----------------------------------------------------------------
-   Glassmorphism Card
-   ----------------------------------------------------------------- */
-
+/* Glassmorphism Card */
 .glass {
   background: var(--color-bg-glass);
   backdrop-filter: blur(12px) saturate(180%);
@@ -77,10 +71,7 @@ body::before {
   box-shadow: 0 8px 32px 0 var(--color-glow);
 }
 
-/* -----------------------------------------------------------------
-   Gradient Buttons
-   ----------------------------------------------------------------- */
-
+/* Gradient Buttons */
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -99,10 +90,6 @@ body::before {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px var(--color-glow);
 }
-
-/* -----------------------------------------------------------------
-   Navigation Tabs
-   ----------------------------------------------------------------- */
 
 nav .tabs {
   display: flex;
@@ -124,10 +111,6 @@ nav .tabs a:hover {
   background: var(--color-accent);
   color: #111;
 }
-
-/* -----------------------------------------------------------------
-   Forms
-   ----------------------------------------------------------------- */
 
 form {
   display: flex;
@@ -151,10 +134,6 @@ form .btn {
   align-self: flex-start;
 }
 
-/* -----------------------------------------------------------------
-   Plan Table
-   ----------------------------------------------------------------- */
-
 .plan-table {
   width: 100%;
   border-collapse: collapse;
@@ -173,10 +152,6 @@ form .btn {
 .plan-table tr:nth-child(even) {
   background: var(--color-card);
 }
-
-/* -----------------------------------------------------------------
-   Floating Particles & Glow Orbs (simple CSS – animation is handled by JS)
-   ----------------------------------------------------------------- */
 
 .particle {
   position: absolute;
@@ -198,25 +173,15 @@ form .btn {
   pointer-events: none;
 }
 
-/* -----------------------------------------------------------------
-   Responsive Design
-   ----------------------------------------------------------------- */
-
 @media (max-width: 768px) {
   .plan-table th,
   .plan-table td {
     padding: 0.5rem;
     font-size: 0.9rem;
   }
-  .btn {
-    width: 100%;
-    text-align: center;
-  }
+  .btn { width: 100%; text-align: center; }
 }
 
 @media (max-width: 480px) {
-  nav .tabs {
-    flex-direction: column;
-    align-items: stretch;
-  }
+  nav .tabs { flex-direction: column; align-items: stretch; }
 }
