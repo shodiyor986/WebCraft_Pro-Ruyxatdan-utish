@@ -1,1 +1,139 @@
-LyoqIFdlYkNyYWZ0IFBybyDigJQg4oCUiIEVuYWJsaW5nIHN0eWxpbmcpICovCjpyb290IHsKICAtLWJnLWNvbG9yOiAjMGEwYTBhOwogICAtLXRleHQtY29sb3I6ICNlMGUwZTA7CiAgLS1wcmltYXJ5LWdyYWRpZW50OiBsaW5lYXItZ3JhZGllbnQoMTM1ZGVnLCAlZmYwMGNjLCAjMzMzM2ZmKTsKICAtLWdsYXNzLWJnOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDgpOwogICAtLWdsYXNzLWJvcmRlcjogcmdiYSh2YXIoMSwgc2l6ZTozMikpOwogICAtLW9yYi1jb2xvcjogcmdiYSgyNTUsIDAsMjAwLDAuNCk7fQoKLyogR2xvYmFsIHJlc2V0cyAqLypcbiovCnsKICBib3gtc2l6aW5nOiBib3JkZXItYm94OwogIG1hcmdpbjogMDsKICBwYWRkaW5nOiAwOwp9Cgpib2R5IHsKICBtaW4taGVpZ2h0OiAxMDB2aDsKICBiYWNrZ3JvdW5kOiB2YXIoLS1iZy1jb2xvcik7CiAgY29sb3I6IHZhcigtLXRleHQtY29sb3IpOwogIGZvbnQtZmFtaWx5OiAnU2Vnb2UgVUknLCBUYWhvbWEsIHNhbnMtc2VyaWY7CiAgb3ZlcmZsb3c6IGhpZGRlbjsKICBwb3NpdGlvbjogcmVsYXRpdmU7fQoKLyogTmVvbiBnciBiYWNrZ3JvdW5kICovCmxpbj5bXSB7CiAgcG9zaXRpb246IGZpeGVkOwogIGluZGV4OiAwOwogIHBvaW50ZXItZXZlbnRzOiBub25lOwogIGJhY2tncm91bmQ6CiAgICByZXBlYXRpbmctbGluZWFyLWdyYWRpZW50KDU1ZGVnLCB2YXIoLS1nbGFzcy1ib3JkZXIpIDAsIHZhcigtLWxpbWl0LWJvcmRyYXkpIDEwcHgsIHRyYW5zcGFyZW50IDIwcHg7CiAgICByZXBlYXRpbmctbGluZWFyLWdyYWRpZW50KC01NWRlZywgdmFyKC0tZ2xhc3MtYm9yZGVyKSAwLCB2YXIoLS1nbGFzcy1ib3JkZXIpIDEwcHgsIHRyYW5zcGFyZW50IDEwcHgsIHRyYW5zcGFyZW50IDIwcHg7CiAgICBvcGFjaXR5OiAwLjI1OwogIHotaW5kZXg6IC0yOwp9CgovKiBHbG93IG9yYnMgKi8KQGtleWZyYW1lcyBvcmJNb3ZlIHsKICAwJSB7IHRyYW5zZm9ybTogdHJhbnNsYXRlKDAsIDApIHNjYWxlKDEpOyBvcGFjaXR5OiAwLjg7IH0KICAwLjU1IHsgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTIwdncgLTIwdmgpIHNjYWxlKDEuNSk7IG9wYWNpdHk6IDAuNDsgfQogIDEwMCB7IHRyYW5zZm9ybTogdHJhbnNsYXRlKC0zMHZ3LCAzMHZoKSBzY2FsZSgxKTsgb3BhY2l0eTogMC44OyB9Cgoub3JiIHsKICBwb3NpdGlvbjogYWJzb2x1dGU7CiAgd2lkdGg6IDE4MHB4OwogIGhlaWdodDogMTgwcHg7CiAgYmFja2dyb3VuZDogcmFkaWFsLWdyYWRpZW50KGNpcmNsZSwgdmFyKC0tb3JiLWNvbG9yKSwgdHJhbnNwYXJlbnQpOwogIGJvcmRlci1yYWRpdXM6IDUwJTsKICBhbmltYXRpb246IG9yYk1vdmUgMTVzIGluZmluaXRlIGxpbmVhcjsKICBmaWx0ZXI6IGJsdXIoMzBweCk7CiAgei1pbmRleDogLTE7fQoub3JiMiB7IGFuaW1hdGlvbi1kZWxheTogN3M7IH0KCi8qIEZsb2F0aW5nIHBhcnRpY2xlcyAqLwpAcmVhZ3JlcF9zZWxlY3RzIHtcbiAgZnJvbSB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMCkgcm90YXRlKDBkZWcpOyBvcGFjaXR5OiAwLjY7IH0gdG8geyB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoLTIwMHB4KSByb3RhdGUoMzYwZGVnKTsgb3BhY2l0eTogMDsgfQp9CgoubmV0d29yayB7CiAgcG9zaXRpb246IGFic29sdXRlOwogIHdpZHRoOiAxMnB4OwogIGhlaWdodDogMTJweDsKICBiYWNrZ3JvdW5kOiB2YXIoLS1wcmltYXJ5LWdyYWRpZW50KTsKICBib3JkZXItcmFkaXVzOiA1MCU7CiAgYW5pbWF0aW9uOiBwYXJ0aWNsZUZsb2F0IDhzIGluZmluaXRlIGVhc2UtaW47CiAgb3BhY2l0eTogMC42Owp9CgouY2FyZCB7CiAgYmFja2dyb3VuZDogdmF0KC0tZ2xhc3MtYmcpOwogIGJhY2tkcjogYmx1cigxMnB4KTsKICBiYWNrZ29yZC1maWx0ZXI6IGJsdXIoOHB4KTsKICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1nbGFzcy1ib3JkZXIpOwogIGJvcmRlci1yYWRpdXM6IDEwcHg7CiAgdGV4dC1hbGlnbjogY2VudGVyOwogIHBhZGRpbmc6IDEycjsgfQoKLyogR3JhZGludCBidXR0b24gKi8KLmJ0biB7CiAgYmFja2dyb3VuZDogdmF0KC0tcHJpbWFyeS1ncmFkaWVudCk7CiAgYm9yZGVyOiBub25lOwogIGJvcmRlci1yYWRpdXM6IDhweDsKICBjb2xvcjogI2ZmZjsKICBwYWRkaW5nOiAwLjZyZW0gMS4ycjsgY3Vyc29yOiBwb2ludGVyOwogIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjJzLCBib3gtc2hhZG93IDAuMnM7CiAgZm9udC13ZWlnaHQ6IDYwMDt9CgouYnRuOmhvdmVyIHsKICB0cmFuc2Zvcm06IHRyYW5zbGF0ZShhZCgtMnB4KTsKICBib3gtc2hhZG93OiAwIDRweCAxMnB4IHZhcigtaG9yYi1jb2xvcil7fQp9Ci5wb3N0IHsgbWFyZ2luOiAwOyBwYWRkaW5nOiAwOyB3aWR0aDogMTAwJSB9CgphdXRoX3Rva2VuIC0tIHsgdG9rZW46ICdXZS1Ob3RlJzsgZmlsbDogbm9tbSAjMDAwOyB9Cg==
+/* WebCraft Pro – Dark Theme with Glassmorphism, Neon Grid, Glow Orbs, and Particles */
+:root {
+  --bg-color: #0a0a0a;
+  --text-color: #e0e0e0;
+  --primary-gradient: linear-gradient(135deg, #ff6ec4, #7873f5);
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glow-color: #00ffff;
+}
+
+/* Global resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Neon Grid Background */
+.grid-bg {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255,255,255,0.02) 0,
+    rgba(255,255,255,0.02) 1px,
+    transparent 1px,
+    transparent 20px
+  ),
+  repeating-linear-gradient(
+    -45deg,
+    rgba(255,255,255,0.02) 0,
+    rgba(255,255,255,0.02) 1px,
+    transparent 1px,
+    transparent 20px
+  );
+  pointer-events: none;
+  z-index: -2;
+  animation: gridMove 30s linear infinite;
+}
+@keyframes gridMove {
+  from {background-position: 0 0;}
+  to {background-position: 200px 200px;}
+}
+
+/* Glow Orbs (floating circles) */
+.orb {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at 30% 30%, var(--glow-color), transparent 60%);
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: float 20s ease-in-out infinite;
+  opacity: 0.4;
+}
+@keyframes float {
+  0% {transform: translate(0,0) scale(1);}
+  50% {transform: translate(30vw,30vh) scale(1.3);}
+  100% {transform: translate(0,0) scale(1);}
+}
+
+/* Particles (tiny dots) */
+.particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: var(--glow-color);
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: drift 12s linear infinite;
+}
+@keyframes drift {
+  from {transform: translate(0,0);}
+  to {transform: translate(calc(100vw - 10px), calc(100vh - 10px));}
+}
+
+/* Glassmorphism Card */
+.card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 420px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+}
+
+/* Gradient Button */
+.btn {
+  display: inline-block;
+  background: var(--primary-gradient);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255,255,255,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {margin: 1rem; padding: 1.5rem;}
+  .btn {width: 100%; text-align: center;}
+}
+
+/* Positioning helpers for orbs and particles */
+.orb:nth-child(1) {top: 10%; left: 20%; animation-delay: 0s;}
+.orb:nth-child(2) {top: 70%; left: 80%; animation-delay: 5s;}
+.orb:nth-child(3) {top: 40%; left: 50%; animation-delay: 2s;}
+
+/* Injected via HTML */
+body::before {content: ''; position: absolute; inset: 0; background: var(--bg-color); z-index: -3;}
+
+/* Additional styling for forms */
+form input {
+  width: 100%;
+  padding: 0.6rem;
+  margin: 0.4rem 0;
+  border: 1px solid var(--glass-border);
+  border-radius: 6px;
+  background: rgba(255,255,255,0.05);
+  color: var(--text-color);
+}
+form input::placeholder {color: #777;}
