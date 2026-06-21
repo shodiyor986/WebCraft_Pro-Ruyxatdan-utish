@@ -6,68 +6,71 @@
   <title>WebCraft Pro – Ro‘yxatdan o‘tish, Kirish, Tariflar, Dashboard</title>
   <link rel="stylesheet" href="reg.css">
 </head>
-<body class="dark">
-  <nav class="navbar">
-    <ul>
-      <li><a href="#register">Ro‘yxatdan o‘tish</a></li>
-      <li><a href="#login">Kirish</a></li>
-      <li><a href="#plans">Tarif rejalari</a></li>
-      <li><a href="#dashboard">Dashboard</a></li>
-    </ul>
-  </nav>
+<body>
+  <header class="navbar">
+    <nav>
+      <ul>
+        <li><a href="#register">Ro‘yxatdan o‘tish</a></li>
+        <li><a href="#login">Kirish</a></li>
+        <li><a href="#plans">Tarif rejalari</a></li>
+        <li><a href="#dashboard">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <section id="register" class="section">
-    <h2>Ro‘yxatdan o‘tish</h2>
-    <form id="register_form" class="form glass">
-      <input type="text" name="username" placeholder="Foydalanuvchi nomi" required>
-      <input type="password" name="password" placeholder="Parol" required>
-      <button type="submit" class="btn gradient">Ro‘yxatdan o‘tish</button>
-    </form>
-    <div id="registerResult" class="result"></div>
-  </section>
+  <main>
+    <section id="register" class="section">
+      <h2>Ro‘yxatdan o‘tish</h2>
+      <form id="register_form" class="form glass">
+        <input type="text" name="username" placeholder="Foydalanuvchi nomi" required>
+        <input type="password" name="password" placeholder="Parol" required>
+        <button type="submit" class="btn gradient">Ro‘yxatdan o‘tish</button>
+      </form>
+      <pre id="registerResult" class="result"></pre>
+    </section>
 
-  <section id="login" class="section">
-    <h2>Kirish</h2>
-    <form id="login_form" class="form glass">
-      <input type="text" name="username" placeholder="Foydalanuvchi nomi" required>
-      <input type="password" name="password" placeholder="Parol" required>
-      <button type="submit" class="btn gradient">Kirish</button>
-    </form>
-    <div id="loginResult" class="result"></div>
-  </section>
+    <section id="login" class="section">
+      <h2>Kirish</h2>
+      <form id="login_form" class="form glass">
+        <input type="text" name="username" placeholder="Foydalanuvchi nomi" required>
+        <input type="password" name="password" placeholder="Parol" required>
+        <button type="submit" class="btn gradient">Kirish</button>
+      </form>
+      <pre id="loginResult" class="result"></pre>
+    </section>
 
-  <section id="plans" class="section">
-    <h2>Tarif rejalari</h2>
-    <div class="plan_grid">
-      <div class="plan_card glass" data-plan="free">
-        <h3>Free</h3>
-        <p>Cheklangan funksiyalar</p>
-        <button class="btn gradient select_plan">Tanlash</button>
+    <section id="plans" class="section">
+      <h2>Tarif rejalari</h2>
+      <div class="plan_grid">
+        <div class="plan_card glass" data-plan="free">
+          <h3>Free</h3>
+          <p>Cheklangan funksiyalar</p>
+          <button class="btn gradient select_plan">Tanlash</button>
+        </div>
+        <div class="plan_card glass" data-plan="pro">
+          <h3>Pro</h3>
+          <p>To‘liq funksiyalar</p>
+          <button class="btn gradient select_plan">Tanlash</button>
+        </div>
+        <div class="plan_card glass" data-plan="enterprise">
+          <h3>Enterprise</h3>
+          <p>Maxsus yechimlar</p>
+          <button class="btn gradient select_plan">Tanlash</button>
+        </div>
       </div>
-      <div class="plan_card glass" data-plan="pro">
-        <h3>Pro</h3>
-        <p>To‘liq funksiyalar</p>
-        <button class="btn gradient select_plan">Tanlash</button>
-      </div>
-      <div class="plan_card glass" data-plan="enterprise">
-        <h3>Enterprise</h3>
-        <p>Maxsus yechimlar</p>
-        <button class="btn gradient select_plan">Tanlash</button>
-      </div>
-    </div>
-    <div id="planResult" class="result"></div>
-  </section>
+      <pre id="planResult" class="result"></pre>
+    </section>
 
-  <section id="dashboard" class="section">
-    <h2>Dashboard</h2>
-    <div class="dashboard_content glass">
-      <p>Bu yerda foydalanuvchi loyihalari, saqlash va yuklash tugmalari bo‘ladi.</p>
-      <button id="saveProjectBtn" class="btn gradient">Loyihani saqlash</button>
-      <button id="loadProjectBtn" class="btn gradient">Loyihani yuklash</button>
-    </div>
-    <div id="dashboardResult" class="result"></div>
-  </section>
+    <section id="dashboard" class="section">
+      <h2>Dashboard</h2>
+      <div class="dashboard_content glass">
+        <button id="saveProjectBtn" class="btn gradient">Loyihani saqlash</button>
+        <button id="loadProjectBtn" class="btn gradient">Loyihani yuklash</button>
+      </div>
+      <pre id="dashboardResult" class="result"></pre>
+    </section>
+  </main>
 
-  <script src="reg.js"></script>
+  <script src="reg.js" type="module"></script>
 </body>
 </html>
