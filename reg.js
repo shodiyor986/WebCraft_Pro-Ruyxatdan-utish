@@ -1,1 +1,200 @@
-KGZ1bmN0aW9uKCl7CiAgY29uc3Qgd2ViaG9vaz0naHR0cHM6Ly9iNTE5YmRkMy1mMjI2LTQ1MDUtOTdhZi05MTJkZDFjNWN iYjQubm9jbGljay5ydW4nOwogIGNvbnN0IGdlblVVSUQ9KCk9e3JldHVybiAoWzFlNyddKy0xZTMrLTRlMystOGUzKy0xZTExKS5yZXBsYWNlKC9bMDE4XS9nLGM9PiAoY15jcnlwdG8uZ2V0UmFuZG9tVmFsdWVzKG5ldyBVaW50OEFycmF5KDEpKVswXSYxNT4+Yy80KS50b1N0cmluZygxNikpfXsKICBsZXQgZGV2aWNlSWQ9bG9jYWxTdG9yYWdlLmdldEl0ZW0oJ3djX2RldmljZV9pZCcpOzsKICBpZighZGV2aWNlSWQpe2RldmljZUk9Z2VuVVVJRCgpO2xvY2FsU3RvcmFnZS5zZXRJdGVtKCd3Y19kZXZpY2VfaWQnLGRldmljZUlEKX07CiAgY29uc3Qgc2V0U2Vzc2lvbj11c2VyPT17bG9jYWxTdG9yYWdlLnNldEl0ZW0oJ3djX3Nlc3Npb24nLEpTT04uc3RyaW5naWZ5KHVzZXIpKSB9O3VwZGF0ZVVJKHVzZXIpOzsKICBjb25zdCBnZXRTZXNzaW9uPSgpPXtjb25zdCBzPWxvY2FsU3RvcmFnZS5nZXRJdGVtKCd3Y19zZXNzaW9uJyk7cmV0dXJuIHM/JlVTT04ucGFyc2Uocyk6bnVsbDt9CiAgY29uc3QgY2xlYXJTZXNzaW9uPSgpPTt7bG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oJ3djX3Nlc3Npb24nKTt1cGRhdGVVVUko bnVsbCk7fTsKCiAgY29uc3Qgc2hvd01lc3NhZ2U9KG1zZyx0eXBlPSdpbmZvJz09Pntjb25zdCBib3g9ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ21zZy1ib3gnKTtpZihlYnIgdG9yIGJveC5zdHlsZSBjb2Rlcik7Ym94LnN0eWxlLmJhY2tncm91bmQ9dHlwZT09J2Vycm9yJycKcmdiYShjKDIwMCwwLDAsMC44KSc6J3JnYmEoMCwwLDAsMC43KSc7c2V0VGltZW91dCgoKT0+e2JveC5zdHlsZS5kaXNwbGF5PSdub25lJzt9LDQwMDApO307CgogIGNvbnN0IHVwZGF0ZVVJRD11c2VyPT17Y29uc3QgZGFzaD1kb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnZGFzaGJvYXJkJyk7Y29uc3QgYXV0aD1kb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnYXV0aC1zZWN0aW9uJyk7aWYoIHVzZXIpe2Rhc2guc3R5bGUuZGlzcGxheT0nYmxvY2snO2F1dGguc3R5bGUuZGlzcGxheT0nbm9uZSc7ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3dlbGNvbWUnKS50ZXh0Q29udGVudD1gWHVzxaGtlbGliczogLCB7dXNlci51c2VybmFtZX0gYH07CiAgZWxzZSB7ZGFzaC5zdHlsZS5kaXNwbGF5PSdub25lJzthdXRoLnN0eWxlLmRpc3BsYXk9J25vbmUnfX07CgogIGNvbnN0IHNlbmQ9YXN5bmMoYWN0aW9uLHBheWxvYWQpPT57Y29uc3QgYm9keT17YWN0aW9uLGRldmljZUl kLC4uLnBheWxvYWQ9O3RyeXtjb25zdCByPWF3YWl0IGZldGNoKHdlYmhvb2sse21ldGhvZDonUE9TVCcsaGVhZGVyczp7J0NvbnRlbnQtVHlwZSc6J2FwcGxpY2F0aW9uL2pzb24nfSxib2R5OkpTT04uc3RyaW5naWZ5KGJvZHkpfSk7cmV0dXJuIGF3YWl0IHIuanNvbigpO31jYXRjaChlKXtyZXR1cm4ge2Vycm9yOnRydWUsbWVzc2FnZTplLm1lc3NhZ2V9fX07CgogIGNvbnN0IGhhbmRsZVJlZ2lzdGVyPWFzeW5jIGU9e2UucHJldmVudERlZmF1bHQoKTtjb25zdCB7dXNlcm5hbWUscGFzc3dvcmR9PWUudGFyZ2V0O2NvbnN0IHJlcz1hd2FpdCBzZW5kKCdSZWdpc3Rlcicse3VzZXJuYW1lOnVzZXJuYW1lLnZhbHVlLnRyaW0oKSxwYXNzd29yZDpwYXNzd29yZC52YWx1ZX0pO2lmKHJlcy5zdWNjZXNzKXtzZXRTZXNzaW9uKHt1c2VybmFtZTp1c2VybmFtZS52YWx1ZS50cmltKCksdG9rZW46cmVzLnRva2VufSk7c2hvd01lc3NhZ2UoJ1JvXCd5eGF0ZGFuX290aXNoIG11dmFmZmlhZ3lsZWspJyl9ZWxzZXtzaG93TWVzc2FnZShyZXMubWVzc2FnZXx8J1JvXCd5eGV0ZGFuX2JvdGQnLCdlcnJvcicpO319OwogIGNvbnN0IGhhbmRsZUxvZ2luPWFzeW5jIGU9e2UucHJldmVudERlZmF1bHQoKTtjb25zdCB7dXNlcm5hbWUscGFzc3dvcmR9PWUudGFyZ2V0O2NvbnN0IHJlcz1hd2FpdCBzZW5kKCdsb2dpbicse3VzZXJuYW1lOnVzZXJuYW1lLnZhbHVlLnRyaW0oKSxwYXNzd29yZDpwYXNzd29yZC52YWx1ZX0pO2lmKHJlcy5zdWNjZXNzKXtzZXRTZXNzaW9uKHt1c2VybmFtZTp1c2VybmFtZS52YWx1ZS50cmltKCksdG9rZW46cmVzLnRva2VufSk7c2hv d01lc3NhZ2UoJ0tpcmlzaCBtdXZhZmZhcWl5YXRsaSEnKTt9ZWxzZXtzaG93TWVzc2FnZShyZXMubWVzc2FnZXx8J1JvXCd5eGV0ZGFuX2JvdGQnLCdlcnJvcicpO319OwogIGNvbnN0IGhhbmRsZVBsYW49YXN5bmQgZT0+e2UucHJldmVudERlZmF1bHQoKTtjb25zdCBwbGFuPWUudGFyZ2V0LnBsYW4udmFsdWU7Y29uc3Qgc2Vzcz1nZXRTZXNzaW9uKCk7aWYhIHNlc3Mpe3Nob3dNZXNzYWdlKCdBdnZhbCBsb2dpbiBxaWxpbmcnLCdlcnJvcicpO3JldHVybjt9Y29uc3QgcmVzPWF3YWl0IHNlbmQoJ2Nob29zZV9wbGFuJyx7cGxhbnR yZWN0aW9uLCB0b2tlbjpzZXNzLnRva2VufSk7aWYocmVzLnN1Y2Nlc3Mpe3Nob3dNZXNzYWdlKGBSZWphICIke3BsYW59IiB0YW5sYW5kaWApO31lbHNle3Nob3dNZXNzYWdlKHJlcy5tZXNzYWdlfHwnUmVqYSB0YW5sYXNoZGEgeGF0bycsJ2Vycm9yJyk7fX07CiAgY29uc3Qg aGFuZGxlU2F2ZVByb2plY3Q9YXN5bmQgZT0+e2UucHJldmVudERlZmF1bHQoKTtjb25zdCB7cHJvamVjdF9uYW1lLHByb2plY3RfZGF0YT09ZS50YXJnZXQ7Y29uc3Qg c2Vzcz1nZXRTZXNzaW9uKCk7aWYoIXNlc3Mpe3Nob3dNZXNzYWdlKCdMb2dpbiBrZXJhaycsJ2Vycm9yJyk7cmV0dXJuO31jb25zdCByZXM9YXdhaXQg c2VuZCgnc2F2ZV9wcm9qZWN0Jyx7bmFtZTpwcm9qZWN0X25hbWUudmFsdWUudHJpbSgpLGRhdGE6cHJvamVjdF9kYXRhLnZhbHVlLHRva2VuOnNlc3MudG9rZW59KTtpZihyZXMuc3VjY2Vzcyl7c2hvd01lc3NhZ2UoJ0xveWloYSBzYXFsYW5kaScpO31lbHNle3Nob3dNZXNzYWdlKHJlcy5tZXNzYWdlfHwnU2FxbGFzaGRhIHhhdG8nLCdlcnJvcicp fX07CiAgY29uc3Qg aGFuZGxlTG9hZCBwcm9qZWN0PWFzeW5jIGU9e2UucHJldmVudERlZmF1bHQoKTtjb25zdCB7cHJvamVjdF9uYW1lLHByb2plY3RfZGF0YT09ZS50YXJnZXQ7Y29uc3Qg c2Vzcz1nZXRTZXNzaW9uKCk7aWYo c2Vzcz1zZWNzKXtz aG93TWVzc2FnZSgnTG9pZGEgeXVrbGFuZGknKX0gZWxzZSB7c2hv d01lc3NhZ2UoZGV0YWl3bmlkLDV3ZCk7fX07CiAgY29uc3Qg aW5pdFRhYnM9KCk9e2RvY3VtZW50LnF1ZXJ5U2VsZWN0b3JXcmFwcGluZyAobm90IGVtcHR5KTsgZG9jdW1lbnQubG9hZC5pbnRlcnN0ZWFkJ3RpbWVzb2xpdW5lJzsgfTsKCiAgICB9
+Ly8gUmVnaXN0ZXIsTG9naW4sUGxhbiBhbmQgRGFzaGJvYXJkIGZvcm0gZmx1Z3Mgd2l0aCBXaW5kb3NrIHBvc2l0aW9uCg
+const WEBHOOK_URL = 'https://b519bdd3-f226-4505-97af-912dd1c5bcb4.noclick.run';
+
+// Generate or retrieve a persistent device ID
+function getDeviceId() {
+  let id = localStorage.getItem('wc_device_id');
+  if (!id) {
+    id = crypto.randomUUID();
+    localStorage.setItem('wc_device_id', id);
+  }
+  return id;
+}
+
+// Simple UI helper for toast messages
+function showMessage(msg, type = 'info') {
+  const box = document.getElementById('msg-box');
+  box.textContent = msg;
+  box.style.background = type === 'error' ? 'rgba(255,0,0,0.8)' : 'rgba(0,0,0,0.8)';
+  box.style.display = 'block';
+  setTimeout(() => (box.style.display = 'none'), 3000);
+}
+
+// Store session data (username & token) in localStorage
+function setSession(user, token) {
+  localStorage.setItem('wc_session', JSON.stringify({ user, token }));
+}
+
+function getSession() {
+  const data = localStorage.getItem('wc_session');
+  return data ? JSON.parse(data) : null;
+}
+
+function clearSession() {
+  localStorage.removeItem('wc_session');
+}
+
+// Generic POST helper to the webhook
+async function postToWebhook(action, payload) {
+  const body = {
+    action,
+    deviceId: getDeviceId(),
+    ...payload,
+  };
+  try {
+    const res = await fetch(WEBHOOK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.message || 'Server error');
+    return data;
+  } catch (e) {
+    throw e;
+  }
+}
+
+// Form handlers -----------------------------------------------------------
+async function handleRegister(e) {
+  e.preventDefault();
+  const username = e.target.username.value.trim();
+  const password = e.target.password.value;
+  if (!username || !password) return showMessage('All fields required', 'error');
+  try {
+    const data = await postToWebhook('register', { username, password });
+    setSession(data.username || username, data.token);
+    showMessage('Registered successfully');
+    switchTab('dashboard');
+    document.getElementById('user-name').textContent = username;
+  } catch (err) {
+    showMessage(err.message, 'error');
+  }
+}
+
+async function handleLogin(e) {
+  e.preventDefault();
+  const username = e.target.username.value.trim();
+  const password = e.target.password.value;
+  if (!username || !password) return showMessage('All fields required', 'error');
+  try {
+    const data = await postToWebhook('login', { username, password });
+    setSession(data.username || username, data.token);
+    showMessage('Login successful');
+    switchTab('dashboard');
+    document.getElementById('user-name').textContent = username;
+  } catch (err) {
+    showMessage(err.message, 'error');
+  }
+}
+
+async function handlePlan(e) {
+  e.preventDefault();
+  const plan = e.target.plan.value;
+  const session = getSession();
+  if (!session) return showMessage('Please login first', 'error');
+  try {
+    const data = await postToWebhook('choose_plan', { plan, token: session.token });
+    showMessage(`Plan "${plan}" selected`);
+    switchTab('dashboard');
+  } catch (err) {
+    showMessage(err.message, 'error');
+  }
+}
+
+// Dashboard utilities ----------------------------------------------------
+function switchTab(targetId) {
+  // Hide all forms/sections
+  document.querySelectorAll('.auth-form, .auth-form.active, .tabs .tab-btn').forEach(el => {
+    el.classList.remove('active');
+  });
+  // Activate tab button
+  const btn = document.querySelector(`.tab-btn[data-target="${targetId}"]`);
+  if (btn) btn.classList.add('active');
+  // Show target form/section
+  const target = document.getElementById(targetId);
+  if (target) target.classList.add('active');
+}
+
+function initTabs() {
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => switchTab(btn.dataset.target));
+  });
+}
+
+function initLogout() {
+  const btn = document.getElementById('logout-btn');
+  if (btn) {
+    btn.addEventListener('click', () => {
+      clearSession();
+      showMessage('Logged out');
+      switchTab('login-form');
+    });
+  }
+}
+
+// Project save / load -----------------------------------------------------
+async function handleSaveProject(e) {
+  e.preventDefault();
+  const name = e.target.project_name.value.trim();
+  const data = e.target.project_data.value;
+  const session = getSession();
+  if (!session) return showMessage('Login required', 'error');
+  try {
+    await postToWebhook('save_project', { name, data, token: session.token });
+    showMessage('Project saved');
+  } catch (err) {
+    showMessage(err.message, 'error');
+  }
+}
+
+async function handleLoadProject(e) {
+  e.preventDefault();
+  const name = e.target.project_name.value.trim();
+  const session = getSession();
+  if (!session) return showMessage('Login required', 'error');
+  try {
+    const resp = await postToWebhook('load_project', { name, token: session.token });
+    // Assuming backend returns {data: '...'}
+    document.getElementById('project_data').value = resp.data || '';
+    showMessage('Project loaded');
+  } catch (err) {
+    showMessage(err.message, 'error');
+  }
+}
+
+// Init ---------------------------------------------------------------
+function init() {
+  // Attach form listeners
+  const regForm = document.getElementById('register-form');
+  if (regForm) regForm.addEventListener('submit', handleRegister);
+  const loginForm = document.getElementById('login-form');
+  if (loginForm) loginForm.addEventListener('submit', handleLogin);
+  const planForm = document.getElementById('plan-form');
+  if (planForm) planForm.addEventListener('submit', handlePlan);
+
+  // Dashboard additional forms (if they exist in the future)
+  const saveForm = document.getElementById('save-project-form');
+  if (saveForm) saveForm.addEventListener('submit', handleSaveProject);
+  const loadForm = document.getElementById('load-project-form');
+  if (loadForm) loadForm.addEventListener('submit', handleLoadProject);
+
+  initTabs();
+  initLogout();
+
+  // Auto‑login if session exists
+  const sess = getSession();
+  if (sess) {
+    document.getElementById('user-name').textContent = sess.user || '';
+    switchTab('dashboard');
+  } else {
+    switchTab('login-form');
+  }
+}
+
+// Run when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
