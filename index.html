@@ -1,51 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>WebCraft Pro – Registration, Login, Plans, Dashboard</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="reg.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebCraft Pro – Registration, Login, Plans, Dashboard</title>
+  <link rel="stylesheet" href="reg.css" />
 </head>
 <body>
-<div class="container">
-  <div class="tabs">
-    <button class="tab-btn active" data-target="register-form">Register</button>
-    <button class="tab-btn" data-target="login-form">Login</button>
-    <button class="tab-btn" data-target="plan-form">Plans</button>
-    <button class="tab-btn" data-target="dashboard">Dashboard</button>
+  <div class="app-container">
+    <!-- Navigation Tabs -->
+    <nav class="tabs">
+      <button class="tab-btn active" data-target="register-section">Register</button>
+      <button class="tab-btn" data-target="login-section">Login</button>
+      <button class="tab-btn" data-target="plan-section">Plans</button>
+      <button class="tab-btn" data-target="dashboard-section">Dashboard</button>
+    </nav>
+
+    <!-- Register Form -->
+    <section id="register-section" class="form-section active">
+      <h2>Register</h2>
+      <form id="register-form" class="auth-form">
+        <input type="text" name="username" placeholder="Username" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <button type="submit" class="gradient-btn">Register</button>
+      </form>
+    </section>
+
+    <!-- Login Form -->
+    <section id="login-section" class="form-section">
+      <h2>Login</h2>
+      <form id="login-form" class="auth-form">
+        <input type="text" name="username" placeholder="Username" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <button type="submit" class="gradient-btn">Login</button>
+      </form>
+    </section>
+
+    <!-- Plan Selection -->
+    <section id="plan-section" class="form-section">
+      <h2>Select a Plan</h2>
+      <form id="plan-form" class="auth-form">
+        <select name="plan" required>
+          <option value="free">Free</option>
+          <option value="pro">Pro</option>
+          <option value="enterprise">Enterprise</option>
+        </select>
+        <button type="submit" class="gradient-btn">Choose Plan</button>
+      </form>
+    </section>
+
+    <!-- Dashboard -->
+    <section id="dashboard-section" class="form-section">
+      <h2>Dashboard</h2>
+      <p>Welcome, <span id="user-name"></span>!</p>
+      <button id="logout-btn" class="gradient-btn">Logout</button>
+    </section>
   </div>
 
-  <form id="register-form" class="auth-form active">
-    <h2>Register</h2>
-    <input type="text" name="username" placeholder="Username" required>
-    <input type="password" name="password" placeholder="Password" required>
-    <button type="submit" class="gradient-btn">Register</button>
-  </form>
+  <div id="msg-box" class="msg-box"></div>
 
-  <form id="login-form" class="auth-form">
-    <h2>Login</h2>
-    <input type="text" name="username" placeholder="Username" required>
-    <input type="password" name="password" placeholder="Password" required>
-    <button type="submit" class="gradient-btn">Login</button>
-  </form>
-
-  <form id="plan-form" class="auth-form">
-    <h2>Select a Plan</h2>
-    <select name="plan" required>
-      <option value="free">Free</option>
-      <option value="pro">Pro</option>
-      <option value="enterprise">Enterprise</option>
-    </select>
-    <button type="submit" class="gradient-btn">Choose</button>
-  </form>
-
-  <section id="dashboard" class="auth-form">
-    <h2>Dashboard</h2>
-    <p>Welcome, <span id="user-name"></span>!</p>
-    <button id="logout-btn" class="gradient-btn">Logout</button>
-  </section>
-</div>
-<div id="msg-box" style="display:none;"></div>
-<script src="reg.js"></script>
+  <script src="reg.js"></script>
 </body>
 </html>
