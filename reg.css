@@ -1,1 +1,235 @@
-LyogIFRhYmxlIGZvciBkYXJrIHRoZW1lICovCgotLS1iZy1jb2xvcjogIzAwMDAwMDsKLS1iZy1vcGFjaXR5OiAuMTsKLS1nbG9iYWwtY29sb3I6ICNmZmZmZmY7Ci0tLXN0YW5kYXJkLWNvbG9yOiAjMDAwMDAwOwotLS1jb2xvcjogI2ZmZmZmZjsKLS1pbmRlbnQtc3R5bGU6IG5vbmU7Ci0tLWFjY2VudC1iZzogcmdiYSgwLDAsMiwgMC44KTsKLS1hY2Nlc3QtYm94LXN0cm9rZTogcHJpbWFyeSB0YWJsZSBzdHJvazo7Ci0tLWFjY2VudC1ib3gtc2hhZG93OiAwIDB4IDBweCAxMHB4IHJnYmEoMjU1LCAyNTUsIDI1NSk7CgotLXNob3VsZGVyOiBub25lOwoKLyogR2xvYmFsIG5vcm1hbCBzdHlsZXMgKi8KLmNvbnRhaW5lciB7CiAgZGlzcGxheTogZmxleDsKICB3aWR0aDogMTAwJTsKICBtYXJnaW46IDBweDsKICBwYWRkaW5nOiAyMHB4OwogIGJvcmRlci1yYWRpdXM6IDEwcHg7CiAgYm9yZGVyOiAxcHggc29saWQgdmVyeS1ibGFjayA7CiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tYmctd2hpdGUpOwogIGNvbG9yOiB2YXIoLS0tY29sb3IpOwogIGZpbGw6IHZhcigtaXMtZm9udC1jb2xvcik7CiAgb3ZlcmZsb3c6IGhpZGRlbjsKfQoKLyogTmVvbiBnciBiYWNrZ3JvdW5kICovCi5uZW9uLWdyaW5kIHsKICBwb3NpdGlvbjogYWJzb2x1dGU7CiAgdG9wOiAwOyBsZWZ0OiAwOwogIHdpZHRoOiAxMDAlOwogIGhlaWdodDogMTAwJTsKICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoNzBkeCwgNzBkeCk7CiAgYW5pbWF0aW9uOiBncmFkaWVudC1hbmFseXNpcz0xcyBpbmZpbml0eSBlc2NhcGU7CiAgZml4ZWQ6IHdpZHRoOiAxMDAlOwogIHotaW5kZXg6IC0xOwogIG94eWdlbi1jb2xvciA6ICNmZmZmZmY7CiAgb3ZlcmZsb3c6IGhpZGRlbjsKfQoKQGtleWZyYW1lIG5lYW9uLWdyaW5kIHsKICB0byB7CiAgICBjb2xvciA6IHZhcigyNTUsIDI1NSwgMjU1LCAwLjI1KTsKICB9CiAgfQp9CgovKiBjbG9ha2UgZ3JpZCwgZ3JpZCBkaWFsbCBhbmQgcG9pbnRlciBlZmZpY3RzICovCkAuZ3JpZGRpYWx7CiAgd2lkdGg6IDEwMHB4OwogIGhlaWdodDogMTAwcHg7CiAgcG9zaXRpb246IGZpeGVkOwogIGxlZnQ6IDAlOwogIHRvcDogMCU7CiAgb3ZlcmZsb3c6IGhpZGRlbjsKICBiYWNrZ3JvdW5kOiBpbWFnZSh1cmwoJy9hc3NldHMvbmVvbl9ncmFkaWVudC5wbmcnKSBub25lIHJlcGVhdCwgY29sb3I6ICNmZmZmZmYpOwogIGZpbHRlcjogY3Jvc3MtZmlsdGVyKDEwMHB4LCBtb3JlKTsKICBhbmltYXRpb246IG5ld1BvcnRyYWl0TmVvblRpbWVfMSAzcyBpbmRlZmluaXR5IGVzc2NhcGU7Cn0KCi8qIEdsb2NrIG9yYnMgKi9cbi5nbG9ja09uZSB7CiAgcG9zaXRpb246IGZ1bGwtYWJzb2x1dGU7CiAgdG9wOiAyMCU7CiAgbGVmdDogMTAlOwogIHdpZHRoOiAyMHsgc3R5bGU6IGJvbmRlcjsgYmFja2dyb3VuZDogcmFkaWFsKDEwMCwgMSAwKX07CiAgZGlzcGxheTogbm9uZTsgYW5pbWF0aW9uOiBnbG9ja09uZSAxLjVzIGluZmluaXRlIGVzc2NhcGU7Cn0KCi8qIEJ1dHRvbnMgd2l0aCBncmFkaWVudCB0cmFuc2ZlcigqLwouZ3JpZCBidXR0b24gewogIGJhY2tncm91bmQtY29sb3I6IHZhcigtaW5kZW50LWNvbG9yKTsKICBwYWRkaW5nOiAxMHB4IDEwcHg7CiAgYm9yZGVyOiAxcHggc29saWQgdmVyeS1ibGFjayBzdHJvazogMSBzb2xpZCB0cmFuc3BhcmVudDsgYm9yZGVyLXJhZGl1czogNHB4OwogIGNvbG9yOiB2YXIoLS1hc2N0aXZlKTsKICBmb250LXdlaWdodDogNjAwOwogIHRyYW5zaXRpb246IGFsc29fZGVmYXVsdCAwLjM7CiAgdGV4dC1zaGFkb3c6IDAgMCAxcHggIzAwMDAwMDsgc2hhZG93OiAwIDAgMHB4IHJnYmEoMjU1LCAyNTUsIDI1NSkgc2hhZG93Owp9Ci5ncmliLWJ0biB7CiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tYWNjZW50LWNvbG9yKTsKICBiYWNrZ3JvdW5kOiByYWRpYWwocHJlc2V0KSBuby1yZXBlYXQ7CiAgYm9yZGVyOiAxcHggc29saWQgdmVyeS1ibGFjayBzdHJvazogMSBzb2xpZCB0cmFuc3BhcmVudCAxMHB4Owp9Ci8qIEdyaW5kCi5ncmliLXJlc3BvbnNlIHsgZGlzcGxheTogZmxleDt9
+/* Dark theme and glassmorphism */
+:root {
+  --bg-color: #0a0a0a;
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --accent: hsl(210, 100%, 55%);
+  --accent-hover: hsl(210, 100%, 65%);
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --gradient-start: hsl(210, 100%, 45%);
+  --gradient-end: hsl(270, 100%, 55%);
+}
+
+/* Global resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: var(--text-primary);
+}
+
+body {
+  background: var(--bg-color);
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Neon Grid Background */
+body::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.03) 0px,
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px,
+    transparent 20px
+  ),
+  repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.03) 0px,
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px,
+    transparent 20px
+  );
+  background-size: 200% 200%;
+  animation: gridMove 30s linear infinite;
+  z-index: -2;
+}
+
+@keyframes gridMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 200% 200%; }
+}
+
+/* Glow Orbs */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3), transparent);
+  filter: blur(8px);
+  animation: float 12s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-30px) rotate(180deg); }
+}
+
+/* Generate a few orbs via pseudo elements */
+body::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><circle cx="100" cy="100" r="80" fill="rgba(255,255,255,0.08)"/></svg>') repeat;
+  opacity: 0.2;
+  animation: orbPulse 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes orbPulse {
+  0% { opacity: 0.1; }
+  50% { opacity: 0.25; }
+  100% { opacity: 0.1; }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header, .footer {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Glassmorphism cards */
+.auth-section, .dashboard-section {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+.auth-section.hidden, .dashboard-section.hidden {
+  display: none;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-form input {
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  color: var(--text-primary);
+}
+
+.auth-form input::placeholder {
+  color: var(--text-secondary);
+}
+
+/* Gradient button */
+.btn {
+  cursor: pointer;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  color: #fff;
+  font-weight: 600;
+  transition: transform 0.2s, background 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, var(--gradient-end), var(--gradient-start));
+}
+
+.btn.select-plan {
+  margin-top: 0.5rem;
+}
+
+.response {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Plan grid */
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.plan-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+/* Dashboard Project panel */
+.project-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#projectEditor {
+  min-height: 200px;
+  resize: vertical;
+  font-family: monospace;
+}
+
+.project-list {
+  list-style: none;
+  margin-top: 1rem;
+  padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.project-item {
+  padding: 0.5rem;
+  cursor: pointer;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.project-item:hover {
+  background: rgba(255,255,255,0.07);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container { padding: 1rem; }
+  .auth-section, .dashboard-section { padding: 1rem; }
+}
+
+/* Add floating particles (simple) */
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: particleMove 8s linear infinite;
+}
+
+@keyframes particleMove {
+  0% { transform: translate(0,0); opacity: 1; }
+  100% { transform: translate(calc(100vw - 4px), calc(100vh - 4px)); opacity: 0; }
+}
+
+/* Create particles via JS (optional) */
