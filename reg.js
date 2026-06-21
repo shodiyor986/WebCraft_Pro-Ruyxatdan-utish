@@ -36,7 +36,7 @@ function showResult(elementId, data) {
   }
 }
 
-// Registration
+// Registration form handling
 const registrationForm = document.getElementById('registrationForm');
 if (registrationForm) {
   registrationForm.addEventListener('submit', async e => {
@@ -52,7 +52,7 @@ if (registrationForm) {
   });
 }
 
-// Login
+// Login form handling
 const loginForm = document.getElementById('loginForm');
 if (loginForm) {
   loginForm.addEventListener('submit', async e => {
@@ -61,7 +61,7 @@ if (loginForm) {
     const password = e.target.password.value;
     try {
       const result = await postToWebhook('login', { username, password });
-      if (!result.error && result.sessionToken) {
+      if (result.sessionToken) {
         localStorage.setItem('sessionToken', result.sessionToken);
       }
       showResult('loginResult', result);
@@ -71,7 +71,7 @@ if (loginForm) {
   });
 }
 
-// Plan selection – expects elements with data-plan attribute inside #planContainer
+// Plan selection handling
 const planContainer = document.getElementById('planContainer');
 if (planContainer) {
   planContainer.addEventListener('click', async e => {
@@ -86,7 +86,7 @@ if (planContainer) {
   });
 }
 
-// Save project – sends current dashboard HTML
+// Save project handling
 const saveBtn = document.getElementById('saveProjectBtn');
 if (saveBtn) {
   saveBtn.addEventListener('click', async () => {
@@ -101,15 +101,14 @@ if (saveBtn) {
   });
 }
 
-// Load project – expects webhook to return { data: "<html>..." }
+// Load project handling
 const loadBtn = document.getElementById('loadProjectBtn');
 if (loadBtn) {
   loadBtn.addEventListener('click', async () => {
     try {
       const result = await postToWebhook('loadProject', {});
-      if (result.data) {
-        const dashboard = document.getElementById('dashboard');
-        if (dashboard) dashboard.innerHTML = result.data;
+      if (result.data && document.getElementById('dashboard')) {
+        document.getElementById('dashboard').innerHTML = result.data;
       }
       showResult('projectResult', result);
     } catch (err) {
@@ -118,7 +117,7 @@ if (loadBtn) {
   });
 }
 
-// Optional: add some floating orbs/particles for visual flair (generated via CSS classes)
+// Visual flair: create floating orbs on page load
 function createOrbs(count = 5) {
   const body = document.body;
   for (let i = 0; i < count; i++) {
