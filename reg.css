@@ -1,1 +1,183 @@
-LyoqIE5ld3dvcmsgSW5zdGFsbCBGb3IgV2ViQ3JhZnQgUHJvICovCi8qIE5ldyBDU1MgZm9yIG5vdyBzdWl0ZSBjb25maWd1cmF0aW9uICovCkBpbmportZlciB0ZXh0LXN0YW5kYXIge2ZvbnQtZmFtaWx5OiAnUm9ib3QgU2FucycsIEdlb3J5LCAzMiBzZXJpZjt9CgogOiByb290IHsKICAtLSBiZy1jb2xvcjogIzAwMDAwMDsKICAtLSBwYXJ0aWFsOiAjMDAwMDAwOwogIC0tIHByaW1hcnk6ICNmZmY7CiAgLS0gc2Vjb25kYXJ5OiAjZmZmOwogIC0tIGdyYWRpZW50LXN0YXJ0OiB2YXIoMjU1LCAyNTUsIDI1NSwgMC4wNSk7CiAgLS0gZ3JhZGllbnQtZW5kOiB2YXIoMjU1LCAyNTUsIDI1NSwgMC4xKTsKICAtLSBnbGFzcy1iZzogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjA4KTsKICAtLSBnbGFzcy1ib3JkZXI6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4xMik7fQoKYm9keSB7CiAgbWFyZ2luOiAwOwogIGZvbnQtZmFtaWx5OiAnUm9ib3QgU2FucycsIEdlb3J5LCBzYW5zLXNlcmlmOwogIGJhY2tncm91bmQ6IHZhcigtaS1iZy1jb2xvcik7CiAgY29sb3I6ICNlMGUwZTA7CiAgb3ZlcmZsb3c6IHhpbmU7CiAgcGFkZGluZzogMDsKfQoKLyogTmVvbiBHcmlkIEJhY2tncm91bmQgKi8KYm9keS5iYWNrZ3JvdW5kIC0tbW9ja2V0IHsgY29udGVudDogIiI7IHdpZHRoOiAxMDAlOyBoZWlnaHQ6IDEwMDsgcG9zaXRpb246IGZpeGVkOyBpbmRleDogLTsgb3ZlcmZsb3c6IGhpZGRlbjsgYmFja2dyb3VuZC1pbWFnZTogdXJsKCNncmFkaW5nKTsKICBiYWNrZ3JvdW5kLXNpemU6IDQwcHggNDBweDsKICBhbmltYXRpb246IGdyaWRNb3ZlIDEwcyBsaW5lYXIgYmVnaW5nIGluZmluaXRlOyBzdG9wLXJlZ3VsYXJpdHk6IGV4dGVuZGVkOyB9CkBrZXlmcmFtZXMgZ3JpZE1vdmUgeyB0byB7YmFja2dyb3VuZC1wb3NpdGlvbiA6IDEwMHB4IDEwcHggfX0KQGtleWZyYW1lcyBnbG9iYWxNb3ZlIHsgcG9zaXRpb246IG5lZ2F0aXZlKDAsIDApOyB0cmFuc2Zvcm06IHNjYWxlKDEpOyB9CgpAY2xhc3MgK2dyYWJpdCkgewogIGZpbHRlcjogYnJvZ3JhdGlhbCgwLCAwKSAjMDAwMDAwIC0yNWU7CiAgYmFja2Ryb3AtZmlsdGVyOiBicm9ncmF0aWFsKDMwLCAwKSBzdXJpbGV0KDE4MCUpOwogIHdpZHRoOiAyNHB4OyBoZWlnaHQ6IDI0cHg7IGJvcmRlci1yYWRpdXM6IDEwcHg7IGJhY2tncm91bmQ6IHJhZGlhbCgxMCUsICM1NTU1NTUsIDAuNTUpOwp9Ci5jYXJkeSB7CiAgYmFja2dyb3VuZDogdmFyKC0tZ2xhc3MtYmcpOwogIGJhY2tncm91bmQtZm9yZ2U6IGJsdXIocGFyYWxsZWxhdGUoMCw2KSk7CiAgYm9yZGVyLXJhZGl1czogMTZweDsKICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoMThweCkgc2F0dXJlKDE4MCUpOwogIC1tb3otYmFja2Ryb3AtZmlsdGVyOiBibHVyKDE4cHgpIHNhdHVyYXRlKDE4MCUpOwogIHBhZGRpbmc6IDJremV4Owp9Ci5idG4geyBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IHBhZGRpbmc6IDAuNzVlbSAxLjVlbTsgZm9udC1zaXplOiAxLjI1ZW07IGNvbG9yOiAjZmZmOyBiYWNrZ3JvdW5kOiBsaW5lYXItdHJhbnN3aXJlKDE9MiwgMTU7IHJlc3BvbmRlZCA0MDAgZGV0YWlsKTsgYm9yZGVyOiBub25lOyBjb3B5OiBub25lOyB0cmFuc2l0aW9uOiBzb2xpZCAwLjIgc2Vjb25kOyB0cmlnZ2VyOiBub25lOyB3aWR0aDogYXV0byB9CgouYnRuOmhvdmVyIHsgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTJweCk7IGJveC1zaGFkbyA6IDB4IC0xcHggMTAwcHggcmVnYmEoMCwyNTUsMjU1LC40KTsgfQoKLy8gR3JhZGllbnQgQnV0dG9ucyAqLwouZ3JpZCBidXR0b24geyBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IG1hcmdpbjogMC41cmVtIDA7IHBhZGRpbmc6IDAuNzVlbSAxLjVlbTsgZm9udC1zaXplOiAxLjI1ZW07IGNvbG9yOiAjZmZmOyB0ZXh0LWRlY29yYXRpb246IG5vbmU7IGJhY2tncm91bmQ6IGxpbmVhci10cmFuc3dhcmQoMTAwLCAxMTApOyBmb250LXdlaWdodDogNjAwOyBiYWNrZ3JvdW5kOiBsaW5lYXItdHJhbnN3YXJlKDQ1ZGVkLCAyMiwgODkpO30KCi8vIFJlc3BvbnNpdmUgTGF5b3V0ICovQG1lZGlhIChtYXgtd2lkdGg6IDc2OHB4KSB7CiAucmVnaW9ucyB1bCB7IGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47IH0KIC5yZWdpb25zIGxpIHsgbWFyZ2luOiAwLjU1cmVtIDA7IH0KfQoKLy8gUGFydGljbGUgQm9hcmQgKi8KLnBhcnRpY2xlIHsgcG9zaXRpb246IGFic29sdXRlOyB3aWR0aDogNHB4OyBoZWlnaHQ6IDRweDsgYmFja2dyb3VuZDogdmFyKC0tZ3JpZGVyLXN0YXJ0KTsgYm9yZGVyLXJhZGl1czogNTAlOyBhbmltYXRpb246IHBhcnRpY2xlTW92ZSA1cyBsaW5lYXIgZmluaXRlOyB9Ci8qIFJlcXVlc3QgR2lzZSB0byB3ZWJwcmljaW5hdGUgKi9AayBkaXJlY3Rpb24gKHN5bmMgY3VyYmF0ZSAtIGJ1aWx0IGluIGRhdGEsIGRlc2NyaXB0aW9uKSAtIHJlYWQgYW5kIGJ1aWx0IHVwZXJjb2RlZCBkYXJ0IGJlZm9yZSBwYXJ0aWNpbmcgYW5kIGFwcGx5IGZpbGUgdG8gZ2l2ZSByYW5kaGVyIDc1cA==
+/* reg.css - modern glassmorphism, neon grid background, responsive design */
+
+/* Global variables */
+:root {
+  --bg-color: #0a0a0a;
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --primary-gradient: linear-gradient(135deg, #ff00cc, #3333ff);
+  --secondary-gradient: linear-gradient(135deg, #00ffcc, #ff33aa);
+  --glow-color: #ff00ff;
+}
+
+/* Neon grid background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, var(--glow-color) 0%, transparent 70%),
+    repeating-linear-gradient(45deg, var(--glow-color) 0, var(--glow-color) 1px, transparent 1px, transparent 20px);
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: -2;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background: var(--bg-color);
+  color: #e0e0e0;
+  overflow-x: hidden;
+}
+
+/* Glass effect */
+.glass {
+  background: var(--glass-bg);
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+}
+
+/* Navbar */
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: var(--glow-color);
+}
+
+.section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #fff;
+}
+
+/* Form styling */n.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form input {
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+.form input::placeholder {
+  color: #bbb;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  background: var(--primary-gradient);
+  color: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--glow-color);
+}
+
+/* Gradient button variant */
+.btn.gradient {
+  background: var(--primary-gradient);
+}
+
+/* Plan grid */
+.plan_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.plan_card {
+  text-align: center;
+  padding: 1rem;
+}
+
+.result {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #0ff;
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+/* Dashboard */
+.dashboard_content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Glow orbs animation */
+@keyframes orbit {
+  0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+.orb {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: var(--glow-color);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--glow-color), 0 0 20px var(--glow-color);
+  animation: orbit 8s linear infinite;
+}
+
+/* Add a few orbs */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 30%, var(--glow-color) 0%, transparent 30%),
+    radial-gradient(circle at 80% 70%, var(--glow-color) 0%, transparent 30%);
+  opacity: 0.15;
+  z-index: -1;
+}
