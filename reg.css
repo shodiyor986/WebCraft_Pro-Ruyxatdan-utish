@@ -1,1 +1,113 @@
-.glass{background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2);border-radius:12px;}
+/* Dark theme & glassmorphism */
+:root {
+  --bg: #0a0a0a;
+  --bg-glass: rgba(255,255,255,0.08);
+  --glass-blur: 12px;
+  --primary: #00ffea;
+  --secondary: #ff00ff;
+  --gradient-btn: linear-gradient(135deg, #00ffea, #ff00ff);
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: var(--bg);
+  color: #fff;
+  overflow: hidden;
+}
+section {
+  padding: 2rem;
+}
+.glass {
+  background: var(--bg-glass);
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+}
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #fff;
+  background: var(--gradient-btn);
+  transition: transform .2s, box-shadow .2s;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+/* Neon grid background */
+@keyframes gridMove {
+  from {background-position: 0 0;}
+  to {background-position: 200px 200px;}
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--primary) 0,
+    var(--primary) 1px,
+    transparent 1px,
+    transparent 10px
+  ),
+  repeating-linear-gradient(
+    -45deg,
+    var(--secondary) 0,
+    var(--secondary) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+  background-size: 200% 200%;
+  animation: gridMove 20s linear infinite;
+  opacity: 0.2;
+  pointer-events: none;
+}
+/* Glow orbs */
+@keyframes orbMove {
+  0% {transform: translate(0,0);}
+  25% {transform: translate(30vw,-20vh);}
+  50% {transform: translate(-20vw,30vh);}
+  75% {transform: translate(-30vw,-10vh);}
+  100% {transform: translate(0,0);}
+}
+.orb {
+  position: fixed;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(0,255,234,0.4), transparent);
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: orbMove 30s ease-in-out infinite;
+  pointer-events: none;
+}
+.orb:nth-child(1) {top: 10%; left: 20%; animation-delay: 0s;}
+.orb:nth-child(2) {top: 70%; left: 80%; animation-delay: 10s;}
+.orb:nth-child(3) {top: 40%; left: 50%; animation-delay: 20s;}
+/* Particles */
+@keyframes particleFloat {
+  from {transform: translateY(0) scale(1);}
+  to {transform: translateY(-200vh) scale(0.5);}
+}
+.particle {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: particleFloat 10s linear infinite;
+}
+@media (max-width: 768px) {
+  .glass {padding: 1rem;}
+  .btn {padding: 0.5rem 1rem;}
+}
+/* Responsive layout */
+#auth-section, #dashboard {
+  max-width: 500px;
+  margin: 2rem auto;
+}
