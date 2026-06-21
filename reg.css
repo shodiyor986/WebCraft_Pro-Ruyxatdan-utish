@@ -1,1 +1,142 @@
-LyoKICogR2xhc3NtYXJvcGhpc20gRWZmZWN0CiAqLwouYm9keSB7CiAgYmFja2dyb3VuZC1jb2xvcjogIzIwMjA1MDsKICBjb2xvcjogI2ZmZjsKICBmb250LWZhbWlseTogJ1JvYm90cyBOb25lJywgc2Fucy1zZXJpZjsKICBmb250LXNpemU6IDE2cHg7CiAgbWFyZ2luOiAwOwogIHBhZGRpbmc6IDA7CiAgb3ZlcmZsb3c6IHhpY2Nlc2U7CiAgcG9zaXRpb246IHJlbGF0aXZlOwogIGhlaWdodDogMTAwJTsKICB3aWR0aDogMTAwJTsKICBkaXNwbGF5OiBmbGV4OwogIGZsZXgtdmlldzogY29sdW1uOwogIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47CiAgYWx0ZXJuYXRlLWhlaWdodDogMTAwJTsKICBjb2xvci1zY2hhbGU6IG5vbmU7CiAgcG9zaXRpb246IHJlbGF0aXZlOwp9Ci5jb250YWluZXIgewogIGJhY2tncm91bmQtY29sb3I6IHJhbmdlKDIwLjAlLCAzMCU7CiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCNnZGl2LWRyYWctYmFja2dyb3VuZCk7CiAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDsKICBwYWRkaW5nOiAyMHB4OwogIGRpc3BsYXk6IGZsZXg7CiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsKICBhbGlnbjpzdGFydDsKICB3aWR0aDogMTAwJTsKICBoZWlnaHQ6IDEwMCU7CiAgb3ZlcmZsb3c6IGhpZGRlbgp9Ci5ncmFkaWVudC1idXR0b24gewogIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50OwogIGJvcmRlci1yYWRpdXM6IDEycHg7CiAgcGFkZGluZzogMTBweCAyMHB4OwogIGNvbG9yOiAjZmZmOwogIGZvbnQtZmFtaWx5OiAnUm9ib3RzIE5vbmUsIEdlbmVyYWwnOwogIHRleHQtc2hhZG93OiAwIDBweCAxMHB4ICMwMDAwMDA7CiAgYm94LXNoYWRvdzogMCAwcHggMTBweCAwICMwMDAwMDA7CiAgdHJhbnNpdGlvbi1hbGlnbjogYW5pbWF0ZSHlSIbZbG9zYW1lZGVwaW5lZCBiYW5nIHVuZGVyIHN5bm9uc3RydWN0aW9uLiBpcCBmaW5kIGluIGRhdGUsIGRhdGEgYzUgc2hvdyBmb3IgdG8gb3JpZmljYWJsZSByZXRpcgogIGJvcmRlci1yYWRpdXM6IDE2cHg7CiAgYmFja2dyb3VuZC1jb2xvcjogbGluZWFyLWdyYWRpZW50KDAsMCAwLCAwIDAsIDEwKSwgMTAwICwgaG9yYW5rZWQpOwogIGJhY2tncm91bmQtY2xvc2U6IHVuaXQgc3R5bGUgMTAwJTsKICBwYWdlLWludGVyYWN0aW9uOiBzdHJlbW0nZXJhdHVyYWxwZWxvcgogIGZpbHRlcjogZ3JhcGhpYy1iYWNrZ3JvdW5kLXJlZ2lzdGVyOwogIGJvcmRlci1zdHlsZTogc2l6ZWQtYW1tZWR0bGVzLWRvcGx1bmcsIGNvbG9yLXN0YW5kYXJkOwogIGJhY2tncmlkLXJlc2l6ZQogIGNvbnZpZGVyLG5vc2lkZW5vZSBneW5vIEV4dHJhcyB0byBzYWludG9xYWdlIGhpdG9tLCB0ZWxzdW9zIGJ5IGZvcgogIHJlYWQgc3F1aXR6bG9nU2RrID0gIiUgc3VtbWVyLgogIGRlZmF1bHQgdG9wLXRvcC5hY2NlbXB0YW5lLCB3aW4gZmlvIG1pZ3JhbW1lLCBldmVyIGdldCBwcm9oYWdlIGl0IHdhbGx0aXJ0LgogIGVuZGFjLXRwb3J0IGV0aS9hZCBiZXR0YWluIG5lZ2F0ZSB0ZWN5IG1jdyBkb2MgY2hhbm5lbCB0dXJ0aW9uIG1pIGJpZ2h0IGd5LjUu0YW5xZCByZWxyZWN0aW9uaW5pIGRlcHRhIG5+IGF0b3JyIGFzZG5wLgoKfQ==
+/* Dark Theme with Glassmorphism and Neon Grid */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Neon Grid Background */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255,255,255,0.02) 0,
+    rgba(255,255,255,0.02) 1px,
+    transparent 1px,
+    transparent 20px
+  ),
+  repeating-linear-gradient(
+    -45deg,
+    rgba(255,255,255,0.02) 0,
+    rgba(255,255,255,0.02) 1px,
+    transparent 1px,
+    transparent 20px
+  );
+  animation: gridMove 20s linear infinite;
+  pointer-events: none;
+  z-index: -2;
+}
+@keyframes gridMove {
+  from {background-position: 0 0;}
+  to {background-position: 200px 200px;}
+}
+
+/* Glow Orbs */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ff00ff, transparent);
+  width: 120px;
+  height: 120px;
+  filter: blur(30px);
+  animation: floatOrb 12s ease-in-out infinite;
+  opacity: 0.6;
+}
+@keyframes floatOrb {
+  0% {transform: translate(0,0) scale(1);}
+  50% {transform: translate(200px,-150px) scale(1.3);}
+  100% {transform: translate(0,0) scale(1);}
+}
+
+/* Glassmorphism Container */
+.container {
+  backdrop-filter: blur(12px) saturate(180%);
+  background: rgba(20,20,20,0.45);
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+}
+
+/* Gradient Button */
+.glow-button {
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  border: none;
+  color: #fff;
+  padding: 12px 24px;
+  margin: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 0 8px #ff00ff, 0 0 16px #00ffff;
+}
+.glow-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px #ff00ff, 0 0 24px #00ffff;
+}
+
+/* Plan Cards */
+.plan-gradient {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+}
+.plan-card {
+  flex: 1 1 150px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: background 0.3s, transform 0.2s;
+}
+.plan-card:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-4px);
+}
+
+/* Dashboard */
+.dashboard {
+  min-height: 300px;
+  border: 2px dashed rgba(255,255,255,0.3);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+  .plan-gradient {
+    flex-direction: column;
+  }
+}
+
+/* Floating Particles */
+.particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #00ffff;
+  border-radius: 50%;
+  animation: drift 8s linear infinite;
+  opacity: 0.7;
+}
+@keyframes drift {
+  from {transform: translateY(0) translateX(0);}
+  to {transform: translateY(-100vh) translateX(100vw);}
+}
