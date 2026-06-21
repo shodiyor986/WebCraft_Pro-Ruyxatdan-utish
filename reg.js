@@ -1,4 +1,4 @@
-// WebCraft Pro – Front‑end logic for registration, login, plans and dashboard
+// WebCraft Pro – Front‑end logic for registration, login, plans, and dashboard
 // ---------------------------------------------------------------
 // All actions are sent to a single webhook endpoint. The endpoint
 // receives a JSON payload and returns a JSON response. The response
@@ -80,6 +80,25 @@ function showMessage(msg, type = "info") {
 }
 
 // -----------------------------------------------------------------
+// Navigation – show/hide sections based on tab click
+// -----------------------------------------------------------------
+function switchSection(target) {
+  document.querySelectorAll(".section").forEach((el) => (el.style.display = "none"));
+  const section = document.getElementById(`${target}-section`);
+  if (section) section.style.display = "block";
+  // update active tab styling
+  document.querySelectorAll("nav .tabs a").forEach((a) => a.classList.toggle("active", a.dataset.target === target);
+}
+
+document.querySelectorAll("nav .tabs a").forEach((a) => {
+  a.addEventListener("click", (e) => {
+    e.preventDefault();
+    const target = a.dataset.target;
+    switchSection(target);
+  });
+});
+
+// -----------------------------------------------------------------
 // Registration form handling
 // -----------------------------------------------------------------
 const registerForm = document.getElementById("register-form");
@@ -116,10 +135,7 @@ if (loginForm) {
     else if (result.session) {
       setSession(result.session);
       showMessage("Login successful – loading dashboard…");
-      // Switch UI to dashboard view
-      document.querySelectorAll(".section").forEach((el) => (el.style.display = "none"));
-      const dash = document.getElementById("dashboard-section");
-      if (dash) dash.style.display = "block";
+      switchSection("dashboard");
     } else {
       showMessage("Unexpected response from server", "error");
     }
