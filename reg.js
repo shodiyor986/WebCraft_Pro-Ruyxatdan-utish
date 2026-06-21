@@ -1,1 +1,130 @@
-Ly8gV2ViQ3JhZnQgUHJvIC0gRnJvbnRlbmQgTG9naWMKY29uc3QgV0VCSE9PSV9VUkwgPSAiaHR0cHM6Ly9iNTE5YmRkMy1mMjI2LTQ1MDUtOTdhZi05MTJkZDFjNWJjYjQubm9jbGljay5ydW4iOwoKLy8gLS0tLS0tLS0tLS0tIFV0aWxp dHkgLS0tLS0tLS0tLS0tCmxldCBnZW5lcmF0ZURldmljZUl kID0gKCkgPT4gewogIC8vIFNpbXBsZSBkZXRlcm1pbmlzdGljIFVVSUQg4oCTTGluayBnZW5l cmF0b3IKICByZXR1cm4gY3J5cHRvLnJhbmRvbVVVSUQoKTsKfQoKZnVuY3Rpb24gZ2 V0RGV2aWNlSWQoKSB7CiAgbGV0IGlkID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oImRldmljZUlkIik7CiAgaWYgKCFpZCkgewogICAg aWQgPSBnZW5lcmF0ZURldmljZUltKCk7CiAgICBsb2NhbFN0b3JhZ2Uuc2V0SXRlbSgiZGV2aWNlSWQiLCBpZCk7CiAgfQogIHJldHVybiBpZDsKfQoKYXN5bmMg ZnVuY3Rpb24gcG9zdFRvV2ViaG9vayhhY3Rpb24sIHBheWxvYWQpIHsKICBjb25zdCBib2R5ID0geyBhY3Rpb24sIGRldmljZUlkOiBnZXRkZXZpY2VJZCgpLCAuLi5wYXlsb2FkIH07CiAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBmZXRjaChXRUJIT09LX1VSTCwgewogIG1ldGhvZDogIlBPU1QiLAogIGhlYWRlcnM6IHsgIkNvbnRlbnQtVHlwZSI6ICJhcHBsaWNhdGlvbi9qc29uIiB9LAogIGJvZHk6IEpTT04uc3RyaW5naWZ0KGJvZHkpCiB9KTsKICBjb25zdCBkYXRhID0gYXdhaXQgcmVzcG9uc2UuanNvbigpOwogIHJldHVybiBkYXRhOwp9CmZ1bmN0aW9uIHNob3dSZXN1bHQodGFyZ2V0SWQsIGRhdGEpIHsKICBjb25zdCB0YXJnZXQgPSBkb2N1bWVudC5nZXRFRmVsZW1lbnRCeUlkKHRhcmdldElkKTsKICBpZiAoIXRhcmdldCkgcmV0dXJuOwogIHRhcmdldC5pbm5lckhUTUwgPSBgPHByZSBjbGFzcz0icmVzdWx0Ij4ke0pTT04uc3RyaW5naWZ0KGRhdGEsIG51bGwsIDIpfTwvcHJlPmA7Cn0KCi8vLS0tLS0tLS0tLS0tIFJlZ2lzdHJhdGlvbi0tLS0tLS0tLS0tLS0KY29uc3QgcmVnRm9ybSA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJyZWdpc3Rlcl9mb3JtIik7CmlmIChyZWdGb3JtKSB7CiAgcmVnRm9ybS5hZGRFdmVudExpc3RlbmVyKCJzdWJtaXQiLCBhc3luYyBlID0+IHsKICAgIGUucHJldmVudERlZmF1bHQoKTsKICAgIGNvbnN0IHVzZXJuYW1lID0gcmVnRm9ybS5xdWVyeVNlbGVjdG9yKCJbbmFtZT0ndXNlcm5hbWUnXSIpLnZhbHVlLnRyaW0oKTsKICAgIGNvbnN0IHBhc3N3b3JkID0gcmVnRm9ybS5xdWVyeVNlbGVjdG9yKCJbbmFtZT0ncGFzc3dvcmQnXSIpLnZhbHVlOwogICAgY29uc3QgcmVzdWx0ID0gYXdhaXQgcG9zdFRvV2ViaG9vaygi cmVnaXN0ZXIiLCB7IHVzZXJuYW1lLCBwYXNzd29yZCB9KTsKICAgIGlmIChyZXN1bHQudG9rZW4pIGxvY2FsU3Rv cmFnZS5zZXRJdGVtKCJzZXNzaW9uVG9rZW4iLCByZXN1bHQudG9rZW4pOwogICAgc2hvd1Jlc3VsdCgicmVnUmVzdWx0IiwgcmVzdWx0KTsKICB9KTsKfQoKLy8tLS0tLS0tLS0tLS0gTG9naW4gLS0tLS0tLS0tLS0tCmxvZ2luRm9ybSA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJsb2dpbl9mb3Jt Iik7CmlmIChsb2dpbkZvcm0pIHsKICBsb2dpbkZvcm0uYWRkRXZlbnRMaXN0ZW5lcigiU3VibWl0IiwgYXN5bmMgZSA9 PiB7CiAgICBlLnByZXZlbnREZWZhdWx0KCk7CiAgICBjb25zdCB1c2VybmFtZSA9IGxvZ2luRm9ybS5xdWVyeVNlbGVjdG9yKCJbbmFtZT0ndXNlcm5hbWUnXSIpLnZhbHVlLnRyaW0oKTsKICAgIGNvbnN0IHBhc3N3b3JkID0gbG9naW5Gb3JtLnF1ZXJ5U2VsZWN0b3IoIltuYW1lPSdwYXNzd29yZCddIiku dmFsdWU7CiAgICBjb25zdCByZXN1bHQgPSBhd2FpdCBwb3N0VG9XZWJob29rKCJsb2dpbiIsIHsgdXNlcm5hbWUsIHBhc3N3b3JkIH0pOwog ICAgaWYgKHJlc3VsdC50b2tlbikgbG9jYWxTdG9yYWdlLnNldEl0ZW0oInNlc3Npb25Ub2tlbiIsIHJlc3VsdC50b2tlbik7CiAgICBzaG93UmVzdWx0KCJsb2dpblJlc3VsdCIsIHJlc3VsdCk7CiAgfSk7Cn0KCi8vLS0tLS0tLS0tLS0tIFBsYW4gU2VsZWN0aW9uIC0tLS0tLS0tLS0tLS0KY29uc3QgcGxhbkJ1dHRvbnMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCIucGxhbi1jZWxsIik7CnBsYW5CdXR0b25zLmZvckVhY2goYnRuID0+ IHsgYnRuLmFkZEV2ZW50TGlzdGVuZXIoImNsaWNrIiwgYXN5bmMgKCkgPT4gewogIGNvbnN0IHBsYW4gPSBidG4uZGF0YXNldC5wbGFuOwogIGNvbnN0IHRva2VuID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oInNlc3Npb25Ub2tlbiIpIHx8ICIiOwogIGNvbnN0IHJlc3VsdCA9IGF3YWl0IHBvc3RUb1dlYmhvb2soInNlbGVjdFBsYW4iLCB7IHBsYW4sIHRva2VuIH0pOwogIHNob3dSZXN1bHQoInBsYW5SZXN1bHQiLCByZXN1bHQpOwp9KTsKfQoKLy8tLS0tLS0tLS0tLS0gUHJvamVjdCBEYXNoYm9hcmQgLS0tLS0tLS0tLS0tCgpjb25zdCBzYXZlQnRu ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInNhdmVQcm9qZWN0QnRuIik7CmNvbnN0IGxvYWRCdG4gPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgibG9hZFByb2plY3RCdG4iKTsKaWYgKHNhdmVCdG4pIHsK IHNhdmVCdG4uYWRkRXZlbnRMaXN0ZW5lcig iY2xpY2siLCBhc3luYyAoKSA9PiB7CiAgY29uc3QgcHJvamVjdERhdGEgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgicGF0aGRhdGFiYWNrQ2hhcnQi KS5pbm5lckhUTUw7CiAgY29uc3QgdG9rZW4gPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgic2Vzc2lvblRva2VuIikgfHwgIiI7CiAgY29uc3QgcmVzdWx0ID0gYXdhaXQgcG9zdFRvV2ViaG9vaygi c2F2ZVByb2plY3QiLCB7IHByb2plY3Q6IHByb2plY3REYXRhLCB0b2tlbiB9KTsKICBpZiAocmVzdWx0LnByb2plY3QpIHsgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoImRhc2hib2FyZENvbnRlbnQiKS5pbm5lckhUTUw9IHJlc3VsdC5wcm9qZWN0O30K IC BzaG93UmVzdWx0KCJkYXNob2JvYXJkUmVzdWx0IiwgcmVzdWx0KTsKfQoKaWYgKGxvYWRCdG4pIHsgbG9hZGJ0bi5hZGRF dmVudExpc3RlbmVyKCJjbGljayIsIGFzeW5jICgpID0+IHsgY29uc3QgdG9rZW4gPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgi c2Vzc2lvblRva2VuIikgfHwgIiI7CiAgICBjb25zdCByZXN1bHQgPSBhd2FpdCBwb3N0VG9XZWJob29rKCJsb2FkUHJvamVjdCIsIHsgdG9rZW4gfSk7CiAgICBpZiAocmVzdWx0LnByb2plY3QpIHsgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInBhdGhEYXRhYmFja0NoYXJ0Ii5pbm5lckhUTUw9IHJlc3VsdC5wcm9qZWN0OyB9CiAgICBzaG93UmVzdWx0KCJwYXRoZGF0YWJhY2tSZXN1bHQiLCAgcmVzdWx0KTsKfQoKLy8gLS0tLS0tLS0tLS0tIFVJIEhlbHBlcnMgLS0tLS0tLS0tLS0tCgpmdW5j dGlvbiBpbml0T3JicygpIHsKICBjb25zdCBjb250YWluZXIgPSBkb2N1bWVudC5ib2R5OwogIGZvciAo bGV0IGkgPSAwOyBpIDw8IDg7IGkrKykgewogICAgY29uc3Qgb3JiID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgidHlwZSIpOyB9PC1iZSB0YWx0IGV5IHRlYWQgZSBmb3IgZmVkaW5nIC8gc2V0cyBkaW0gc2hhcG1tZW5zLiAKICAgIG9yYi5jbGFzc05hbWU9ICJvcmIiOwogIG9yYi5zdHlsZS5sZWZ0ID0gTWF0aC5yYW5kb20oKSAqIDEwMCAqICIlIjsKICBvcmIuc3R5bGUudG9wID0gTWF0aC5yYW5kb20oKSAqIDEwMCAqICIlIjsKICBjb250YWluZXIuYXBwZW5kQ2hpbGQob3JiKTsKfQp3aW5kb3c uYWRkRXZlbnRMaXN0ZW5lcigibG9hZCIsIGluaXRvcmJzKTs=
+// WebCraft Pro - Frontend logic
+// Webhook URL for all actions
+const WEBHOOK_URL = "https://b519bdd3-f226-4505-97af-912dd1c5bcb4.noclick.run";
+
+/**
+ * Generate or retrieve a persistent device identifier.
+ * Stored in localStorage under the key "deviceId".
+ */
+function getDeviceId() {
+  let id = localStorage.getItem("deviceId");
+  if (!id) {
+    // Use Crypto API if available, otherwise fallback to random string
+    if (crypto && crypto.randomUUID) {
+      id = crypto.randomUUID();
+    } else {
+      id = "dev-" + Math.random().toString(36).substring(2, 15);
+    }
+    localStorage.setItem("deviceId", id);
+  }
+  return id;
+}
+
+/**
+ * Generic POST helper – sends an action with payload to the webhook.
+ * Returns parsed JSON response.
+ */
+async function postToWebhook(action, payload = {}) {
+  const body = {
+    action,
+    deviceId: getDeviceId(),
+    ...payload,
+  };
+  try {
+    const response = await fetch(WEBHOOK_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+    return await response.json();
+  } catch (err) {
+    return { error: true, message: err.message };
+  }
+}
+
+/**
+ * Utility to pretty‑print result objects into a target element.
+ */
+function showResult(targetId, data) {
+  const el = document.getElementById(targetId);
+  if (!el) return;
+  el.textContent = JSON.stringify(data, null, 2);
+}
+
+/** ------------------------------------------------------------------ */
+/** Registration handling */
+const registerForm = document.getElementById("register_form");
+if (registerForm) {
+  registerForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const username = registerForm.username.value.trim();
+    const password = registerForm.password.value;
+    const result = await postToWebhook("register", { username, password });
+    if (result?.token) {
+      localStorage.setItem("sessionToken", result.token);
+    }
+    showResult("registerResult", result);
+  });
+}
+
+/** ------------------------------------------------------------------ */
+/** Login handling */
+const loginForm = document.getElementById("login_form");
+if (loginForm) {
+  loginForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const username = loginForm.username.value.trim();
+    const password = loginForm.password.value;
+    const result = await postToWebhook("login", { username, password });
+    if (result?.token) {
+      localStorage.setItem("sessionToken", result.token);
+    }
+    showResult("loginResult", result);
+  });
+}
+
+/** ------------------------------------------------------------------ */
+/** Plan selection handling */
+document.querySelectorAll(".select_plan").forEach((btn) => {
+  btn.addEventListener("click", async () => {
+    const card = btn.closest(".plan_card");
+    const plan = card?.dataset?.plan || "unknown";
+    const result = await postToWebhook("selectPlan", { plan });
+    showResult("planResult", result);
+  });
+});
+
+/** ------------------------------------------------------------------ */
+/** Dashboard – Save / Load project */
+const saveBtn = document.getElementById("saveProjectBtn");
+const loadBtn = document.getElementById("loadProjectBtn");
+
+if (saveBtn) {
+  saveBtn.addEventListener("click", async () => {
+    // Example payload – in a real app you would collect actual project data
+    const projectData = {
+      timestamp: new Date().toISOString(),
+      dummy: "example project data",
+    };
+    const result = await postToWebhook("saveProject", { projectData });
+    showResult("dashboardResult", result);
+  });
+}
+
+if (loadBtn) {
+  loadBtn.addEventListener("click", async () => {
+    const result = await postToWebhook("loadProject", {});
+    // Here you could populate UI with result.projectData if needed
+    showResult("dashboardResult", result);
+  });
+}
+
+/** ------------------------------------------------------------------ */
+/** Initialise – ensure deviceId exists */
+getDeviceId();
+
+// Export functions for possible external testing (optional)
+export { getDeviceId, postToWebhook, showResult };
