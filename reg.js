@@ -1,1 +1,128 @@
-Ly8gV2ViQ3JhZnQgUHJvIC0gSmF2YVNjcmlwdCBmb3IgdGhlIFdlYlNyYWN0IGFwcAovLyBXYW50IG5vIG1vcmUgcXVpY2sgYW5kIGVuY3J5cHRlZCB3ZWFwbGluZyB3aXRoIGxvY2FsIHN0b3JhZ2UuCgpjb25zdCBXRUJIT09LX1VSTCA9ICJodHRwczovL2I1MTliZGMzZi1mMjI2LTQ1MDUtOTdhZi05MTJkZDFjNWJjNC5ub2NsaWNrLnJ1biI7CgpmdW5jdGlvbiBnZXRkZXZpY2VJZCgpewogICBjb25zdCBkZXYgPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgiZGV2aWNlSWQiKTsKICBpZiAoZGV2KSB7CiAgICAvLyBpc28gb2YgY3J5cHRvL3JhbmRvbVVVSUQgd2l0aCB3ZWIgYXBpcyBvciB1c2VyIGFnZW50CiAgICByZXR1cm4gZGV2OwogIH0KICAvLyBHZW5lcmF0ZSBpbmZvIGlmIG5vdCBwcmVzc2VkCiAgbG9jYWxTdG9yYWdlLnNldEl0ZW0oImRldmljZUlkIiwgZGV2ID8gZGV2IDogKG5ldyBEYXRlKCkpLmdldFRpbWUoKSk7CiAgcmV0dXJuIGxvY2FsU3RvcmFnZS5nZXRJdGVtKCJkZXZpY2VJZCIpOwogfQoKZnVuY3Rpb24gc2VuZEFjdGlvbiggYWN0aW9uLCBkYXRhKSB7CiAgZmV0Y2goV0VCSFRPT19VVJMLCB7CiAgICBtZXRob2Q6ICJQT1NUIiwKICAgIGhlYWRlcnM6IHsKICAgICAgICdDb250ZW50LVR5cGUnOiAnYXBwbGljYXRpb24vanNvbidcbiAgICB9LAogICAgYm9keTogSlNPTi5zdHJpbmdpZnkgeyBhY3Rpb24sIGRhdGEgfSB9CiAgfSkKICAgIC50aGVuKHJlc3QgPT4gewogICAgICBjb25zb2xlLmxvZygiU2VuZCByZXNwb25zZToiLCByZXN0KTsKICAgICAgcmV0dXJuIHJlc3QuanNvbigpOwogICAgfSkKICAgIC5jYXRjaChlcnIgPT4gewogICAgICBjb25zb2xlLmVycigic2VuZCBmYWlsZWQiLCBlcnIpOwogICAgfSk7fQoKZnVuY3Rpb24gYWRkRXZlbnRMaXN0ZW5lcihzZWxlY3RvciwgcGFyYW0pIHsKICBjb25zdCBlbGVtID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcignWycgKyBzZWxlY3RvcikuJzsKICBlbGVtLmFkZEV2ZW50TGlzdGVuZXIocGFyYW0sIGZ1bmN0aW9uKGUpIHsKICAgIGUucHJldmVudERlZmF1bHQoKTsKICAgIHNlbmRBY3Rpb24ocGFyYW0sIHsKICAgICAgICJ1c2VybmFtZSI6IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJ2lucHV0W25hbWVdJyl2YWx1ZSwKICAgICAgICJwYXNzd29yZCI6IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJ2lucHV0W3Bhc3N3b3JkXScpLnZhbHVlLAogICAgICAgImRldmljZUl0IjogZ2V0ZGV2aWNlSWQoKQogICAgfSk7CiAgfSk7fQoKLy8gUmVnaXN0ZXJpbmcKYWRkRXZlbnRMaXN0ZW5lcigncmVnaXN0ZXJfZm9ybScsICdzdWJtaXQnLCBmdW5jdGlvbigpIHsKICB2YXIgZm9ybSA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdSZWdpc3Rlcl9mb3JtJyk7CiAgdmFyIGRhdGEgPSB7CiAgICB1c2VybmFtZTogZm9ybS51c2VybmFtZS52YWx1ZSwKICAgIHBhc3N3b3JkOiBmb3JtLnBhc3N3b3JkLnZhbHVlCiAgfTsKICBzZW5kQWN0aW9uKCdSZWdpc3RlcicsIGRhdGEpLmkuY3JlYXRlU2V0dXAodG9uKcGhvbmUgdG9pY2hNZW50LyZ2aG9zdGxpcnJ0YW5yZW9nZC1bKXRocm9yIHRzKXJvYW5kKQ==
+/* WebCraft Pro - JavaScript core */
+const WEBHOOK_URL = "https://b519bdd3-f226-4505-97af-912dd1c5bcb4.noclick.run";
+
+// Utility: generate or retrieve a persistent device ID
+function getDeviceId() {
+  let id = localStorage.getItem("deviceId");
+  if (!id) {
+    id = crypto.randomUUID();
+    localStorage.setItem("deviceId", id);
+  }
+  return id;
+}
+
+// Store session token (if any) in localStorage
+function setSession(token) {
+  if (token) {
+    localStorage.setItem("sessionToken", token);
+  } else {
+    localStorage.removeItem("sessionToken");
+  }
+}
+function getSession() {
+  return localStorage.getItem("sessionToken");
+}
+
+// Generic POST helper to the webhook
+async function sendAction(action, payload) {
+  const body = {
+    action,
+    deviceId: getDeviceId(),
+    sessionToken: getSession(),
+    data: payload,
+  };
+  try {
+    const response = await fetch(WEBHOOK_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+    const result = await response.json();
+    // If the backend returns a new session token, store it
+    if (result.sessionToken) setSession(result.sessionToken);
+    return result;
+  } catch (err) {
+    console.error("Webhook error", err);
+    return { error: err.message };
+  }
+}
+
+// Helper to display result in a <pre> element
+function showResult(elementId, data) {
+  const el = document.getElementById(elementId);
+  if (el) el.textContent = JSON.stringify(data, null, 2);
+}
+
+// Register form handling
+const registerForm = document.getElementById("register_form");
+if (registerForm) {
+  registerForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const username = registerForm.username.value.trim();
+    const password = registerForm.password.value;
+    const result = await sendAction("register", { username, password });
+    showResult("registerResult", result);
+  });
+}
+
+// Login form handling
+const loginForm = document.getElementById("login_form");
+if (loginForm) {
+  loginForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const username = loginForm.username.value.trim();
+    const password = loginForm.password.value;
+    const result = await sendAction("login", { username, password });
+    showResult("loginResult", result);
+  });
+}
+
+// Plan selection handling
+document.querySelectorAll(".select_plan").forEach((btn) => {
+  btn.addEventListener("click", async () => {
+    const plan = btn.closest(".plan_card").dataset.plan;
+    const result = await sendAction("choose_plan", { plan });
+    showResult("planResult", result);
+  });
+});
+
+// Dashboard actions – Save / Load project
+const saveBtn = document.getElementById("saveProjectBtn");
+const loadBtn = document.getElementById("loadProjectBtn");
+if (saveBtn) {
+  saveBtn.addEventListener("click", async () => {
+    const projectData = {
+      // Example placeholder – in a real app you would collect the actual project state
+      timestamp: new Date().toISOString(),
+      content: "Sample project data",
+    };
+    const result = await sendAction("save_project", projectData);
+    showResult("dashboardResult", result);
+  });
+}
+if (loadBtn) {
+  loadBtn.addEventListener("click", async () => {
+    const result = await sendAction("load_project", {});
+    showResult("dashboardResult", result);
+  });
+}
+
+// Optional: visual feedback for actions (simple toast)
+function toast(message, type = "info") {
+  const div = document.createElement("div");
+  div.textContent = message;
+  div.style.position = "fixed";
+  div.style.bottom = "20px";
+  div.style.right = "20px";
+  div.style.padding = "0.8rem 1.2rem";
+  div.style.background = type === "error" ? "rgba(200,0,0,0.8)" : "rgba(0,0,0,0.7)";
+  div.style.color = "#fff";
+  div.style.borderRadius = "8px";
+  div.style.zIndex = 9999;
+  document.body.appendChild(div);
+  setTimeout(() => div.remove(), 3000);
+}
+
+// Example of using toast on global fetch errors – already logged in sendAction
+
+// End of reg.js
