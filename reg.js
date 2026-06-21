@@ -3,6 +3,7 @@
 
 const WEBHOOK_URL = "https://b519bdd3-f226-4505-97af-912dd1c5bcb4.noclick.run";
 
+// ---------- Utility Functions ----------
 function getDeviceId() {
   let id = localStorage.getItem("deviceId");
   if (!id) {
@@ -15,16 +16,16 @@ function getDeviceId() {
 async function postToWebhook(action, payload) {
   const body = { deviceId: getDeviceId(), action, ...payload };
   try {
-    const response = await fetch(WEBHOOK_URL, {
+    const res = await fetch(WEBHOOK_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     });
-    const json = await response.json();
+    const json = await res.json();
     return { success: true, data: json };
-  } catch (err) {
-    console.error("Webhook error:", err);
-    return { success: false, error: err };
+  } catch (e) {
+    console.error("Webhook error:", e);
+    return { success: false, error: e };
   }
 }
 
@@ -60,6 +61,7 @@ function toggleSections({ dashboard }) {
   }
 }
 
+// ---------- Project Handling ----------
 async function loadProjects() {
   const email = localStorage.getItem("sessionUser");
   const result = await postToWebhook("list_projects", { email });
@@ -77,8 +79,23 @@ async function loadProjects() {
   }
 }
 
+// ---------- Particle Effect (optional) ----------
+function createParticles(count = 30) {
+  for (let i = 0; i < count; i++) {
+    const p = document.createElement("div");
+    p.className = "particle";
+    p.style.left = Math.random() * 100 + "vw";
+    p.style.top = Math.random() * 100 + "vh";
+    document.body.appendChild(p);
+    // Remove after animation
+    setTimeout(() => p.remove(), 12000);
+  }
+}
+
+// ---------- Event Listeners ----------
 document.addEventListener("DOMContentLoaded", () => {
   initSession();
+  createParticles();
 
   const registerForm = document.getElementById("registerForm");
   const loginForm = document.getElementById("loginForm");
