@@ -1,41 +1,76 @@
-LyogRGFyayB0aGVtZSB3aXRoIGdsYXNzbW9ycGhpc20sIG5l b24gZ3JpZCwgZmxvYXRpbmcgb3JicywgcGFydGlj bGVzICovCgpsYXJyYXkgLS0gY29sb3IgLS0g
-I2ZmZmZmZjsKCi8qIFZhcmlhYmxlcyAqLwp2YXIgLS0g
-YmctY29sb3IgPSAjMzAwMDAwOyAvLyBwcmVmaXggd2l0aCB3aGl0ZSBzcGFjZQp2YXI6
-LS0gZ2xhc3MtYmcgPSByZ2JhKDAsIDAsIDApOyAvLyBiYWNrZ3JvdW5kIGdyYWRpZW50
-Ci92YXIgLS0gZ2xhc3MtYm94LXNpbXBsZSA9IHJnYmEoMjU1LCAyNTUsIDI1NSwgMS4w
-KTsKdmFyIC0tIGdyZXNzLWNvbm5lY3Rpb24gPSB2YXIgKDAsIDAsIDAsIDApOwovKiB0
-aGVtZSBkZWZpbml0aW9ucyAqLwouaGVhZGVyIHsgYmFja2dyb3VuZDogdmFyKC0tYmctY29s
-b3IpOyBjb2xvcjogdmFyKC0tdGV4dC1jb2xvcik7IH0KCi8qIGJhY2tncm91bmQgYW5p
-bWF0aW9uICovCi5iZy1ncmFkaWVudCB7CiAgYW5pbWF0aW9uOiBncmFkaWVudCBvcHRp
-b25zIDFzIGluZmluaXRlIGZpbHRlciB0b3BzIDIgZmluaXRlIHRvb2x0aXA7CiAgYW5p
-bWF0aW9uOiBncmFkaWVudCBlc2NhcGUgMzBzIGluZmluaXRlIGZpbHRlciB0b3BzIDE1
-c2Vjb25kIGZpbHRlciB0b29sdGlwLgogIGJhY2tncm91bmQ6IHZhcigtdHJhbnNwYXJl
-bnQgLTIwZCkgc291cmNlKGJ0bm5pbmZpbmVfZ2V0Y29sb3IpOyBvcGFjaXR5OiAwLjU7
-fQoKLyogR2lzc2UgbG9nbyBvciBpbWFnZSB0eXBlIGJvdW5kYXJ5ICovCi5nbG9iYWxz
-IHsgZGlzcGxheTogbm9uZTsgcG9zaXRpb246IGZpeGVkOyB3aWR0aDogMTAwJSAwOyBo
-ZWlnaHQ6IDEwMHh9Ci5nbG9iYWwge2JhY2tncm91bmQ6IG5vbmU7fQogLnJlc3Vs
-dCB7IGJhY2tncm91bmQ6ICMwMDBmZjtjb2xvcjogI2ZmZjsgcG9zaXRpb246
-IHJlbGF0aXZlOyB0b3A6IDUwJTsgaGVpZ2h0OiA1MCU7IHdpZHRoOiAyMDAlOyBoZWln
-aHQ6IDEwMDAlOyB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTApO2JvcmRl
-ci1yYWRpdXM6IDIgMHB4OyB0ZXh0LWFsaWduOiBjZW50ZXIgZGlzcGxheTogZmxleDsg
-YWxpZ24taXRlbXM6IGNlbnRlciB9
+/* Dark theme with glassmorphism, neon grid, glow orbs, floating particles, gradient buttons */
 
-LyoqIEJ1dHRvbnMgKi8KLmJ0biB7CiAgZGlzcGxheTogcG9ydGl2ZSBpbnRlZ2VyOyBw
-YWRkaW5nOiAuOGVtIDEuNnJlbTsKICBiYWNrZ3JvdW5kOiB2YXIoLS1wcmltYXJ5LWdy
-YWRpZW50KTsKICBjb2xvcjogI2ZmZjsKICBib3JkZXI6IG5vbmU7CiAgYm9yZGVyLXJh
-ZGl1czogOHB4Owp9Ci5idG46aG92ZXIge2Zsb2F0OiB0cnVlOyB0cmFuc2Zvcm06IHNj
-YWxlKDEsIDEpO30K
+:root {
+  --bg-color: #0a0a0a;
+  --primary-gradient: linear-gradient(135deg, #ff00cc, #3333ff);
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --text-color: #e0e0e0;
+}
 
-LyoqIEZvcm0gc3R5bGluZyAqLwouZm9ybSB7CiAgZGlzcGxheTogZmxleDsKICBmbGV4
-LWRpcmVjdGlvbjogY29sdW1uOyBnYXA6IDEuNnJlbTsKfQwKCi5mb3JtIGlucHV0IHsg
-cGFkZGluZzogLjhyZW07IGJvcmRlci1yYWRpdXM6IDZweDsgYm9yZGVyOiAxcHggc29s
-aWQgdmFyKC0tZ2xhc3MtYm9yZGVyKTsKICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAp
-OyBjb2xvcjogdmFyKC0tdGV4dC1jb2xvcik7IH0K
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  overflow: hidden;
+  margin: 0;
+  min-height: 100vh;
+  background-image: radial-gradient(circle at 20% 20%, rgba(255,0,200,0.2), transparent),
+                    radial-gradient(circle at 80% 80%, rgba(0,200,255,0.2), transparent);
+}
 
-LyoqIFBsYW4gZ3JpZCAqLwoucGxhbl9ncmlkIHsgZGlzcGxheTogZ3JpZDsgZ3JpZC10
-ZW1wbGF0ZS1jb2x1bW5zOiByZXBlYXQoYXV0by1maXQsIG1pbm1heCg1MDBweCwg
-MSB4KSk7IGdhcDogMS41cmVtOyBwYWRkaW5nOiAuOGVtIDFyc2VtO30KLnBsYW5fY2Fy
-ZCB7IGJhY2tncm91bmQ6IHZhcigta2xhc3MtYmcpOyBib3JkZXI6IDEgc29saWQgdmFy
-KC0tZ2xhc3MtYm9yZGVyKTsKICBib3JkZXItcmFkaXM6IDEycHg7IHBhZGRpbmc6IDEu
-NXJlZjt0ZXh0LWFsaWduOiBjZW50ZXI7IGJhY2t0cmFuc3BhcmU6IGJsdXIoMTJweCk7
-fQ==
+/* Neon grid background */
+.grid-bg {
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(45deg, var(--glass-border) 0, var(--glass-border) 1px, transparent 1px, transparent 20px),
+              repeating-linear-gradient(-45deg, var(--glass-border) 0, var(--glass-border) 1px, transparent 1px, transparent 20px);
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+/* Glassmorphism cards */
+.card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem;
+  color: var(--text-color);
+}
+
+/* Gradient button */
+.btn {
+  background: var(--primary-gradient);
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255,0,200,0.4);
+}
+
+/* Glow orbs animation */
+@keyframes orb {
+  0% { transform: translate(0,0) scale(1); opacity:0.8; }
+  50% { transform: translate(30vw,-30vh) scale(1.5); opacity:0.4; }
+  100% { transform: translate(-30vw,30vh) scale(1); opacity:0.8; }
+}
+.orb {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(255,0,200,0.5), transparent);
+  border-radius: 50%;
+  animation: orb 12s infinite linear;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .plan_grid { display: flex; flex-direction: column; }
+}
