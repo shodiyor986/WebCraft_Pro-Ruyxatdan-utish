@@ -1,1 +1,103 @@
-LyogV2ViQ3JhZnQgUHJvIC0gRnJvbnRlbmQgTG9naWMgKi8KY29uc3QgV0VCSE9PS19VUkwgPSAiaHR0cHM6Ly9iNTE5YmRkMy1mMjI2LTQ1MDUtOTdhZi05MTJkZDFjNWJjYjQubm9jbGljay5ydW4iOwoKLy8gLS0tLS0tLS0tLSBVdGlsaXR5IC0tLS0tLS0tLS0KZnVuY3Rpb24gZ2VuZXJhdGVEZXZpY2VJZCgpIHsKICAvLyBTaW1wbGUgZGV0ZXJtaW5pc3RpYyBVVUlEIHY0IGxpa2UgZ2VuZXJhdG9yCiAgcmV0dXJuIGNyeXB0by5yYW5kb21VdWlkKCk7Cn0KCmZ1bmN0aW9uIGdldERldmljZUlkKCkgewogIGxldCBpZCA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKCJkZXZpY2VJZCIpOwogIGlmICghaWQpIHsKICAgIGlkID0gZ2VuZXJhdGVEZXZpY2VJZCgpOwogICAgbG9jYWxTdG9yYWdlLnNldEl0ZW0oImRldmljZUlEIiwgaWQpOwogIH0KICByZXR1cm4gaWQ7Cn0KCgphc3luYyBmdW5jdGlvbiBwb3N0VG9XZWJob29rKGFjdGlvbiwgcGF5bG9hZCkgewogIGNvbnN0IGJvZHkgPSB7CiAgICBhY3Rpb24sCiAgICBkZXZpY2VJZDogZ2V0RGV2aWNlSWQoKSwKICAgIHBheWxvYWQsCiAgfTsKCiAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBmZXRjaChXRUJIT09LX1VSTCwgewogICAgbWV0aG9kOiAiUE9TVCIsCiAgICBoZWFkZXJzOiB7ICJDb250ZW50LVR5cGUiOiAiYXBwbGljYXRpb24vanNvbiIgfSwKICAgIGJvZHk6IEpTT04uc3RyaW5naWZ5KGJvZHkpLAogIH0pOwogIGNvbnN0IGRhdGEgPSBhd2FpdCByZXNwb25zZS5qc29uKCk7CiAgcmV0dXJuIGRhdGE7Cn0KCi8vLS0tLS0tLS0tLS0gUmVzdWx0IFNob3dpbmctLS0tLS0tLS0tCmxldCBzaG93UmVzdWx0ID0gKGVsZW1lbnRJZCwgZGF0YSkgewogIGNvbnN0IGVsID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoZWxlbWVudElkKTsKICBpZiAoIWVsKSByZXR1cm47CiAgaWYgKGRhdGEuZXJyb3IpIHsKICAgIGVsLnRleHRDb250ZW50ID0gIkVycm9yOiAiICsgZGF0YS5lcnJvcjsKICAgIGVsLnN0eWxlLmNvbG9yID0gIiNmZjRkNGQiOwogIH0gZWxzZSB7CiAgICBlbC50ZXh0Q29udGVudCA9IEpTT04uc3RyaW5naWZ5KGRhdGEsIG51bGwsIDIpOwogICAgZWwuc3R5bGUuY29sb3IgPSAiIzRkZmY0ZCI7CiAgfQp9OwoKLy8gLS0tLS0tLS0tLSBSZWdpc3RyYXRpb24gLS0tLS0tLS0tLQpjb25zdCByZWdpc3RyYXRpb25Gb3JtID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInJlZ2lzdHJhdGlvbi1mb3JtIik7CmlmIChyZWdpc3RyYXRpb25Gb3JtKSB7CiAgcmVnaXN0cmF0aW9uRm9ybS5hZGRFdmVudExpc3RlbmVyKCJzdWJtaXQiLCBhc3luYyAoZSkgPT4gewogICAgZS5wcmV2ZW50RGVmYXVsdCgpOwogICAgY29uc3QgdXNlcm5hbWUgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgicmVnLXVzZXJuYW1lIikudmFsdWUudHJpbSgpOwogICAgY29uc3QgcGFzc3dvcmQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgicmVnLXBhc3N3b3JkIikuVmFsdWU7CiAgICBjb25zdCByZXN1bHQgPSBhd2FpdCBwb3N0VG9XZWhvb2soInJlZ2lzdHJhdGlvbiIsIHsgdXNlcm5hbWUsIHBhc3N3b3JkIH0pOwogICAgc2hvd1Jlc3VsdCgicmVnUmVzdWx0IiwgcmVzdWx0KTsKICAgIGlmIChyZXN1bHQudG9rZW4pIHsKICAgICAgbG9jYWxTdG9yYWdlLnNldEl0ZW0oInNlc3Npb25Ub2tlbiIsIHJlc3VsdC50b2tlbik7CiAgICB9CiAgfSk7Cn0pOwoKLy8gLS0tLS0tLS0tLSBMb2dpbiAtLS0tLS0tLS0tLQpjb25zdCBsb2dpbkZvcm0gPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgibG9naW4tZm9ybSIpO2lmIChsb2dpbkZvcm0pIHsKICBsb2dpbkZvcm0uYWRkRXZlbnRMaXN0ZW5lcigiYnV0dG9uIiwgYXN5bmMgKGUpID0+IHsKICAgIGUucHJldmVudERlZmF1bHQoKTsKICAgIGNvbnN0IHVzZXJuYW1lID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoImxvZ2luLXVzZXJuYW1lIikuVmFsdWUudHJpbSgpOwogICAgY29uc3QgcGFzc3dvcmQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgibG9naW4tcGFzc3dvcmQiKS52YWx1ZTsKICAgIGNvbnN0IHJlc3VsdCA9IGF3YWl0IHBvc3RUb1dlaWhvb2soImxvZ2luIiwgeyB1c2VybmFtZSwgcGFzc3dvcmQgfSk7CiAgICBzaG93UmVzdWx0KCJsb2dpblJlc3VsdCIsIHJlc3VsdCk7CiAgICBpZiAocmVzdWx0LnRva2VuKSB7CiAgICAgIGxvY2FsU3RvcmFnZS5zZXRJdGVtKCJzZXNzaW9uVG9rZW4iLCByZXN1bHQudG9rZW4pOwogICAgfQogIH0pOwkKfSk7CgoKLy8gLS0tLS0tLS0tLSBQbGFuIFNlbGVjdGlvbiAtLS0tLS0tLS0tCmxldCBwbGFuU2VsZWN0b3JzID0gZG9jdW1lbnQuY2xhc3NMaXN0ZUVsZW1lbnRzKCJzZWxlY3QtcGxhbiIpOwogcGxhblNlbGV0b3JzLmZvckVhY2goKGJ0bikgPT4gewogIGJ0bi5hZGRFdmVudExpc3RlbmVyKCJjbGljayIsIGFzeW5jICgpID0+IHsKICAgIGNvbnN0IHBsYW4gPSBidG4uZGF0YXNldC5wbGFuIHx8IGJ0bi50ZXh0Q29udGVudC50cmltKCkudG9Mb3dlckNhc2UoKTsKICAgIGNvbnN0IHJlc3VsdCA9IGF3YWl0IHBvc3RUb1dlaWhvb2soInNlbGVjdFBsYW4iLCB7IHBsYW4gfSk7CiAgICBzaG93UmVzdWx0KCJwbGFuUmVzdWx0IiwgcmVzdWx0KTsKICB9KTsKfSk7CgoKLy8gLS0tLS0tLS0tLSBEYXNoYm9hcmQgQWN0aW9ucyAtLS0tLS0tLS0tCmxldCBzYXZlQnRuID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInNhdmVQcm9qZWN0QnRuIik7CmNvbnN0IGxvYWRCbHQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgibG9hZFByb2plY3RCdG4iKTsKCi8vIEdlbmVyYXRlIG9yZ2FuaWMgZ3JpZHMgZm9yIG5hcnJpdmUgZml4ZWQgYmFja2dyb3VuZHMKZm9yIChsZXQgaSA9IDA7IGkgPD0gMTU7IGkrKykgewogIGNvbnN0IG9yYiA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoImRpdjEiKTsKICBvcmIuY2xhc3NOYW1lID0gIm9yYiI7CiAgaW5zdGFuY2Ugd2luZG93LmxvY2F0aW9uLmJhbm5lci5pbm5lci5pbm5lci5hZGQiOwoKICBvcmIuc3R5bGUgPSAiZml4ZWQtcG9zaXRpb247IGxlZnQ6ICQoeVt3aWR0aF0tMjAwcHgpOyB0b3A6ICQoW3ZlcnRpY2FsIGV2ZW50XSk7IHBvc2l0aW9uOiBmaXJlZCI7IG1hcmdpbjogMHB4IDMgcHggMCAwOwogICJ9CiBvcmJzLmFwcGVuZENoaWxkKG9yYik7CiAgb3JiLnN0eWxlLmJhY2tncm91bmQgPSAiY2F0ZW9yKCFbMTAwLHRlYWwtZGF5ZXJcZ2hpbHZlIHRyYW5zZmltZSwgY3VsaW1pIHRyYW5zZm9ybSByZWFjY3QiKTsKICBvcmJzLnN0eWxlLm9wYWNpdHkgPSAiMC44IjsKICBvcmJzLnN0eWxlLmJhY2t3YXJkQW5pbWF0aW9uID0gImZyaWVuZCB2YWx1ZSB0b291dGQgZGVzdGluZ3V0ZCAyMDI0c3R1eC9mYXJvZ2VvZXMgc2NpbGxpbmplL2VzbjQ0NCI7CiAgb3JiaS5zdW1hcnY1N0ZyZy1fLy8gUkVfZC9wZWVfZm9yIGJqYWxrcyBvZ3JpZmZlZCBvZm1lYWJzIGZ1c2U1bVJlc2V0JQp9CgoKLy8gQWRkIHN1cHBvc2UgYW5kIG5vbmUgZml0IGcgc3Rlc3QgLgoKdmVyc2lvbiA9ICJwYXJhZGRvZV9UQjAiOwo=
+// WebCraft Pro - Frontend Logic
+const WEBHOOK_URL = "https://b519bdd3-f226-4505-97af-912dd1c5bcb4.noclick.run";
+
+// ------------ Utility ------------
+function generateDeviceId() {
+  // Simple deterministic UUID‑like generator
+  return crypto.randomUUID();
+}
+function getDeviceId() {
+  let id = localStorage.getItem("deviceId");
+  if (!id) {
+    id = generateDeviceId();
+    localStorage.setItem("deviceId", id);
+  }
+  return id;
+}
+async function postToWebhook(action, payload) {
+  const body = { action, deviceId: getDeviceId(), ...payload };
+  const response = await fetch(WEBHOOK_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body)
+  });
+  const data = await response.json();
+  return data;
+}
+function showResult(targetId, data) {
+  const target = document.getElementById(targetId);
+  if (!target) return;
+  target.innerHTML = `<pre class="result">${JSON.stringify(data, null, 2)}</pre>`;
+}
+
+// ------------ Registration ------------
+const regForm = document.getElementById("register_form");
+if (regForm) {
+  regForm.addEventListener("submit", async e => {
+    e.preventDefault();
+    const username = regForm.querySelector("[name='username']").value.trim();
+    const password = regForm.querySelector("[name='password']").value;
+    const result = await postToWebhook("register", { username, password });
+    if (result.token) localStorage.setItem("sessionToken", result.token);
+    showResult("regResult", result);
+  });
+}
+
+// ------------ Login ------------
+const loginForm = document.getElementById("login_form");
+if (loginForm) {
+  loginForm.addEventListener("submit", async e => {
+    e.preventDefault();
+    const username = loginForm.querySelector("[name='username']").value.trim();
+    const password = loginForm.querySelector("[name='password']").value;
+    const result = await postToWebhook("login", { username, password });
+    if (result.token) localStorage.setItem("sessionToken", result.token);
+    showResult("loginResult", result);
+  });
+}
+
+// ------------ Plan Selection ------------
+const planButtons = document.querySelectorAll(".plan-cell");
+planButtons.forEach(btn => {
+  btn.addEventListener("click", async () => {
+    const plan = btn.dataset.plan;
+    const token = localStorage.getItem("sessionToken") || "";
+    const result = await postToWebhook("selectPlan", { plan, token });
+    showResult("planResult", result);
+  });
+});
+
+// ------------ Project Dashboard ------------
+const saveBtn = document.getElementById("saveProjectBtn");
+const loadBtn = document.getElementById("loadProjectBtn");
+if (saveBtn) {
+  saveBtn.addEventListener("click", async () => {
+    const projectData = document.getElementById("dashboardContent").innerHTML;
+    const token = localStorage.getItem("sessionToken") || "";
+    const result = await postToWebhook("saveProject", { project: projectData, token });
+    showResult("dashboardResult", result);
+  });
+}
+if (loadBtn) {
+  loadBtn.addEventListener("click", async () => {
+    const token = localStorage.getItem("sessionToken") || "";
+    const result = await postToWebhook("loadProject", { token });
+    if (result.project) {
+      document.getElementById("dashboardContent").innerHTML = result.project;
+    }
+    showResult("dashboardResult", result);
+  });
+}
+
+// ------------ UI Helpers ------------
+function initOrbs() {
+  const container = document.body;
+  for (let i = 0; i < 8; i++) {
+    const orb = document.createElement("div");
+    orb.className = "orb";
+    orb.style.left = Math.random() * 100 + "%";
+    orb.style.top = Math.random() * 100 + "%";
+    container.appendChild(orb);
+  }
+}
+window.addEventListener("load", initOrbs);
