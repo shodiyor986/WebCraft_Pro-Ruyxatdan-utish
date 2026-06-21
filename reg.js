@@ -1,8 +1,9 @@
 // reg.js - WebCraft Pro Frontend Logic
+// Updated on 2026-06-21
 // Webhook endpoint
 const WEBHOOK_URL = "https://b519bdd3-f226-4505-97af-912dd1c5bcb4.noclick.run";
 
-// Utility: generate or retrieve device ID
+// Utility: generate/retrieve a unique device ID
 function getDeviceId() {
   let id = localStorage.getItem("deviceId");
   if (!id) {
@@ -12,13 +13,9 @@ function getDeviceId() {
   return id;
 }
 
-// Utility: send data to webhook
+// Utility: POST data to webhook and return parsed JSON
 async function postToWebhook(action, payload) {
-  const body = {
-    deviceId: getDeviceId(),
-    action,
-    ...payload,
-  };
+  const body = { deviceId: getDeviceId(), action, ...payload };
   try {
     const res = await fetch(WEBHOOK_URL, {
       method: "POST",
@@ -27,9 +24,9 @@ async function postToWebhook(action, payload) {
     });
     const data = await res.json();
     return { success: true, data };
-  } catch (e) {
-    console.error("Webhook error", e);
-    return { success: false, error: e };
+  } catch (err) {
+    console.error("Webhook error:", err);
+    return { success: false, error: err };
   }
 }
 
@@ -37,18 +34,12 @@ async function postToWebhook(action, payload) {
 function setSession(email) {
   localStorage.setItem("sessionUser", email);
   document.getElementById("userEmail").textContent = email;
-  document.getElementById("dashboard").classList.remove("hidden");
-  document.getElementById("register").classList.add("hidden");
-  document.getElementById("login").classList.add("hidden");
-  document.getElementById("plans").classList.add("hidden");
+  toggleSections({ dashboard: true });
 }
 
 function clearSession() {
   localStorage.removeItem("sessionUser");
-  document.getElementById("dashboard").classList.add("hidden");
-  document.getElementById("register").classList.remove("hidden");
-  document.getElementById("login").classList.remove("hidden");
-  document.getElementById("plans").classList.remove("hidden");
+  toggleSections({ dashboard: false });
 }
 
 function initSession() {
@@ -56,7 +47,42 @@ function initSession() {
   if (email) setSession(email);
 }
 
-// Form Handlers
+// Show/hide main sections
+function toggleSections({ dashboard }) {
+  const hide = (id) => document.getElementById(id).classList.add("hidden");
+  const show = (id) => document.getElementById(id).classList.remove("hidden");
+  if (dashboard) {
+    hide("register");
+    hide("login");
+    hide("plans");
+    show("dashboard");
+  } else {
+    show("register");
+    show("login");
+    show("plans");
+    hide("dashboard");
+  }
+}
+
+// Load projects for the logged‑in user
+async function loadProjects() {
+  const email = localStorage.getItem("sessionUser");
+  const result = await postToWebhook("list_projects", { email });
+  const listEl = document.getElementById("projectList");
+  listEl.innerHTML = "";
+  if (result.success && Array.isArray(result.data?.projects)) {
+    result.data.projects.forEach((p) => {
+      const div = document.createElement("div");
+      div.className = "project-item card glass";
+      div.innerHTML = `<h4>${p.title}</h4><p>${p.content}</p>`;
+      listEl.appendChild(div);
+    });
+  } else {
+    listEl.textContent = "Loyihalar topilmadi.";
+  }
+}
+
+// DOM ready
 document.addEventListener("DOMContentLoaded", () => {
   initSession();
 
@@ -66,87 +92,68 @@ document.addEventListener("DOMContentLoaded", () => {
   const projectForm = document.getElementById("projectForm");
   const logoutBtn = document.getElementById("logoutBtn");
 
+  // Register
   registerForm?.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const formData = new FormData(registerForm);
-    const payload = { email: formData.get("email"), password: formData.get("password") };
-    const result = await postToWebhook("register", payload);
-    const respEl = document.getElementById("registerResponse");
-    if (result.success && result.data?.status === "ok") {
-      respEl.textContent = "Ro'yxatdan muvaffaqiyatli o'tildi!";
-      setSession(payload.email);
+    const { email, password } = Object.fromEntries(new FormData(registerForm));
+    const res = await postToWebhook("register", { email, password });
+    const out = document.getElementById("registerResponse");
+    if (res.success && res.data?.status === "ok") {
+      out.textContent = "Ro‘yxatdan muvaffaqiyatli o‘tkazildi!";
+      setSession(email);
     } else {
-      respEl.textContent = "Xatolik: " + (result.data?.message || result.error);
+      out.textContent = "Xatolik: " + (res.data?.message || res.error);
     }
   });
 
+  // Login
   loginForm?.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const formData = new FormData(loginForm);
-    const payload = { email: formData.get("email"), password: formData.get("password") };
-    const result = await postToWebhook("login", payload);
-    const respEl = document.getElementById("loginResponse");
-    if (result.success && result.data?.status === "ok") {
-      respEl.textContent = "Kirish muvaffaqiyatli!";
-      setSession(payload.email);
+    const { email, password } = Object.fromEntries(new FormData(loginForm));
+    const res = await postToWebhook("login", { email, password });
+    const out = document.getElementById("loginResponse");
+    if (res.success && res.data?.status === "ok") {
+      out.textContent = "Kirish muvaffaqiyatli!";
+      setSession(email);
     } else {
-      respEl.textContent = "Xatolik: " + (result.data?.message || result.error);
+      out.textContent = "Xatolik: " + (res.data?.message || res.error);
     }
   });
 
+  // Plan selection
   planButtons.forEach((btn) => {
     btn.addEventListener("click", async () => {
       const plan = btn.dataset.plan;
       const email = localStorage.getItem("sessionUser");
-      const result = await postToWebhook("select_plan", { email, plan });
-      const respEl = document.getElementById("planResponse");
-      if (result.success && result.data?.status === "ok") {
-        respEl.textContent = `Plan "${plan}" tanlandi.`;
+      const res = await postToWebhook("select_plan", { email, plan });
+      const out = document.getElementById("planResponse");
+      if (res.success && res.data?.status === "ok") {
+        out.textContent = `Plan "${plan}" tanlandi.`;
       } else {
-        respEl.textContent = "Xatolik: " + (result.data?.message || result.error);
+        out.textContent = "Xatolik: " + (res.data?.message || res.error);
       }
     });
   });
 
+  // Save project
   projectForm?.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const formData = new FormData(projectForm);
-    const payload = {
-      email: localStorage.getItem("sessionUser"),
-      title: formData.get("title"),
-      content: formData.get("content"),
-    };
-    const result = await postToWebhook("save_project", payload);
-    const respEl = document.getElementById("projectResponse");
-    if (result.success && result.data?.status === "ok") {
-      respEl.textContent = "Loyiha saqlandi.";
+    const { title, content } = Object.fromEntries(new FormData(projectForm));
+    const email = localStorage.getItem("sessionUser");
+    const res = await postToWebhook("save_project", { email, title, content });
+    const out = document.getElementById("projectResponse");
+    if (res.success && res.data?.status === "ok") {
+      out.textContent = "Loyiha saqlandi.";
+      projectForm.reset();
       loadProjects();
     } else {
-      respEl.textContent = "Xatolik: " + (result.data?.message || result.error);
+      out.textContent = "Xatolik: " + (res.data?.message || res.error);
     }
   });
 
-  logoutBtn?.addEventListener("click", () => {
-    clearSession();
-  });
+  // Logout
+  logoutBtn?.addEventListener("click", clearSession);
 
-  // Load existing projects on dashboard load
-  async function loadProjects() {
-    const email = localStorage.getItem("sessionUser");
-    const result = await postToWebhook("list_projects", { email });
-    const listEl = document.getElementById("projectList");
-    listEl.innerHTML = "";
-    if (result.success && Array.isArray(result.data?.projects)) {
-      result.data.projects.forEach((p) => {
-        const div = document.createElement("div");
-        div.className = "project-item card glass";
-        div.innerHTML = `<h4>${p.title}</h4><p>${p.content}</p>`;
-        listEl.appendChild(div);
-      });
-    } else {
-      listEl.textContent = "Loyihalar topilmadi.";
-    }
-  }
-
+  // Auto‑load projects when a session exists
   if (localStorage.getItem("sessionUser")) loadProjects();
 });
