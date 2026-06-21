@@ -8,12 +8,12 @@
 const WEBHOOK_URL = "https://b519bdd3-f226-4505-97af-912dd1c5bcb4.noclick.run";
 
 // -----------------------------------------------------------------
-// Helper: generate or retrieve a persistent device identifier
+// Helper: persistent device identifier
 // -----------------------------------------------------------------
 function getDeviceId() {
   let id = localStorage.getItem("wc_device_id");
   if (!id) {
-    // crypto.randomUUID is widely supported in modern browsers
+    // crypto.randomUUID() is supported in all modern browsers
     id = crypto.randomUUID();
     localStorage.setItem("wc_device_id", id);
   }
@@ -75,8 +75,8 @@ function showMessage(msg, type = "info") {
   box.textContent = msg;
   box.style.background = type === "error" ? "rgba(255,107,107,0.9)" : "rgba(0,255,204,0.9)";
   box.style.color = "#111";
-  setTimeout(() => (box.style.display = "none"), 5000);
   box.style.display = "block";
+  setTimeout(() => (box.style.display = "none"), 5000);
 }
 
 // -----------------------------------------------------------------
@@ -93,11 +93,8 @@ if (registerForm) {
       return;
     }
     const result = await postAction("register", { username, password });
-    if (result.error) {
-      showMessage(result.error, "error");
-    } else {
-      showMessage("Registration successful – you can now log in.");
-    }
+    if (result.error) showMessage(result.error, "error");
+    else showMessage("Registration successful – you can now log in.");
   });
 }
 
@@ -115,9 +112,8 @@ if (loginForm) {
       return;
     }
     const result = await postAction("login", { username, password });
-    if (result.error) {
-      showMessage(result.error, "error");
-    } else if (result.session) {
+    if (result.error) showMessage(result.error, "error");
+    else if (result.session) {
       setSession(result.session);
       showMessage("Login successful – loading dashboard…");
       // Switch UI to dashboard view
@@ -143,8 +139,7 @@ document.querySelectorAll("[data-target='plan']").forEach((btn) => {
 });
 
 // -----------------------------------------------------------------
-// Simple code editor – we try to use CodeMirror if available, otherwise
-// fall back to a plain textarea (id="code-editor").
+// Code editor – use CodeMirror if available, otherwise plain textarea
 // -----------------------------------------------------------------
 let editor = null;
 if (window.CodeMirror) {
@@ -158,18 +153,15 @@ if (window.CodeMirror) {
   }
 }
 if (!editor) {
-  // fallback wrapper exposing the same API we need
   const txt = document.getElementById("code-editor");
   editor = {
     getValue: () => (txt ? txt.value : ""),
-    setValue: (val) => {
-      if (txt) txt.value = val;
-    },
+    setValue: (val) => { if (txt) txt.value = val; },
   };
 }
 
 // -----------------------------------------------------------------
-// Project save – expects inputs #project-title and button #save-project
+// Project save – expects #project-title and #save-project-btn
 // -----------------------------------------------------------------
 const saveBtn = document.getElementById("save-project-btn");
 if (saveBtn) {
@@ -187,7 +179,7 @@ if (saveBtn) {
 }
 
 // -----------------------------------------------------------------
-// Project load – expects input #project-id and button #load-project
+// Project load – expects #project-id and #load-project-btn
 // -----------------------------------------------------------------
 const loadBtn = document.getElementById("load-project-btn");
 if (loadBtn) {
@@ -198,9 +190,8 @@ if (loadBtn) {
       return;
     }
     const result = await postAction("loadProject", { id });
-    if (result.error) {
-      showMessage(result.error, "error");
-    } else if (result.project) {
+    if (result.error) showMessage(result.error, "error");
+    else if (result.project) {
       const { title, code } = result.project;
       document.getElementById("project-title").value = title || "";
       editor.setValue(code || "");
@@ -212,9 +203,7 @@ if (loadBtn) {
 }
 
 // -----------------------------------------------------------------
-// Optional – generate some floating particles & orbs for visual flair.
-// The CSS defines .particle and .orb classes; here we create a few
-// elements and animate them using requestAnimationFrame.
+// Visual flair – create floating particles & glowing orbs (CSS classes defined in reg.css)
 // -----------------------------------------------------------------
 (function createVisuals() {
   const container = document.body;
