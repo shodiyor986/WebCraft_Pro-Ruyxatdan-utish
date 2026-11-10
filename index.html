@@ -3,42 +3,54 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-  <meta name="theme-color" content="#79b9e8">
+  <meta name="theme-color" content="#172638">
   <title>OPEN WORLD — Voxel Cosmos</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body data-mode="world">
-  <div id="loading"><div class="spinner"></div><b>OPEN WORLD</b><span>Blokli dunyo yuklanmoqda...</span></div>
   <main id="game"></main>
   <section id="hud">
-    <header><b>OPEN <em>WORLD</em></b><span id="coords">X: 0 · Y: 0 · Z: 0</span></header>
-    <div class="crosshair">+</div>
-    <div id="help">WASD — yurish · Space — sakrash · Sichqoncha — qarash · Chap tugma — qazish · O‘ng tugma — blok qo‘yish</div>
-    <nav id="hotbar">
-      <button class="slot active" data-block="grass">1<br>🌿</button>
-      <button class="slot" data-block="dirt">2<br>🟫</button>
-      <button class="slot" data-block="stone">3<br>🪨</button>
-      <button class="slot" data-block="wood">4<br>🪵</button>
-      <button class="slot" data-block="sand">5<br>🟨</button>
-    </nav>
-    <button id="space-btn">🚀 Kosmos</button>
+    <header class="topbar">
+      <div class="logo">OPEN<span>WORLD</span></div>
+      <div class="status"><span class="sun-icon">☀</span><span id="clock">08:00</span><span id="coords">X: 0 · Z: 0</span></div>
+    </header>
+    <div class="crosshair"><i></i></div>
+    <div id="toast" class="toast">WASD — yurish · E — raketaga chiqish</div>
+    <div class="bottom-ui">
+      <nav id="hotbar" aria-label="Blok tanlash">
+        <button class="slot active" data-block="grass"><small>1</small><span>▦</span><b>O‘t</b></button>
+        <button class="slot" data-block="dirt"><small>2</small><span>▦</span><b>Tuproq</b></button>
+        <button class="slot" data-block="stone"><small>3</small><span>▦</span><b>Tosh</b></button>
+        <button class="slot" data-block="wood"><small>4</small><span>▦</span><b>Yog‘och</b></button>
+        <button class="slot" data-block="sand"><small>5</small><span>▦</span><b>Qum</b></button>
+      </nav>
+    </div>
+    <button id="rocket-btn" class="rocket-btn"><span>🚀</span><b>RAKETAGA CHIQISH</b><small>E</small></button>
     <div id="mobile-controls">
-      <div class="dpad">
-        <button data-move="forward">▲</button>
-        <div><button data-move="left">◀</button><button data-move="back">▼</button><button data-move="right">▶</button></div>
+      <div class="move-pad">
+        <button data-move="forward" aria-label="Oldinga">▲</button>
+        <div><button data-move="left" aria-label="Chapga">◀</button><button data-move="back" aria-label="Orqaga">▼</button><button data-move="right" aria-label="O‘ngga">▶</button></div>
       </div>
-      <div class="actions"><button id="jump">SAKRASH</button><button id="mine">QAZISH</button><button id="place">QO‘YISH</button></div>
+      <div class="action-pad">
+        <button id="jump" title="Sakrash">↥<small>Sakrash</small></button>
+        <button id="mine" title="Qazish">⛏<small>Qazish</small></button>
+        <button id="place" title="Blok qo‘yish">▣<small>Qo‘yish</small></button>
+      </div>
     </div>
     <div id="space-menu" class="hidden">
       <div class="dialog">
-        <button id="close-space" class="close">✕</button>
-        <h2>Kosmosga sayohat</h2><p>Sayyorani tanlang:</p>
+        <button id="close-space" class="close" aria-label="Yopish">×</button>
+        <div class="dialog-icon">🚀</div><h2>Kosmos sayohati</h2>
+        <p>Raketa orqali orbitaga chiqding. Sayyorani tanla:</p>
         <div class="planet-links">
-          <a href="earth.html">🌍 Yer</a><a href="moon.html">🌙 Oy</a><a href="sun.html">☀️ Quyosh</a>
+          <a href="earth.html">🌍 <span>Yer</span></a>
+          <a href="moon.html">🌙 <span>Oy</span></a>
+          <a href="sun.html">☀️ <span>Quyosh</span></a>
         </div>
-        <small>Quyoshga yaqinlashish va uning ustiga qo‘nish o‘chirilgan.</small>
+        <small>Quyosh faqat uzoqdan kuzatiladi. Unga qo‘nish mumkin emas.</small>
       </div>
     </div>
+    <div id="launch-overlay" class="hidden"><div class="launch-message">🚀 <b>UCHISH!</b><span>Atmosferadan chiqilmoqda...</span></div></div>
   </section>
   <script type="module" src="game.js"></script>
 </body>
